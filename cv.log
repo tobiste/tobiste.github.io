@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  7 APR 2024 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  8 APR 2024 00:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,8 +530,7 @@ tex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box55
-)
-No file cv.aux.
+) (cv.aux)
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -561,6 +560,7 @@ Package scrbase Info: activating american \listfigurename on input line 31.
 Package scrbase Info: activating american \listtablename on input line 31.
 Package scrbase Info: activating american \refname on input line 31.
 Package scrbase Info: activating american \indexname on input line 31.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -642,6 +642,8 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 )
 Package hyperref Info: Link coloring OFF on input line 31.
+
+(cv.out) (cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
@@ -700,19 +702,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 [7] (cv.aux)
-
-Package rerunfilecheck Warning: File `cv.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cv.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `cv.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17015 strings out of 478351
- 302671 string characters out of 2837053
- 788242 words of memory out of 3000000
+ 17021 strings out of 478351
+ 302866 string characters out of 2837053
+ 794816 words of memory out of 3000000
  34966 multiletter control sequences out of 15000+600000
  514689 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -724,7 +720,7 @@ er-t1.enc}{C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r
 charter/bchr8a.pfb><C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/type1/bi
 tstrea/charter/bchri8a.pfb><C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/cm-super/sftt1000.pfb>
-Output written on cv.pdf (7 pages, 119155 bytes).
+Output written on cv.pdf (7 pages, 119154 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
