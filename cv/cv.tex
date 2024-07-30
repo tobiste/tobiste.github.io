@@ -7,7 +7,11 @@
 \usepackage[letterpaper,left=2cm, right=2cm, top=2.5cm, bottom=2cm]{geometry}
 
 \usepackage{currvita,graphicx,microtype,csquotes,xcolor,doipubmed,charter,fancyhdr,lastpage}
-\usepackage[defaultsans,oldstyle,scale=0.95]{opensans}
+
+%\usepackage[defaultsans,oldstyle,scale=0.95]{opensans}
+\usepackage[default]{FiraSans}
+%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\rmdefault}
 
 \usepackage[bookmarks,hidelinks]{hyperref}
 \usepackage[hyphenbreaks]{breakurl}
@@ -19,20 +23,24 @@
 
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\lhead{\color{gray}Curriulum vitae}
+\lhead{\color{gray}\textsf{\MakeUppercase{Curriulum vitae}}}
 \chead{}
-\rhead{\color{gray}Tobias Stephan}
+\rhead{\color{gray}\textsf{Tobias Stephan}}
 %\rhead{}
 %\cfoot{\thepage/11}
-\cfoot{\thepage\ of \pageref{LastPage}} 
+\cfoot{\textsf{\thepage\ of \pageref{LastPage}}}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
+
+\setkomafont{section}{\Large\scshape\MakeLowercase}
+\setkomafont{subsection}{\large}
+
 
 \begin{document}
 
 \addcontentsline{toc}{chapter}{Curriculum Vitae}
 
-\begin{cv}{Dr Tobias Stephan}
+\begin{cv}{\textsf{Dr Tobias Stephan}}
     \medskip
     % \noindent\begin{minipage}{.74\linewidth}%
     %\medskip
@@ -70,7 +78,8 @@
     % 
     % \smallskip
 
-    \begin{cvlist}{Education}
+    \section{Education}
+    \begin{cvlist}{}
         \item[2019/03] \textbf{Doctor of Philosophy (PhD)} in \enquote{Geology}\\ \textit{Technische Universit\"at Bergakademie Freiberg, Germany}
         \begin{itemize}\setlength\itemsep{-0.5em}
             \item Thesis: \enquote{Paleogeographic and Structural Control on the Arcuate Variscan
@@ -97,7 +106,8 @@
         \end{itemize}
     \end{cvlist}
 
-    \begin{cvlist}{Professional Experience}
+    \section{Professional Experience}
+    \begin{cvlist}{}
         \item[2024/09--2024/12] \textbf{Sessional teacher}\\
         \textit{Lakehead University, Department of Geology, Thunder Bay, ON, Canada}
 
@@ -153,7 +163,8 @@
         Contribution to the \href{http://isdc.gfz-potsdam.de/igrf-declination-calculator/}{IGRF Declination Calculator}, an online software for estimating the magnetic field declination, inclination, and intensity for any location on Earth and times since 1990
     \end{cvlist}
 
-    \begin{cvlist}{Teaching Experience}
+    \section{Teaching Experience}
+    \begin{cvlist}{}
         \item[2024/09--2024/12] Structural Geology\\
         \textit{Lakehead University, Department of Geology, Thunder Bay, ON, Canada}\\
         Course level: undergraduate | number of students: 20 | lecture hours per week: 5
@@ -183,7 +194,8 @@
     \end{cvlist}
 
     % \newpage
-    \begin{cvlist}{Student Co-Supervision}
+    \section{Student Mentorship}
+    \begin{cvlist}{}
         \item[Graduate] Perez, A., \enquote{Petrology and Geochemistry of the western
             Shebandowan Greenstone Belt (Superior Province, Northern Ontario, Canada)}\\
         Started: 2023/04, \textit{Lakehead University, Thunder Bay}
@@ -208,15 +220,18 @@
         Completed: 2014/09/25, \textit{Technische Universität Bergakademie Freiberg}
     \end{cvlist}
 
-    \begin{cvlist}{Additional Training}
+    \section{Additional Training}
+    \begin{cvlist}{}
         \item[2021--2022] Organization of the weekly \textit{Thermochronology Seminar} at the University of Calgary
         \item[2018] Organization and field trip co-leader, \textit{Variscan tectonics of Cornwall, SE Britain}
         \item[2016] Organization of the international workshop \textit{Late Paleozoic tectonic and magmatic evolution of the Erzgebirge Complex, Germany}, assistant and field trip co-leader
     \end{cvlist}
 
     %\newpage 
-    \begin{cvlist}{Publications}
-        \item[total times cited:] 240\footnote[1]{Web of Science} (344\footnote[2]{Google
+    \section{Publications}
+    \subsection{Peer-reviewed articles}
+    \begin{cvlist}{}
+        \item[total times cited:] 255\footnote[1]{Web of Science} (346\footnote[2]{Google
             Scholar})
         \item[h-index:] 5\footnotemark[1] (7\footnotemark[2])
         \item[-] Stephan, T, and Enkelmann, E. (subm.): \enquote{All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera}. submitted to \textit{Tectonics} in July 2024.
@@ -243,26 +258,20 @@
         \item[3] Heinicke, J., Stephan, T., Alexandrakis, C., Buske, S., and Gaupp, R. (2019): \enquote{Alteration as possible cause for transition from brittle failure to aseismic slip: the case of the NW-Bohemia\,/\, Vogtland earthquake swarm region}. \textit{Journal of Geodynamics} 124, pp. 79--92. \doi{10.1016/j.jog.2019.01.010}
         %
         \item[2] Stephan, T., Kroner, U., and Romer, R.\,L. (2018): \enquote{The pre-orogenic detrital zircon record of the Peri-Gondwanan crust}. \textit{Geological Magazine} 156\,(2), pp. 281--307.\newline
-        \doi{10.1017/s0016756818000031}
+        \doi{10.1017/s0016756818000031}. 
+       \href{https://www.cambridge.org/core/journals/geological-magazine/most-cited?searchWithinIds=277295E1DFDC1E4700796E746AE514CC&productType=JOURNAL_ARTICLE&pageSize=20&filters\%5BisCitedByMin\%5D=0&template=cambridge-core\%2Fjournal\%2Farticle-listings\%2Flistings-wrapper&displayNasaAds=false&showCitationNumbers=true&suppressArticleTypeGrouping=true&sort=platformMetadata.citationCount.crossRef\%3Adesc&filters\%5BdateYearRange\%5D\%5Bfrom\%5D=2017}{\textbf{Journal's most cited article since 2017}}
         %
         \item[1] Stephan, T., Kroner, U., Hahn, T., Hallas, P., and Heuse, T. (2016): \enquote{Fold\,/\,cleavage relationships as indicator for late Variscan sinistral transpression at the Rheno\-/Hercynian\--Saxo\-/Thuringian boundary zone, Central European Variscides}. \textit{Tectonophysics} 681, pp. 250--262. \doi{10.1016/j.tecto.2016.03.005}
 
         %\item[in prep] Stephan, T. and Enkelmann, E., \enquote{Statistical Analysis of the First-Order Intraplate Stress Field of Alaska and the Canadian Cordillera}. to be submitted to \textit{Tectonics} (December 2023).
         %\item Duschl, F., Stephan, T., K\"ohler, S., Drews, M., Koehn, D., and Stollhofen, H. \enquote{How continents (de-)form: A paleostress chart for Central Europe}. to be submitted to \textit{Geology} (December 2023).   
         %\item Stephan, T., Kroner, U., K\"ohler, S., Koehn, D., and Stollhofen, H., \enquote{Large-scale Stress Deflection Associated With Lithospheric Structural Inheritance of Western-Central Europe}. to be submitted to \textit{EGU: Solid Earth} (December 2023).
-
-        % 
-
-        \item[Book] Legler, C., Barth, A., Knobloch, A., Mruma, A.\,H., Myumbilwa Y.,
-        Magigita, M., Msechu, M., Ngole, T., Stanek, K.\,P., Boniface, N., Kagya, M.,
-        Manya, S., Berndt, T., Stahl, M., Gebremichael, M., Dickmayer, E., Repper, C.,
-        Falk, D., and Stephan, T. (2015): \enquote{Explanatory Notes for the
-            Minerogenic Map of Tanzania 1:1,5 M.}, \textit{Geological Survey of Tanzania}.
-        ISBN: 978-9987-477-94-4
     \end{cvlist}
-
-    %\newpage
-    \begin{cvlist}{Conference proceedings} %\footnotetext{\textsf{only first authored contributions listed}}
+    
+        %\newpage
+    \subsection{Conference proceedings}
+    \begin{cvlist}{} %\footnotetext{\textsf{only first authored contributions listed}}
+        \item[37] Stephan, T. (2024): Testing the link between plate boundary obliquity and interplate deformation. \textit{GSA 2024}, Anaheim, CA, USA 
         \item[36] Enkelmann, E. and Stephan, T. (2024): Unveiling the Northern Cordilleran Puzzle: From the St. Elias to the Mackenzie Mountains. \textit{GSA 2024}, Anaheim, CA, USA
         \item[35] Kroner, U. and Stephan, T. (2024): Kossmat’s zonation of the Central European basement in the light of the current knowledge. \textit{GeoSaxonia 2024}, Dresden, Germany
         \item[34] Tiitto, H., Stephan, T., and Phillips, N. J. (2024): Anatomy of an Archean terrane boundary: Structural analysis of the boundary between the Quetico and Wawa Subprovinces (Superior Province). \textit{GAC-MAC 2024}, Brandon, MN
@@ -301,13 +310,25 @@
         \item[1] Stephan, T. and Kroner, U. (2013): Variscan Tectonics of the Schwarzburg Unit (Saxo\-/Thuringian Zone): from a Transform Plate Boundary Zone to an Orogenic Wedge. \textit{GEOPilsen2013}, Plze\v{n}, Czech Republic
     \end{cvlist}
 
+    \subsection{Other academic articles}
+        \begin{cvlist}{}
+        \item[Book] Legler, C., Barth, A., Knobloch, A., Mruma, A.\,H., Myumbilwa Y.,
+        Magigita, M., Msechu, M., Ngole, T., Stanek, K.\,P., Boniface, N., Kagya, M.,
+        Manya, S., Berndt, T., Stahl, M., Gebremichael, M., Dickmayer, E., Repper, C.,
+        Falk, D., and Stephan, T. (2015): \enquote{Explanatory Notes for the
+            Minerogenic Map of Tanzania 1:1,5 M.}, \textit{Geological Survey of Tanzania}.
+        ISBN: 978-9987-477-94-4
+    \end{cvlist}
+    
     %\newpage    
-    \begin{cvlist}{Invited presentations}
+    \section{Invited presentations}
+    \begin{cvlist}{}
         \item[2022/10/18]{Lakehead University, Geology Seminar Series}
         \item[2022/05/11]{Geological Survey Canada, McConnell Club Talks}
     \end{cvlist}
 
-    \begin{cvlist}{Software developments}
+    \section{Software developments}
+    \begin{cvlist}{}
         \item[\textit{tectonicr}] Free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress using relative plate motion (\doi{10.5281/zenodo.8372508}).\\
         Package website: \url{https://tobiste.github.io/tectonicr/}\\
         Download: \url{https://CRAN.R-project.org/package=tectonicr}
@@ -324,7 +345,8 @@
     \end{cvlist}
 
     %\newpage
-    \begin{cvlist}{Funding, Grants, and Awards}
+    \section{Funding, Grants, and Awards}
+    \begin{cvlist}{}
         \item[Grants] 2020--2022
         \href{https://gepris.dfg.de/gepris/projekt/439621066?language=en}{DFG Research
             Fellowship} (85\,000\texteuro) --- \textit{German Research Foundation (DFG)}
@@ -333,20 +355,22 @@
         \item 2009 IAESTE Internship stipend --- \textit{International Association for the Exchange of Students for Technical Experience
         (IAESTE)}
         \item[Awards] Poster award at \textit{CETEG2015}, Kada\v{n}, Czech Republic, 2014
-
     \end{cvlist}
 
-    \begin{cvlist}{Professional Services and Fellowships}
+    \section{Professional Services and Fellowships}
+    \begin{cvlist}{}
         \item[Memberships] The Geological Association of Canada (GAC), Canadian Tectonics
         Group (CTG)%, American Geophysical Union (AGU), European Geological Union (EGU), German Geological Union and Society (DGGV)
         \item[Reviewer for journals] Geology, Gondwana Research, Terra Nova, Geological
         Society of America, Proceedings of the Geologists' Association, Basin Research,
         Lithosphere
+        \item[Committee board member] Jack Henderson Best PhD Thesis Award from the Canadian
+        Tectonics Group of the GAC (since 2023)
+        \item[Session Chair] \textit{GAC-MAC-PEG 2024} (Brandon, MN, Canada): \enquote{It’s our fault! Geological and geophysical insights into fault and shear zone processes}
     \end{cvlist}
 
-    \begin{cvlist}{Volunteer and Extracurricular Activities}
-        \item Committee board of the Jack Henderson Best PhD Thesis Award from the Canadian
-        Tectonics Group of the GAC (2023, 2024)
+    \section{Outreach, Volunteer and Extracurricular Activities}
+    \begin{cvlist}{}      
         \item Talaria Summer Institute (TSI) --- a free summer STEM research mentorship
         program for female and genderqueer students (July 2022)
         \item  \enquote{MINT-Camp Future Skills} --- Outreach program to high school students: I taught and demonstrated 3D modelling, visualization and applications in geosciences.
