@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  25 SEP 2024 09:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  27 SEP 2024 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,31 +750,31 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <12> not available
 
 (Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
-line 251.
+line 253.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 251.
+(Font)              scaled to size 12.0pt on input line 253.
 
 (C:\Users\tobis\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 253.
+(Font)              <7> on input line 255.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 253.
+(Font)              <5> on input line 255.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 253.
+(Font)              <8> on input line 255.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 253.
+(Font)              <6> on input line 255.
 
-Overfull \hbox (0.30678pt too wide) in paragraph at lines 263--265
+Overfull \hbox (0.30678pt too wide) in paragraph at lines 268--270
 \T1/bch/m/it/10 (-20) Deutschen Gesellschaft für Ge-owis-senschaften (J. Appl. 
 Reg. Geol.)\T1/bch/m/n/10 (-20) . []doi: 10.1127/zdgg/2023/0365[] 
  []
 
 [4] [5] [6]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-52.
+59.
 
 (C:\Users\tobis\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -784,20 +784,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[7] 
+[7] [8] 
 AED: lastpage setting LastPage
-[8] (cv.aux)
+[9] (cv.aux)
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17858 strings out of 478351
- 324070 string characters out of 2837053
+ 17856 strings out of 478351
+ 324052 string characters out of 2837053
  803322 words of memory out of 3000000
  35707 multiletter control sequences out of 15000+600000
- 590602 words of font info for 223 fonts, out of 8000000 for 9000
+ 590396 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,106p,10627b,866s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,12n,106p,10627b,864s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
 er-t1.enc}{C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r
 .enc}{C:/Users/tobis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_2mf
@@ -809,9 +809,9 @@ onts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tobis/AppData/Local/Programs/M
 iKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tobis/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/tobis/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on cv.pdf (8 pages, 236227 bytes).
+Output written on cv.pdf (9 pages, 237793 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  58489 words of extra memory for PDF output out of 61914 (max. 10000000)
 
