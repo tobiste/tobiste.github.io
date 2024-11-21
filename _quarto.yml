@@ -10,7 +10,7 @@ project:
     - "!etc/"
 
 # Metadata stuff
-pagetitle: "{{< meta title >}} | Tobias Stephan"
+pagetitle: "Tobias Stephan"
 author-meta: "Tobias Stephan"
 
 website:
