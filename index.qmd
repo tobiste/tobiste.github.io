@@ -1,6 +1,6 @@
 ---
-title: "Hello there!"
-pagetitle: "Tobias Stephan"
+title: "Tobias Stephan"
+pagetitle: "Hello there!"
 subtitle: "Lecturer and Postdoctoral fellow <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
 image: pictures/tobi.jpg
 about: #https://quarto.org/docs/websites/website-about.html
