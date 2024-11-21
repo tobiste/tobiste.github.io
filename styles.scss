@@ -26,3 +26,13 @@ a.navbar:hover{
 a.navbar:active{
   color: #FCFDBFFF;
 }
+
+.nav-footer {
+  border: 0 !important;
+  min-height: 3em;
+
+  .faux-block {
+          display: block;
+          padding-bottom: 0.4em;
+      }
+}

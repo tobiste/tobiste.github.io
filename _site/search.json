@@ -2,21 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Tobias Stephan",
+    "title": "Hello there!",
     "section": "",
-    "text": "My main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling."
+    "text": "I am an postdoctoral fellow and lecturer at the Department of Geology at Lakehead University in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.\nMy main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling.\nI teach courses on structural geology, tectonics, and data science for geology."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
-    "title": "Tobias Stephan",
+    "title": "Hello there!",
     "section": "Education",
     "text": "Education\n\nPhD from Technische Universität Bergakademie Freiberg | Germany | 2019"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
-    "title": "Tobias Stephan",
+    "title": "Hello there!",
     "section": "Experience",
     "text": "Experience\n\nLakehead University, Thunder Bay, ON | Postdoctoral fellow | April 2023 - present\nUniversity of Calgary, AB | Postdoctoral fellow | 2020 - 2022\nFriedrich-Alexander-Universität Erlangen-Nürnberg, Germany | Postdoctoral fellow | March 2020 - November 2020"
   },
@@ -60,14 +60,14 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "GEOL 3310 - Structural Geology and Tectonics\nGEOL 4313 - Geological Case Studies"
+    "text": "Lead Instructor\n\nStructural Geology and Tectonics (Lakehead University, Fall 2024, GEOL 3310)\nGeological Case Studies (Lakehead University, Winter 2025, GEOL-4313)\n\n\n\nTeaching assistant\n\n3D Modeling (Technische Universität Bergakademie Freiberg, 2018)\n\n\n\nShort-courses and workshops\n\nPlate motion and deformation of the lithosphere (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\nProgramming with R — A Beginners’ Guide for Geoscientists (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
   },
   {
     "objectID": "software.html",
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "Analyzing the Orientation of Maximum Horizontal Stress Documentation | Code | CRAN\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
+    "text": "Analyzing the Orientation of Maximum Horizontal Stress\nDocumentation | Code | CRAN\n\n\n\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
   },
   {
     "objectID": "research.html#analysing-stress-and-strain-fields",
@@ -88,21 +88,21 @@
     "href": "teaching.html#lead-instructor",
     "title": "Teaching",
     "section": "",
-    "text": "GEOL 3310 - Structural Geology and Tectonics\nGEOL 4313 - Geological Case Studies"
+    "text": "Structural Geology and Tectonics (Lakehead University, Fall 2024, GEOL 3310)\nGeological Case Studies (Lakehead University, Winter 2025, GEOL-4313)"
   },
   {
     "objectID": "teaching.html#teaching-assistant",
     "href": "teaching.html#teaching-assistant",
     "title": "Teaching",
     "section": "Teaching assistant",
-    "text": "Teaching assistant\n\n3D Modeling"
+    "text": "Teaching assistant\n\n3D Modeling (Technische Universität Bergakademie Freiberg, 2018)"
   },
   {
     "objectID": "software.html#r-packages",
     "href": "software.html#r-packages",
     "title": "Software",
     "section": "",
-    "text": "Analyzing the Orientation of Maximum Horizontal Stress Documentation | Code | CRAN\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
+    "text": "Analyzing the Orientation of Maximum Horizontal Stress\nDocumentation | Code | CRAN\n\n\n\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
   },
   {
     "objectID": "software.html#web-applications",
@@ -130,28 +130,28 @@
     "href": "research.html#tectonic-deformation-fluid-flow-and-mineral-deposits",
     "title": "Research",
     "section": "Tectonic deformation, fluid flow, and mineral deposits",
-    "text": "Tectonic deformation, fluid flow, and mineral deposits\nEtiam quis tortor luctus, pellentesque ante a, finibus dolor. Phasellus in nibh et magna pulvinar malesuada. Ut nisl ex, sagittis at sollicitudin et, sollicitudin id nunc. In id porta urna. Proin porta dolor dolor, vel dapibus nisi lacinia in. Pellentesque ante mauris, ornare non euismod a, fermentum ut sapien. Proin sed vehicula enim. Aliquam tortor odio, vestibulum vitae odio in, tempor molestie justo. Praesent maximus lacus nec leo maximus blandit."
+    "text": "Tectonic deformation, fluid flow, and mineral deposits\nEtiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis."
   },
   {
     "objectID": "research.html#tectonic-basin-and-provenance-analysis",
     "href": "research.html#tectonic-basin-and-provenance-analysis",
     "title": "Research",
     "section": "Tectonic basin and provenance analysis",
-    "text": "Tectonic basin and provenance analysis\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti."
+    "text": "Tectonic basin and provenance analysis\nEtiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis."
   },
   {
     "objectID": "teaching.html#shortcourses-and-workshops",
     "href": "teaching.html#shortcourses-and-workshops",
     "title": "Teaching",
     "section": "Shortcourses and workshops",
-    "text": "Shortcourses and workshops\n\n“Plate motion and deformation of the lithosphere” (Short course held in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\n“Programming with R — A Beginners’ Guide for Geoscientists” (Short course held in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
+    "text": "Shortcourses and workshops\n\n“Plate motion and deformation of the lithosphere” (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\n“Programming with R — A Beginners’ Guide for Geoscientists” (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
   },
   {
     "objectID": "research.html#analyzing-stress-and-strain-fields",
     "href": "research.html#analyzing-stress-and-strain-fields",
     "title": "Research",
     "section": "Analyzing stress and strain fields",
-    "text": "Analyzing stress and strain fields\nAI-generated1 audio summary: \nThe spherical shape of the Earth curves straight orientations on the Earth’s surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, I analyse these fields with respect to the first-order source, plate boundary forces.\n\n\n\nStress field of San Andreas region (Stephan et al., 2019, Fig. 7).\n\n\nSince these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.\n\n\n\nGeometric concept for coordinate and azimuth transformation from a geographical North Pole reference system to a Pole of Rotation reference system (Stephan et al., 2019, Fig. 6).\n\n\nMy work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. For more information on that work, see the publications below:\n\n\n\nGlobal stress field (Stephan et al., 2019, Fig. 14)"
+    "text": "Analyzing stress and strain fields\n\n\nAudio\nAI-generated1 audio summary\n\n\nThe spherical shape of the Earth curves straight orientations on the Earth’s surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, I analyse these fields with respect to the first-order source, plate boundary forces.\n\n\n\nStress field of San Andreas region (Stephan et al., 2019, Fig. 7).\n\n\nSince these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.\nMy work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. \n\n\n\nGlobal stress field (Stephan et al., 2019, Fig. 14)"
   },
   {
     "objectID": "research.html#footnotes",
@@ -159,5 +159,26 @@
     "title": "Research",
     "section": "Footnotes",
     "text": "Footnotes\n\n\ngenerated using Google NotebookLM↩︎"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "teaching.html#short-courses-and-workshops",
+    "href": "teaching.html#short-courses-and-workshops",
+    "title": "Teaching",
+    "section": "Short-courses and workshops",
+    "text": "Short-courses and workshops\n\nPlate motion and deformation of the lithosphere (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\nProgramming with R — A Beginners’ Guide for Geoscientists (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
+  },
+  {
+    "objectID": "research.html#reconstructing-plate-motion-from-pannotia-to-pangea",
+    "href": "research.html#reconstructing-plate-motion-from-pannotia-to-pangea",
+    "title": "Research",
+    "section": "Reconstructing plate motion: From Pannotia to Pangea",
+    "text": "Reconstructing plate motion: From Pannotia to Pangea\nThe supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.\n\n\n\nReconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From Kroner et al. (2020).\n\n\nUsing various methods, including paleomagnetic data, geochronology, and plate kinematic modeling, we can reconstruct the past positions and movements of continents. This research serves as a test of existing plate tectonic models and helps to refine our understanding of how plates interact over time. By identifying inconsistencies and discrepancies in these models, such as the conflicting views on Gondwana-Laurussia interaction during the Devonian, we can develop more accurate and comprehensive representations of Earth’s tectonic history.\nPaleozoic orogenies, such as Caledonian, Taconic, Famatinian, Acadian, and Variscan orogenies occurred at different locations and different time. But they do not represent isolated tectonic events - instead they are all related through the Paleozoic motion between Laussia and Gondwana culminating in the assemblage of Pangea. Thus, plate tectonic models and reconstructions must be in agreement with the conclusions we draw from studying these ancient orogens.\nIn this project, we examine Paleozoic plate tectonics, focusing on the formation of the supercontinent Pangaea. We utilize a novel method to reconstruct relative plate movements from continental deformation patterns, specifically analyzing the interactions between Gondwana and Laurussia. Our research integrates various geological data, including paleogeographic, paleobiogeographic, and geochemical information to explain the complex tectonic evolution of western Pangaea and the Central European Variscides.\n\n\n\nPannotia reconstruction. From Kroner et al. (2020)."
   }
 ]

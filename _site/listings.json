@@ -15,5 +15,9 @@
       "/blog/third-post/index.html",
       "/index.html"
     ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": []
   }
 ]

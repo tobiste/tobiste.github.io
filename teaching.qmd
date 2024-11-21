@@ -2,18 +2,18 @@
 title: Teaching
 ---
 
-## Lead Instructor
+#### Lead Instructor
 
--   GEOL 3310 - Structural Geology and Tectonics
+-   **Structural Geology and Tectonics** <span style="color:grey">(Lakehead University, Fall 2024, GEOL 3310)
 
--   GEOL 4313 - Geological Case Studies
+-   **Geological Case Studies** [(Lakehead University, Winter 2025, GEOL-4313)]{style="color:grey"}
 
-## Teaching assistant
+#### Teaching assistant
 
--   3D Modeling (2018 at Technische Universität Bergakademie Freiberg, Germany)
+-   **3D Modeling** [(Technische Universität Bergakademie Freiberg, 2018)]{style="color:grey"}
 
-## Shortcourses and workshops
+#### Short-courses and workshops
 
--   "Plate motion and deformation of the lithosphere" (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)
+-   **Plate motion and deformation of the lithosphere** [(workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)]{style="color:grey"}
 
--   "Programming with R — A Beginners’ Guide for Geoscientists" (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)
+-   **Programming with R — A Beginners’ Guide for Geoscientists** [(short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)]{style="color:grey"}

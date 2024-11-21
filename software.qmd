@@ -6,12 +6,21 @@ format:
     toc-location: right
 ---
 
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+
 ## R packages
 
-### tectonicr {#sec-tectonicr}
-
-Analyzing the Orientation of Maximum Horizontal Stress
-[Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+
+| ### tectonicr {#sec-tectonicr}                                                                                                                                                            | ![](images/clipboard-1086098341.png){width="1.6in"} |
+|                                                                                                                                                                                           |                                                     |
+| Analyzing the Orientation of Maximum Horizontal Stress                                                                                                                                    |                                                     |
+|                                                                                                                                                                                           |                                                     |
+| [Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) |                                                     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+
 
 ### structr (beta)
 
@@ -19,40 +28,35 @@ Structural geology package for R: [Code](https://github.com/tobiste/structr)
 
 ### laftr
 
-Calculates the ages from LA-ICP-MS based fission track dating: 
-[Documentation](https://tobiste.github.io/laftr/) \| [Code](https://github.com/tobiste/laftr)
+Calculates the ages from LA-ICP-MS based fission track dating: [Documentation](https://tobiste.github.io/laftr/) \| [Code](https://github.com/tobiste/laftr)
 
 ### euler
 
-Rotation of plates in terms of quaternions:  [Code](https://github.com/tobiste/euler)
+Rotation of plates in terms of quaternions: [Code](https://github.com/tobiste/euler)
 
 ### euler.reco
 
-Finds best Euler pole solution for a given structure: 
-[Code](https://github.com/tobiste/euler.reco)
-
+Finds best Euler pole solution for a given structure: [Code](https://github.com/tobiste/euler.reco)
 
 ## Web applications
 
 ### tectonicr
-GUI for [tectonicr](#sec-tectonicr) as browser App (no R installation required): [tectonicr-app](https://tobiste.shinyapps.io/tectonicr-app/)
 
+GUI for [tectonicr](#sec-tectonicr) as browser App (no R installation required): [tectonicr-app](https://tobiste.shinyapps.io/tectonicr-app/)
 
 ### Mohr Circle App
 
-Plotting Mohr Circles for students and teachers: 
-[GUI](https://tobiste.shinyapps.io/Mohr_Circle_App/) \| [Code](https://github.com/tobiste/Mohr_Circle_App)
+Plotting Mohr Circles for students and teachers: [GUI](https://tobiste.shinyapps.io/Mohr_Circle_App/) \| [Code](https://github.com/tobiste/Mohr_Circle_App)
 
 ### apfu converter
 
-Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): 
-[GUI](https://tobiste.shinyapps.io/apfu_converter/%22) \| [Code](https://github.com/tobiste/apfu_converter)
+Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): [GUI](https://tobiste.shinyapps.io/apfu_converter/%22) \| [Code](https://github.com/tobiste/apfu_converter)
 
 ### Theriak-Domino helpers
 
 Web-application providing little helper functions to handle THERIAK DOMINO files:
 
--   Therin Generator: Calculates the molar units given a bulk compositions (wt. \%) and generates the THERIN input for Theriak-Domino
+-   Therin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino
 
 -   GUZZLER table filter: Extracts minerals from the GUZZLER reaction table
 

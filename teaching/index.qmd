@@ -1,0 +1,7 @@
+---
+title: "Teaching"
+listing: 
+  contents: 2024.yml
+  type: table
+  fields: [title, university, number]
+---

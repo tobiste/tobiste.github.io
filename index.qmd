@@ -1,10 +1,11 @@
 ---
-title: "Tobias Stephan"
+title: "Hello there!"
+pagetitle: "Tobias Stephan"
 subtitle: "Lecturer and Postdoctoral fellow <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
 image: pictures/tobi.jpg
 about: #https://quarto.org/docs/websites/website-about.html
   template: trestles
-  image-shape: round
+  #image-shape: round
   links:
     - text: Email
       href: tstephan@lakeheadu.ca
@@ -19,16 +20,20 @@ about: #https://quarto.org/docs/websites/website-about.html
       href: https://www.researchgate.net/profile/Tobias-Stephan-4
 ---
 
+I am an postdoctoral fellow and lecturer at the [Department of Geology at Lakehead University](https://www.lakeheadu.ca/programs/departments/geology) in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.
+
 My main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling. 
 
-## Education
+I teach courses on structural geology, tectonics, and data science for geology. 
 
--   **PhD** from Technische Universität Bergakademie Freiberg \| Germany \| 2019
+<!-- ## Education -->
 
-## Experience
+<!-- -   **PhD** from Technische Universität Bergakademie Freiberg \| Germany \| 2019 -->
 
--   Lakehead University, Thunder Bay, ON \| Postdoctoral fellow \| April 2023 - present
+<!-- ## Experience -->
 
--   University of Calgary, AB \| Postdoctoral fellow \| 2020 - 2022
+<!-- -   Lakehead University, Thunder Bay, ON \| Postdoctoral fellow \| April 2023 - present -->
 
--   Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany \| Postdoctoral fellow \| March 2020 - November 2020
+<!-- -   University of Calgary, AB \| Postdoctoral fellow \| 2020 - 2022 -->
+
+<!-- -   Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany \| Postdoctoral fellow \| March 2020 - November 2020 -->

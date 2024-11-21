@@ -3,10 +3,26 @@ project:
   resources:
     - "*.wav"
 
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!etc/"
+
+# Metadata stuff
+pagetitle: "{{< meta title >}} | Tobias Stephan"
+author-meta: "Tobias Stephan"
+
 website:
   title: "Tobias Stephan"
+  description: "Tobias Stephan is a postdoc and lecturer at Lakehead University, researching lithospheric deformation and teaching data structural geology & tectonics."
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
-  page-footer: "Lakehead University is located on the traditional lands of the Fort William First Nation. Our group lives and works on the traditional territory of the Anishinaabeg (including Ojibwe, Odawa, and Pottawatomi nations) and Metis."
+  page-footer:
+    left: |
+       <span class="faux-block">Tobias Stephan</span>
+       <span class="faux-block"><strong>ORCID</strong> [0000-0002-9290-014X](https://orcid.org/0000-0002-9290-014X)</span>
+    center: "Lakehead University is located on the traditional lands of the Fort William First Nation. Our group lives and works on the traditional territory of the Anishinaabeg (including Ojibwe, Odawa, and Pottawatomi nations) and Metis."
+    right: |
+       <span class="faux-block">Made with R and [Quarto](https://quarto.org/)</span>
   navbar:
     right:
       - text: "About"
@@ -23,4 +39,13 @@ format:
   html:
     theme: [cosmo, styles.scss]
     page-layout: full
+    #grid:
+    #  body-width: 900px
+    #toc: false
+    #code-link: true
+    #anchor-sections: true
+    #fig-cap-location: margin
+    #reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai
 
