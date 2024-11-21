@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          university\n        \n         \n          number\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nuniversity\n\n\nnumber\n\n\n\n\n\n\nStructural Geology & Tectonics\n\n\nLakehead University\n\n\nGEOL-3310\n\n\n\n\nCase Studies\n\n\nLakehead University\n\n\nGEOL-4313\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Analyzing the Orientation of Maximum Horizontal Stress\nDocumentation | Code | CRAN\n\n\n\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
+  },
+  {
+    "objectID": "software.html#r-packages",
+    "href": "software.html#r-packages",
+    "title": "Software",
+    "section": "",
+    "text": "Analyzing the Orientation of Maximum Horizontal Stress\nDocumentation | Code | CRAN\n\n\n\n\n\n\nStructural geology package for R: Code\n\n\n\nCalculates the ages from LA-ICP-MS based fission track dating: Documentation | Code\n\n\n\nRotation of plates in terms of quaternions: Code\n\n\n\nFinds best Euler pole solution for a given structure: Code"
+  },
+  {
+    "objectID": "software.html#web-applications",
+    "href": "software.html#web-applications",
+    "title": "Software",
+    "section": "Web applications",
+    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | Code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | Code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\n\nGUI | Code"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Schaeben, H., Kroner, U., and Stephan, T. (2024): “Mathematical Fundamentals of Spherical Kinematics of Plate Tectonics in Terms of Quaternions”. Mathematical Models and Methods in Applied Sciences 47(6). pp. 4469-4496. doi: 10.1002/mma.9823 | citation | \nStephan, T., Enkelmann, E., and Kroner, U. (2023): “Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries”. Scientific Reports 13:15590. doi: 10.1038/s41598-023-42433-2 | citation | \nJáróka, T., Pfänder, J. A., Seifert, T., Hauff, F., Sperner, B., Staude, S., Stephan, T., and Schulz, B. (2023): “Age and petrogenesis of Ni-Cu-(PGE) sulfide-bearing gabbroic intrusions in the Lausitz Block, northern Bohemian Massif (Germany/Czech Republic)”. Lithos 444-445:107090. doi: 10.1016/j.lithos.2023.107090 | citation\nKroner, U., Romer, R. L., and Stephan, T. (2023): “Die Rekonstruktion von relativen Plattenbewegungen aus dem paläozoischen Deformationsmuster der kontinentalen Kruste”. Zeitschrift der Deutschen Gesellschaft für Geowissenschaften (J. Appl. Reg. Geol.). doi: 10.1127/zdgg/2023/0365 | citation\nKöhler, S., Duschl, F., Fazlikhani, H., Koehn, D., Stephan, T., and Stollhofen, H. (2022): “Reconstruction of cyclic Mesozoic-Cenozoic stress development in SE Germany using fault-slip and stylolite inversion”. Geological Magazine 159 (11–12). pp. 2323-2345. doi: 10.1017/S0016756822000656 | citation\nKroner, U., Stephan, T., and Romer, R. L. (2022): “Paleozoic orogenies and relative plate motions at the sutures of the Iapetus-Rheic Ocean”. In Y. D. Kuiper, J. B. Murphy, R. D. Nance, R. A. Strachan, and M. D. Thompson (Eds.), New Developments in the Appalachian-Caledonian-Variscan Orogen. Geological Society of America. doi: 10.1130/2021.2554(01) | citation\nSchaeben, H., Kroner, U., and Stephan, T. (2021): “Euler Poles of Tectonic Plates”. In B. S. Daza Sagar, Q. Cheng, J. McKinley, and F. Agterberg (Eds.), Encyclopedia of Mathematical Geosciences. Encyclopedia of Earth Sciences Series. doi: 10.1007/978-3-030-26050-7_435-1 | citation\nCaracciolo, L., Ravidà, D. C. G., Chew, D., Janßen, M., Lünsdorf, N. K., Heins, W. A., Stephan, T., and Stollhofen, H. (2021): “Reconstructing environmental signals across the Permian-Triassic boundary in the SE Germanic Basin: A Quantitative Provenance Analysis (QPA) approach”. Global and Planetary Change, 206:103631. doi: 10.1016/j.gloplacha.2021.103631 | citation\nKroner, U., Stephan, T., Romer, R. L., and Roscher, M. (2020): “Paleozoic plate kinematics during the Pannotia–Pangaea supercontinent cycle”. Geological Society, London, Special Publications 503, SP503-2020-15. doi: 10.1144/SP503-2020-15 | citation\nStephan, T., Kroner, U., Romer, R. L., and Rösel, D. (2019): “From a bipartite Gondwana shelf to the arcuate Variscan belt: The Early Paleozoic evolution of northern Peri-Gondwana”. Earth-Science Reviews 192, pp. 491–512. doi: 10.1016/j.earscirev.2019.03.012 | citation\nHeinicke, J., Stephan, T., Alexandrakis, C., Buske, S., and Gaupp, R. (2019): “Alteration as possible cause for transition from brittle failure to aseismic slip: the case of the NW-Bohemia / Vogtland earthquake swarm region”. Journal of Geodynamics 124, pp. 79–92. doi: 10.1016/j.jog.2019.01.010 | citation\nStephan, T., Kroner, U., and Romer, R. L. (2018): “The pre-orogenic detrital zircon record of the Peri-Gondwanan crust”. Geological Magazine 156 (2), pp. 281–307. doi: 10.1017/s0016756818000031 | citation\nStephan, T., Kroner, U., Hahn, T., Hallas, P., and Heuse, T. (2016): “Fold / cleavage relationships as indicator for late Variscan sinistral transpression at the Rheno-Hercynian – Saxo-Thuringian boundary zone, Central European Variscides”. Tectonophysics 681, pp. 250–262. doi: 10.1016/j.tecto.2016.03.005 | citation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello there!",
+    "section": "",
+    "text": "I am an postdoctoral fellow and lecturer at the Department of Geology at Lakehead University in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.\nMy main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling.\nI teach courses on structural geology, tectonics, and data science for geology."
+  },
+  {
+    "objectID": "blog/first-post/index.html",
+    "href": "blog/first-post/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "blog/second-post/index.html",
+    "href": "blog/second-post/index.html",
+    "title": "Second Post",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Amet cursus sit amet dictum sit amet. Eget duis at tellus at urna condimentum. Convallis aenean et tortor at risus viverra. Tincidunt ornare massa eget egestas purus viverra accumsan. Et malesuada fames ac turpis egestas. At imperdiet dui accumsan sit amet. Ut ornare lectus sit amet est placerat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Mattis enim ut tellus elementum sagittis. Dui id ornare arcu odio ut. Natoque penatibus et magnis dis. Libero justo laoreet sit amet cursus sit. Sed faucibus turpis in eu. Tempus iaculis urna id volutpat lacus laoreet.\nPhasellus vestibulum lorem sed risus. Eget felis eget nunc lobortis mattis. Sit amet aliquam id diam maecenas ultricies. Egestas maecenas pharetra convallis posuere morbi. Etiam erat velit scelerisque in dictum non consectetur a erat. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Viverra accumsan in nisl nisi scelerisque. Et netus et malesuada fames ac. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Eget lorem dolor sed viverra ipsum nunc aliquet. Ultrices dui sapien eget mi proin sed libero enim sed. Ultricies mi eget mauris pharetra et ultrices neque. Ipsum suspendisse ultrices gravida dictum. A arcu cursus vitae congue mauris rhoncus aenean vel. Gravida arcu ac tortor dignissim convallis. Nulla posuere sollicitudin aliquam ultrices."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Predicting House Prices with Machine Learning\n\n\n\nPython\n\n\nMachine Learning\n\n\nData Cleaning\n\n\n\nThis project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCustomer Segmentation Using Clustering Techniques\n\n\n\nR\n\n\nMachine Learning\n\n\nClustering\n\n\nStatistical Modelling\n\n\n\nThis project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Global CO2 Emissions\n\n\n\nR\n\n\nData Visualization\n\n\nEnvironmental Science\n\n\n\nThis project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.\n\n\n\nJul 1, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Below is a smattering of research areas I have worked in or am currently working in."
+  },
+  {
+    "objectID": "research.html#analyzing-stress-and-strain-fields",
+    "href": "research.html#analyzing-stress-and-strain-fields",
+    "title": "Research",
+    "section": "Analyzing stress and strain fields",
+    "text": "Analyzing stress and strain fields\n\n\nAudio\nAI-generated1 audio summary\n\n\nThe spherical shape of the Earth curves straight orientations on the Earth’s surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, I analyse these fields with respect to the first-order source, plate boundary forces.\n\n\n\nStress field of San Andreas region (Stephan et al., 2019, Fig. 7).\n\n\nSince these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.\nMy work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. \n\n\n\nGlobal stress field (Stephan et al., 2019, Fig. 14)"
+  },
+  {
+    "objectID": "research.html#plate-motion",
+    "href": "research.html#plate-motion",
+    "title": "Research",
+    "section": "Plate motion",
+    "text": "Plate motion\n\n\n\nSchaeben et al., 2024 (Figure 4).\n\n\nEvery motion on the earth surface can be described as a rotation around an axis piercing through the Earth’s center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). In this project, we use the quaternion formulation of rotations to see what happens to the three axes in a three plate scenario when we change our reference system (usually one plate). Spoiler: Two rotational axis stay fixed while the third one is constantly changing its location and rotation speed. This does not only challenge our way of reconstructing past and current plate motion, it does also has physical consequences on the deformation of plates.\n\n\n\nSchaeben et al., 2024 (Figure 5)"
+  },
+  {
+    "objectID": "research.html#reconstructing-plate-motion-from-pannotia-to-pangea",
+    "href": "research.html#reconstructing-plate-motion-from-pannotia-to-pangea",
+    "title": "Research",
+    "section": "Reconstructing plate motion: From Pannotia to Pangea",
+    "text": "Reconstructing plate motion: From Pannotia to Pangea\nThe supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.\n\n\n\nReconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From Kroner et al. (2020).\n\n\nUsing various methods, including paleomagnetic data, geochronology, and plate kinematic modeling, we can reconstruct the past positions and movements of continents. This research serves as a test of existing plate tectonic models and helps to refine our understanding of how plates interact over time. By identifying inconsistencies and discrepancies in these models, such as the conflicting views on Gondwana-Laurussia interaction during the Devonian, we can develop more accurate and comprehensive representations of Earth’s tectonic history.\nPaleozoic orogenies, such as Caledonian, Taconic, Famatinian, Acadian, and Variscan orogenies occurred at different locations and different time. But they do not represent isolated tectonic events - instead they are all related through the Paleozoic motion between Laussia and Gondwana culminating in the assemblage of Pangea. Thus, plate tectonic models and reconstructions must be in agreement with the conclusions we draw from studying these ancient orogens.\nIn this project, we examine Paleozoic plate tectonics, focusing on the formation of the supercontinent Pangaea. We utilize a novel method to reconstruct relative plate movements from continental deformation patterns, specifically analyzing the interactions between Gondwana and Laurussia. Our research integrates various geological data, including paleogeographic, paleobiogeographic, and geochemical information to explain the complex tectonic evolution of western Pangaea and the Central European Variscides.\n\n\n\nPannotia reconstruction. From Kroner et al. (2020)."
+  },
+  {
+    "objectID": "research.html#footnotes",
+    "href": "research.html#footnotes",
+    "title": "Research",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\ngenerated using Google NotebookLM↩︎"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lead Instructor\n\nStructural Geology and Tectonics (Lakehead University, Fall 2024, GEOL 3310)\nGeological Case Studies (Lakehead University, Winter 2025, GEOL-4313)\n\n\n\nTeaching assistant\n\n3D Modeling (Technische Universität Bergakademie Freiberg, 2018)\n\n\n\nShort-courses and workshops\n\nPlate motion and deformation of the lithosphere (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\nProgramming with R — A Beginners’ Guide for Geoscientists (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
+  }
+]
