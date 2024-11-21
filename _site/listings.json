@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/blog/first-post/index.html",
+      "/projects/index.html",
+      "/research.html",
+      "/blog/second-post/index.html",
+      "/software.html",
+      "/teaching.html",
+      "/blog/third-post/index.html",
+      "/index.html"
+    ]
+  }
+]

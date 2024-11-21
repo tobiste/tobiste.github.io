@@ -1,0 +1,34 @@
+---
+title: "Tobias Stephan"
+subtitle: "Lecturer and Postdoctoral fellow <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
+image: pictures/tobi.jpg
+about: #https://quarto.org/docs/websites/website-about.html
+  template: trestles
+  image-shape: round
+  links:
+    - text: Email
+      href: tstephan@lakeheadu.ca
+      icon: envelope-fill
+    - icon: github
+      text: Github
+      href: https://github.com/tobiste/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/tobias-stephan-4247267b/
+    - text: ResearchGate
+      href: https://www.researchgate.net/profile/Tobias-Stephan-4
+---
+
+My main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling. 
+
+## Education
+
+-   **PhD** from Technische Universität Bergakademie Freiberg \| Germany \| 2019
+
+## Experience
+
+-   Lakehead University, Thunder Bay, ON \| Postdoctoral fellow \| April 2023 - present
+
+-   University of Calgary, AB \| Postdoctoral fellow \| 2020 - 2022
+
+-   Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany \| Postdoctoral fellow \| March 2020 - November 2020

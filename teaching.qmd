@@ -1,0 +1,19 @@
+---
+title: Teaching
+---
+
+## Lead Instructor
+
+-   GEOL 3310 - Structural Geology and Tectonics
+
+-   GEOL 4313 - Geological Case Studies
+
+## Teaching assistant
+
+-   3D Modeling (2018 at Technische Universität Bergakademie Freiberg, Germany)
+
+## Shortcourses and workshops
+
+-   "Plate motion and deformation of the lithosphere" (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)
+
+-   "Programming with R — A Beginners’ Guide for Geoscientists" (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)

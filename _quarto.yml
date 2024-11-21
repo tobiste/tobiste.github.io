@@ -1,0 +1,26 @@
+project:
+  type: website
+  resources:
+    - "*.wav"
+
+website:
+  title: "Tobias Stephan"
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  page-footer: "Lakehead University is located on the traditional lands of the Fort William First Nation. Our group lives and works on the traditional territory of the Anishinaabeg (including Ojibwe, Odawa, and Pottawatomi nations) and Metis."
+  navbar:
+    right:
+      - text: "About"
+        href: index.qmd
+      - research.qmd
+      - publications.qmd
+      - software.qmd
+      - teaching.qmd
+      - href: cv/cv.pdf
+        text: "Curriculum Vitæ"
+        icon: file-pdf-fill
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    page-layout: full
+
