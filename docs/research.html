@@ -128,19 +128,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#analyzing-stress-and-strain-fields" id="toc-analyzing-stress-and-strain-fields" class="nav-link active" data-scroll-target="#analyzing-stress-and-strain-fields">Analyzing stress and strain fields</a></li>
-  <li><a href="#plate-motion" id="toc-plate-motion" class="nav-link" data-scroll-target="#plate-motion">Plate motion</a></li>
-  <li><a href="#reconstructing-plate-motion-from-pannotia-to-pangea" id="toc-reconstructing-plate-motion-from-pannotia-to-pangea" class="nav-link" data-scroll-target="#reconstructing-plate-motion-from-pannotia-to-pangea">Reconstructing plate motion: From Pannotia to Pangea</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -149,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -162,15 +154,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Below is a smattering of research areas I have worked in or am currently working in.</p>
-<section id="analyzing-stress-and-strain-fields" class="level2">
+<div class="grid">
+<section id="analyzing-stress-and-strain-fields" class="level2 g-col-6">
 <h2 class="anchored" data-anchor-id="analyzing-stress-and-strain-fields">Analyzing stress and strain fields</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><audio src=".\stuff/Podcast%20-%20Analyzing%20the%20orientation%20of%20stress.wav" class="img-fluid" controls=""><a href=".\stuff/Podcast - Analyzing the orientation of stress.wav">Audio</a></audio></p>
-<figcaption>AI-generated<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> audio summary</figcaption>
-</figure>
+</section>
+<div class="g-col-3">
+<p>AI-generated<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> audio summary</p>
 </div>
-<p>The spherical shape of the Earth curves straight orientations on the Earth’s surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, I analyse these fields with respect to the first-order source, plate boundary forces.</p>
+<div class="g-col-3">
+<p><audio src=".\stuff/Podcast%20-%20Analyzing%20the%20orientation%20of%20stress.wav" class="img-fluid" controls=""><a href=".\stuff/Podcast - Analyzing the orientation of stress.wav">Audio</a></audio></p>
+</div>
+</div>
+<p>The spherical shape of the Earth curves straight orientations on the Earth’s surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, we analyse these fields with respect to the first-order source, plate boundary forces.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pictures/Figure_07_san_andreas_data.png" class="img-fluid figure-img"></p>
@@ -185,25 +180,42 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Global stress field (Stephan et al., 2019, Fig. 14)</figcaption>
 </figure>
 </div>
-</section>
-<section id="plate-motion" class="level2">
+<div class="grid">
+<section id="plate-motion" class="level2 g-col-6">
 <h2 class="anchored" data-anchor-id="plate-motion">Plate motion</h2>
+</section>
+<div class="g-col-3">
+<p>AI-generated<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> audio summary</p>
+</div>
+<div class="g-col-3">
+<p><audio src=".\stuff/Euler%20Poles%20of%20Tectonic%20Platesof%20plate%20motion.wav" class="img-fluid" controls=""><a href=".\stuff/Euler Poles of Tectonic Platesof plate motion.wav">Audio</a></audio></p>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pictures/Figure_04_schaeben.png" class="img-fluid figure-img"></p>
 <figcaption>Schaeben et al., 2024 (Figure 4).</figcaption>
 </figure>
 </div>
-<p>Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth’s center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). In this project, we use the quaternion formulation of rotations to see what happens to the three axes in a three plate scenario when we change our reference system (usually one plate). Spoiler: Two rotational axis stay fixed while the third one is constantly changing its location and rotation speed. This does not only challenge our way of reconstructing past and current plate motion, it does also has physical consequences on the deformation of plates.</p>
+<p>Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth’s center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). But how do we describe plate motion if these pole migrates as well?</p>
+<p>In this interdisciplinary project, we use the quaternion formulation of rotations to see what happens to the three axes in a three plate scenario when we change our reference system (usually one plate). We show that in such a scenario, two rotational axis can stay fixed while the third one is constantly changing its location and rotation speed. Thus, a change of plate motion is not only a consequence of (complicated) geodynamic changes - it can be due to a (much easier) cause: spherical geometry. This does not only challenge our way of reconstructing past and current plate motion, it does also has physical consequences on the deformation of plates.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pictures/Figure_05_schaeben.png" class="img-fluid figure-img"></p>
 <figcaption>Schaeben et al., 2024 (Figure 5)</figcaption>
 </figure>
 </div>
-</section>
-<section id="reconstructing-plate-motion-from-pannotia-to-pangea" class="level2">
+<div class="grid">
+<section id="reconstructing-plate-motion-from-pannotia-to-pangea" class="level2 g-col-6">
 <h2 class="anchored" data-anchor-id="reconstructing-plate-motion-from-pannotia-to-pangea">Reconstructing plate motion: From Pannotia to Pangea</h2>
+</section>
+<div class="g-col-3">
+<p>AI-generated<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> audio summary</p>
+</div>
+<div class="g-col-3">
+<p><audio src=".\stuff/Reconstructing%20plate%20motion%20linked%20to%20Pangea%20assemblage.wav" class="img-fluid" controls=""><a href=".\stuff/Reconstructing plate motion linked to Pangea assemblage.wav">Audio</a></audio></p>
+</div>
+</div>
 <p>The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -222,13 +234,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>generated using <a href="https://notebooklm.google/">Google NotebookLM</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>generated using <a href="https://notebooklm.google/">Google NotebookLM</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>generated using <a href="https://notebooklm.google/">Google NotebookLM</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
