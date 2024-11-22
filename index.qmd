@@ -1,7 +1,7 @@
 ---
 title: "Tobias Stephan"
-pagetitle: "Hello there!"
-subtitle: "Lecturer and Postdoctoral associate <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
+#pagetitle: "Hello there!"
+subtitle: "Lecturer and Postdoctoral Associate <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
 image: pictures/tobi.jpg
 about: #https://quarto.org/docs/websites/website-about.html
   template: trestles
@@ -20,7 +20,7 @@ about: #https://quarto.org/docs/websites/website-about.html
       href: https://www.researchgate.net/profile/Tobias-Stephan-4
 ---
 
-I am an Postdoctoral associate and lecturer at the [Department of Geology at Lakehead University](https://www.lakeheadu.ca/programs/departments/geology) in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.
+I am a Postdoctoral associate and lecturer at the [Department of Geology at Lakehead University](https://www.lakeheadu.ca/programs/departments/geology) in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.
 
 My main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling. 
 
