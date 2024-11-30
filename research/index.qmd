@@ -1,0 +1,15 @@
+---
+title: Research
+listing: 
+  type: default
+  contents: /
+  date-format: iso
+  categories: true
+  fields: [title, description, categories, image]
+  sort-ui: false
+  filter-ui: false
+  field-display-names: 
+    title: "Project"
+---
+
+Below is a smattering of research areas I have worked in or am currently working in.

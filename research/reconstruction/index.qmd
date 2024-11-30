@@ -1,0 +1,43 @@
+---
+title: "Reconstructing plate motion: From Pannotia to Pangea"
+description: "The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth's systems."
+date: "11/30/2024"
+image: "../../pictures/Stephan2019_ESR_10.png"
+categories:
+  - Plate motion
+  - Pangea
+  - Varsican
+  - Reconstruction
+  - Mineral deposits
+  - Supercontinent cycle
+---
+
+
+::: {.grid}
+
+::: {.g-col-9}
+The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth's systems.
+
+:::
+
+
+::: {.g-col-3}
+![](../../stuff/Reconstructing plate motion linked to Pangea assemblage.wav)
+
+AI-generated[^1] audio summary
+:::
+
+:::
+
+
+![Reconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From Kroner et al. (2020).](../../pictures/Pannotia_Pangea.gif)
+
+Using various methods, including paleomagnetic data, geochronology, and plate kinematic modeling, we can reconstruct the past positions and movements of continents. This research serves as a test of existing plate tectonic models and helps to refine our understanding of how plates interact over time. 
+By identifying inconsistencies and discrepancies in these models, such as the conflicting views on Gondwana-Laurussia interaction during the Devonian, we can develop more accurate and comprehensive representations of Earth's tectonic history. 
+
+Paleozoic orogenies, such as Caledonian, Taconic, Famatinian, Acadian, and Variscan orogenies occurred at different locations and different time. But they do not represent isolated tectonic events - instead they are all related through the Paleozoic motion between Laussia and Gondwana culminating in the assemblage of Pangea. Thus, plate tectonic models and reconstructions must be in agreement with the conclusions we draw from studying these ancient orogens.
+
+
+In this project, we examine Paleozoic plate tectonics, focusing on the formation of the supercontinent Pangaea. We utilize a novel method to reconstruct relative plate movements from continental deformation patterns, specifically analyzing the interactions between Gondwana and Laurussia. Our research integrates various geological data, including paleogeographic, paleobiogeographic, and geochemical information to explain the complex tectonic evolution of western Pangaea and the Central European Variscides. 
+
+![Pannotia reconstruction. From Kroner et al. (2020).](../../pictures/pannotia.PNG)

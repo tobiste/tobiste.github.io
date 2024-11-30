@@ -1,0 +1,31 @@
+---
+title: "Analyzing stress and strain fields"
+description: "The spherical shape of the Earth curves straight orientations on the Earth's surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, we analyse these fields with respect to the first-order source, plate boundary forces."
+date: "11/30/2024"
+image: "cover.png"
+categories:
+  - Plate motion
+  - Stress
+---
+
+::::: grid
+::: g-col-9
+The spherical shape of the Earth curves straight orientations on the Earth's surface. Thus, a statistical analysis of large tectonic fields, such as stress and strain, is challenging as long as there is no reference system. In this project, we analyse these fields with respect to the first-order source, plate boundary forces.
+:::
+
+::: g-col-3
+![](../../stuff/Podcast%20-%20Analyzing%20the%20orientation%20of%20stress.wav)
+
+AI-generated[^1] audio summary
+:::
+:::::
+
+[^1]: generated using [Google NotebookLM](https://notebooklm.google/)
+
+![Stress field of San Andreas region (Stephan et al., 2019, Fig. 7).](../../pictures/Figure_07_san_andreas_data.png)
+
+Since these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.
+
+My work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. <!-- For more information on that work, see the publications below: -->
+
+![Global stress field (Stephan et al., 2019, Fig. 14)](../../pictures/Figure_14_world.png)

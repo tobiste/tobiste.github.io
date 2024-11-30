@@ -28,7 +28,7 @@ website:
     right:
       - text: "About"
         href: index.qmd
-      - research.qmd
+      - research/index.qmd
       - publications.qmd
       - software.qmd
       - teaching.qmd

@@ -10,7 +10,7 @@ title: Publications
 
 -   Kroner, U., Romer, R. L., and **Stephan, T.** (2023): "Die Rekonstruktion von relativen Plattenbewegungen aus dem paläozoischen Deformationsmuster der kontinentalen Kruste". *Zeitschrift der Deutschen Gesellschaft für Geowissenschaften (J. Appl. Reg. Geol.)*. doi: [10.1127/zdgg/2023/0365](https://doi.org/10.1127/zdgg/2023/0365) \| [citation](publications/Kroner2023_ZDGG.bib)
 
--   Köhler, S., Duschl, F., Fazlikhani, H., Koehn, D., **Stephan, T.**, and Stollhofen, H. (2022): "Reconstruction of cyclic Mesozoic-Cenozoic stress development in SE Germany using fault-slip and stylolite inversion". *Geological Magazine* 159 (11–12). pp. 2323-2345. doi: [10.1017/S0016756822000656](https://doi.org/10.1017/S0016756822000656) \| [citation](publications/Koehler2022_GeoMag.bib)
+-   Köhler, S., Duschl, F., Fazlikhani, H., Koehn, D., **Stephan, T.**, and Stollhofen, H. (2022): "Reconstruction of cyclic Mesozoic-Cenozoic stress development in SE Germany using fault-slip and stylolite inversion". *Geological Magazine* 159 (11–12). pp. 2323-2345. doi: [10.1017/S0016756822000656](https://doi.org/10.1017/S0016756822000656) \| [citation](publications/Koehler2022_GeoMag.bib)  \| [<i class="bi bi-file-pdf-fill"></i>](publications/Koehler2022_GeoMag.pdf)
 
 -   Kroner, U., **Stephan, T.**, and Romer, R. L. (2022): "Paleozoic orogenies and relative plate motions at the sutures of the Iapetus-Rheic Ocean". In Y. D. Kuiper, J. B. Murphy, R. D. Nance, R. A. Strachan, and M. D. Thompson (Eds.), New Developments in the Appalachian-Caledonian-Variscan Orogen. *Geological Society of America*. doi: [10.1130/2021.2554(01)](https://doi.org/10.1130/2021.2554(01)) \| [citation](publications/Kroner2022_GSA.bib)
 
