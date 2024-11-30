@@ -1,6 +1,6 @@
 ---
 title: "Pre-orogenic detrital zircon record of Peri-Gondwana"
-description: "Sources end-members for the porvencanc of the shelf sedimentry rocks involved in the Variscan orogen."
+description: "Source end-members for shelf sedimentary rocks incorporated in the Variscan orogen."
 format:
   html:
     toc: true
