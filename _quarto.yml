@@ -20,10 +20,10 @@ website:
   page-footer:
     left: |
        <span class="faux-block">Tobias Stephan (he/him)</span>
-       <span class="faux-block">ORCID [0000-0002-9290-014X](https://orcid.org/0000-0002-9290-014X)</span>
+       <span class="faux-block">[<img class="manImg" src="pictures/ORCID_iD.png" alt="ORCID" style="height:15px"></img> 0000-0002-9290-014X](https://orcid.org/0000-0002-9290-014X)</span>
     center: "Lakehead University is located on the traditional lands of the Fort William First Nation. Our group lives and works on the traditional territory of the Anishinaabeg (including Ojibwe, Odawa, and Pottawatomi nations) and Metis."
     right: |
-       <span class="faux-block">Made with [R](https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111) and [Quarto](https://quarto.org/)</span>
+       <span class="faux-block">Made with [<img class="manImg" src="pictures/Rlogo.png" alt="R" style="height:15px"></img>](https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111) and [<img class="manImg" src="pictures/logo-quarto2.png" alt="Quarto" style="height:15px"></img>](https://quarto.org/)</span>
   navbar:
     right:
       - text: "About"
