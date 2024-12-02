@@ -1,18 +1,21 @@
 ---
 title: "Plate motion"
-description: "Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth's center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). But how do we describe plate motion if these pole migrates as well?"
+description: "Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth's center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). But how do we describe plate motion if these poles migrate as well?"
 date: "11/30/2024"
 image: "cover.png"
 categories:
   - Plate motion
   - Pangea
+citeproc: true
+bibliography: ../../publications/my_publications.bib
+csl: ../../publications/agu.csl
 ---
 
 
 ::: {.grid}
 
 ::: {.g-col-9}
-Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth's center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). But how do we describe plate motion if these pole migrates as well?
+Every motion on the earth surface can be described as a rotation around an axis piercing through the Earth's center. Thus, also plate motion is mathematically described as the rotation of spherical polygons around rotational axes (so called Euler poles or Poles of Rotation). But how do we describe plate motion if these poles migrate as well?
 :::
 
 
@@ -24,8 +27,17 @@ AI-generated[^1] audio summary
 
 :::
 
-![Schaeben et al., 2024 (Figure 4).](../../pictures/Figure_04_schaeben.png)
+![[@Schaeben2024, Figure 4].](../../pictures/Figure_04_schaeben.png)
 
-In this interdisciplinary project, we use the quaternion formulation of rotations to see what happens to the three axes in a three plate scenario when we change our reference system (usually one plate). We show that in such a scenario, two rotational axis can stay fixed while the third one is constantly changing its location and rotation speed. Thus, a change of plate motion is not only a consequence of (complicated) geodynamic changes - it can be due to a (much easier) cause: spherical geometry. This does not only challenge our way of reconstructing past and current plate motion, it does also has physical consequences on the deformation of plates.
+In this interdisciplinary project, we use the quaternion formulation of rotations to see what happens to the three axes in a three plate scenario when we change our reference system (usually one plate). We show that in such a scenario, two rotational axis can stay fixed while the third one is constantly changing its location and rotation speed. Thus, a change of plate motion is not only a consequence of complex geodynamic changes - it can be due to a much easier cause: spherical geometry. This does not only challenge our way of reconstructing past and current plate motion, it does also has physical consequences on the deformation of plates.
 
-![Schaeben et al., 2024 (Figure 5)](../../pictures/Figure_05_schaeben.png)
+![[@Schaeben2024, Figure 5].](../../pictures/Figure_05_schaeben.png)
+
+---
+nocite: |
+  @Schaeben2022
+---
+
+### Reference
+::: {#refs}
+:::

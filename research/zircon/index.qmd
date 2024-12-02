@@ -12,6 +12,9 @@ categories:
   - Varsican
   - Reconstruction
   - Mineral deposits
+citeproc: true
+bibliography: ../../publications/my_publications.bib
+csl: ../../publications/agu.csl
 ---
 
 The use of modern approaches to analyze detrital zircon provenance data challenges existing paleogeographic models and refines our understanding of the tectonic history of ancient continental blocks. In particular, detrital zircon provenance analysis may contributes significantly to our understanding of the pre-orogenic paleogeography, the existence and extent of ancient oceanic lithosphere, the operation of large-scale sediment dispersal systems, and the processes of crustal growth and evolution in different parts of the world.
@@ -19,14 +22,16 @@ The use of modern approaches to analyze detrital zircon provenance data challeng
 We employ statistical approach to analyze the detrital zircon age spectra to understand the provenance of sedimentary rocks and reconstruct paleogeography. Our study focuses on the Peri-Gondwanan crust north of Africa and adjacent areas incorporated in the Variscan orogen.
 
 ## Database
+
 We therefore compiled ca. 60.000 detrital zircons U-Pb ages from 770 Precambrian to Lower Paleozoic sedimentary rocks samples sourced from 160 publications. By analyzing such a vast compilation of zircon ages, we minimized potential biases arising from incomplete or limited datasets. This approach enhances the reliability of the provenance interpretations and their implications for understanding the tectonic history of the Peri-Gondwanan.
 
-![Detrital zircon spectra of the sources for the sedimentary rocks of the Peri-Gondwanan shelf (Stephan et al., 2019, Fig. 3).](../../pictures/Stephan2019_GM_03.png)
+![Detrital zircon spectra of the sources for the sedimentary rocks of the Peri-Gondwanan shelf [@Stephan2019a, Figure 3].](../../pictures/Stephan2019_GM_03.png)
 
 ## Method and results
+
 For the statistical analyses, we include multidimensional scaling and density-based clustering to identify provenance end-member populations representing distinct source regions.
 
-![Statistical analyzis and clustering (Stephan et al., 2019, Fig. 5).](../../pictures/Stephan2019_GM_05.png)
+![Statistical analyzis and clustering [@Stephan2019a, Figure 5].](../../pictures/Stephan2019_GM_05.png)
 
 By comparing the detrital zircon age spectra of Peri-Gondwanan samples with those from known source areas, we identified four distinct zircon provinces:
 
@@ -38,7 +43,7 @@ By comparing the detrital zircon age spectra of Peri-Gondwanan samples with thos
 
 -   *East African–Arabian Zircon Province*: Features a 1.8–2.0 Ga peak, a subordinate Eburnean peak, a modest 2.5–2.7 Ga peak, a significant \~1.0 Ga 'Grenvillian' peak, and a \~800 Ma peak, resembling sedimentary rocks from Egypt, Israel, Jordan, and Iran.
 
-![Spatial distribution of the pre-Variscan zircon provinces along the Variscan basement of Europe and North America (Stephan et al., 2019, Fig. 6).](../../pictures/Stephan2019_GM_06.PNG)
+![Spatial distribution of the pre-Variscan zircon provinces along the Variscan basement of Europe and North America [@Stephan2019a; Fig. 6].](../../pictures/Stephan2019_GM_06.PNG)
 
 ## Major implications
 
@@ -52,6 +57,7 @@ By comparing the detrital zircon age spectra of Peri-Gondwanan samples with thos
 
 -   **Correlating Litho-Biostratigraphic Units and Terranes**: Detrital zircon provenance analysis can aid in correlating rock units and terranes across vast distances, even when they are now separated by tectonic processes. Our study's identification of similar zircon age patterns in geographically disparate regions supports the correlation of certain terranes and lithostratigraphic units.
 
-## Reference
+### Reference
+::: {#refs}
+:::
 
-Stephan, T., Kroner, U., Romer, R.L., 2019. The pre-orogenic detrital zircon record of the Peri-Gondwanan crust. Geol. Mag. 156, 281–307. <https://doi.org/10.1017/S0016756818000031>

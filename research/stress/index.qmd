@@ -6,6 +6,9 @@ image: "cover.png"
 categories:
   - Plate motion
   - Stress
+citeproc: true
+bibliography: ../../publications/my_publications.bib
+csl: ../../publications/agu.csl
 ---
 
 ::::: grid
@@ -22,10 +25,14 @@ AI-generated[^1] audio summary
 
 [^1]: generated using [Google NotebookLM](https://notebooklm.google/)
 
-![Stress field of San Andreas region (Stephan et al., 2019, Fig. 7).](../../pictures/Figure_07_san_andreas_data.png)
+![Stress field of San Andreas region [@Stephan2023, Figure 7].](../../pictures/Figure_07_san_andreas_data.png)
 
 Since these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.
 
 My work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. <!-- For more information on that work, see the publications below: -->
 
-![Global stress field (Stephan et al., 2019, Fig. 14)](../../pictures/Figure_14_world.png)
+![Global stress field [@Stephan2023, Figure 14].](../../pictures/Figure_14_world.png)
+
+### Reference
+::: {#refs}
+:::

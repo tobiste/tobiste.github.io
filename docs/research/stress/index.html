@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -180,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../pictures/Figure_07_san_andreas_data.png" class="img-fluid figure-img"></p>
-<figcaption>Stress field of San Andreas region (Stephan et al., 2019, Fig. 7).</figcaption>
+<figcaption>Stress field of San Andreas region <span class="citation" data-cites="Stephan2023">(<a href="#ref-Stephan2023" role="doc-biblioref">Stephan et al., 2023, fig. 7</a>)</span>.</figcaption>
 </figure>
 </div>
 <p>Since these forces are at an angular relationship to the plate motion between two plate, the pole of rotation serves as an new reference system. Plate motion parameters are easy to determine and the new reference system also allows for testing and predicting stress fields. This is in particular useful in areas where stress and strain data are not available. And the method can be applied for paleo-stress fields, too.</p>
@@ -188,11 +208,19 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../pictures/Figure_14_world.png" class="img-fluid figure-img"></p>
-<figcaption>Global stress field (Stephan et al., 2019, Fig. 14)</figcaption>
+<figcaption>Global stress field <span class="citation" data-cites="Stephan2023">(<a href="#ref-Stephan2023" role="doc-biblioref">Stephan et al., 2023, fig. 14</a>)</span>.</figcaption>
 </figure>
+</div>
+<section id="reference" class="level3">
+<h3 class="anchored" data-anchor-id="reference">Reference</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Stephan2023" class="csl-entry" role="listitem">
+Stephan, T., Enkelmann, E., &amp; Kroner, U. (2023). <span class="nocase">Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries</span>. <em>Scientific Reports</em>, <em>13</em>(1), 15590. <a href="https://doi.org/10.1038/s41598-023-42433-2">https://doi.org/10.1038/s41598-023-42433-2</a>
+</div>
 </div>
 
 
+</section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>

@@ -10,6 +10,9 @@ categories:
   - Reconstruction
   - Mineral deposits
   - Supercontinent cycle
+citeproc: true
+bibliography: ../../publications/my_publications.bib
+csl: ../../publications/agu.csl
 ---
 
 
@@ -30,7 +33,7 @@ AI-generated[^1] audio summary
 :::
 
 
-![Reconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From Kroner et al. (2020).](../../pictures/Pannotia_Pangea.gif)
+![Reconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From @Kroner2020.](../../pictures/Pannotia_Pangea.gif)
 
 Using various methods, including paleomagnetic data, geochronology, and plate kinematic modeling, we can reconstruct the past positions and movements of continents. This research serves as a test of existing plate tectonic models and helps to refine our understanding of how plates interact over time. 
 By identifying inconsistencies and discrepancies in these models, such as the conflicting views on Gondwana-Laurussia interaction during the Devonian, we can develop more accurate and comprehensive representations of Earth's tectonic history. 
@@ -40,4 +43,14 @@ Paleozoic orogenies, such as Caledonian, Taconic, Famatinian, Acadian, and Varis
 
 In this project, we examine Paleozoic plate tectonics, focusing on the formation of the supercontinent Pangaea. We utilize a novel method to reconstruct relative plate movements from continental deformation patterns, specifically analyzing the interactions between Gondwana and Laurussia. Our research integrates various geological data, including paleogeographic, paleobiogeographic, and geochemical information to explain the complex tectonic evolution of western Pangaea and the Central European Variscides. 
 
-![Pannotia reconstruction. From Kroner et al. (2020).](../../pictures/pannotia.PNG)
+![Pannotia reconstruction. From @Kroner2020.](../../pictures/pannotia.PNG)
+
+---
+nocite: |
+  @Stephan2019, @Kroner2023, Kroner2022
+---
+
+### Reference
+::: {#refs}
+:::
+

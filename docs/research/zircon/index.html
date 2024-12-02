@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -137,8 +157,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#database" id="toc-database" class="nav-link active" data-scroll-target="#database">Database</a></li>
   <li><a href="#method-and-results" id="toc-method-and-results" class="nav-link" data-scroll-target="#method-and-results">Method and results</a></li>
-  <li><a href="#major-implications" id="toc-major-implications" class="nav-link" data-scroll-target="#major-implications">Major implications</a></li>
+  <li><a href="#major-implications" id="toc-major-implications" class="nav-link" data-scroll-target="#major-implications">Major implications</a>
+  <ul class="collapse">
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -189,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../pictures/Stephan2019_GM_03.png" class="img-fluid figure-img"></p>
-<figcaption>Detrital zircon spectra of the sources for the sedimentary rocks of the Peri-Gondwanan shelf (Stephan et al., 2019, Fig. 3).</figcaption>
+<figcaption>Detrital zircon spectra of the sources for the sedimentary rocks of the Peri-Gondwanan shelf <span class="citation" data-cites="Stephan2019a">(<a href="#ref-Stephan2019a" role="doc-biblioref">Stephan et al., 2019, fig. 3</a>)</span>.</figcaption>
 </figure>
 </div>
 </section>
@@ -199,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../pictures/Stephan2019_GM_05.png" class="img-fluid figure-img"></p>
-<figcaption>Statistical analyzis and clustering (Stephan et al., 2019, Fig. 5).</figcaption>
+<figcaption>Statistical analyzis and clustering <span class="citation" data-cites="Stephan2019a">(<a href="#ref-Stephan2019a" role="doc-biblioref">Stephan et al., 2019, fig. 5</a>)</span>.</figcaption>
 </figure>
 </div>
 <p>By comparing the detrital zircon age spectra of Peri-Gondwanan samples with those from known source areas, we identified four distinct zircon provinces:</p>
@@ -212,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../pictures/Stephan2019_GM_06.PNG" class="img-fluid figure-img"></p>
-<figcaption>Spatial distribution of the pre-Variscan zircon provinces along the Variscan basement of Europe and North America (Stephan et al., 2019, Fig. 6).</figcaption>
+<figcaption>Spatial distribution of the pre-Variscan zircon provinces along the Variscan basement of Europe and North America [<span class="citation" data-cites="Stephan2019a">Stephan et al. (<a href="#ref-Stephan2019a" role="doc-biblioref">2019</a>)</span>; Fig. 6].</figcaption>
 </figure>
 </div>
 </section>
@@ -225,12 +247,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Understanding Crustal Growth and Evolution</strong>: The distribution of zircon ages provides information about the timing and nature of magmatic and metamorphic events that contributed to the formation of continental crust. Our findings on the age distributions within each zircon province shed light on the crustal evolution of different regions within Peri-Gondwana.</p></li>
 <li><p><strong>Correlating Litho-Biostratigraphic Units and Terranes</strong>: Detrital zircon provenance analysis can aid in correlating rock units and terranes across vast distances, even when they are now separated by tectonic processes. Our study’s identification of similar zircon age patterns in geographically disparate regions supports the correlation of certain terranes and lithostratigraphic units.</p></li>
 </ul>
+<section id="reference" class="level3">
+<h3 class="anchored" data-anchor-id="reference">Reference</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Stephan2019a" class="csl-entry" role="listitem">
+Stephan, T., Kroner, U., &amp; Romer, R. L. (2019). <span class="nocase">The pre-orogenic detrital zircon record of the Peri-Gondwanan crust</span>. <em>Geological Magazine</em>, <em>156</em>(2), 281–307. <a href="https://doi.org/10.1017/S0016756818000031">https://doi.org/10.1017/S0016756818000031</a>
+</div>
+</div>
+
+
 </section>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
-<p>Stephan, T., Kroner, U., Romer, R.L., 2019. The pre-orogenic detrital zircon record of the Peri-Gondwanan crust. Geol. Mag. 156, 281–307. <a href="https://doi.org/10.1017/S0016756818000031" class="uri">https://doi.org/10.1017/S0016756818000031</a></p>
-
-
 </section>
 
 </main> <!-- /main -->
