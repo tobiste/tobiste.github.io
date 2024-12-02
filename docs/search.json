@@ -11,21 +11,21 @@
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "My developments are located on my Github page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!"
+    "text": "My developments are located on my GitHub page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!"
   },
   {
     "objectID": "software.html#r-packages",
     "href": "software.html#r-packages",
     "title": "Software",
     "section": "R packages",
-    "text": "R packages\n\ntectonicr\n\n\ntectonicr is a free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates (see Stephan et al., 2023). You can download and install it directly from the CRAN server using install.packages(\"tectonicr\") in R. A beta version is on github.\nDocumentation | Code | CRAN | GUI\n\n\n\n\n\n\n\nstructr (beta)\nStructural geology package for R, free and open-source. It provides functions to\n\nanalyze and visualize orientation data such as faults, folds, bedding planes, and lineations.\nanalyze and visualize the magnitudes of stress in the Mohr Circle.\nreconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles\n\nCode\n\n\nlaftr\nCalculates the ages from LA-ICP-MS based fission track dating.\nDocumentation | Code\n\n\neuler\nRotation of plates in terms of quaternions: Code\n\n\neuler.reco\nFinds best Euler pole solution for a given structure: Code"
+    "text": "R packages\n\ntectonicr\n\n\ntectonicr is a free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates (see Stephan et al., 2023). You can download and install it directly from the CRAN server using install.packages(\"tectonicr\") in R. A beta version is on github.\ndocumentation | code | CRAN | GUI\n\n\n\n\n\n\n\nstructr (beta)\nStructural geology package for R, free and open-source. It provides functions to\n\nanalyze and visualize orientation data such as faults, folds, bedding planes, and lineations.\nanalyze and visualize the magnitudes of stress in the Mohr Circle.\nreconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles\n\ncode\n\n\nlaftr\nCalculates the ages from LA-ICP-MS based fission track dating.\ndocumentation | code\n\n\neuler\nRotation of plates in terms of quaternions: code\n\n\neuler.reco\nFinds best Euler pole solution for a given structure: code"
   },
   {
     "objectID": "software.html#web-applications",
     "href": "software.html#web-applications",
     "title": "Software",
     "section": "Web applications",
-    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | Code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | Code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\n\nGUI | Code"
+    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\n\nGUI | code"
   },
   {
     "objectID": "research/stress/index.html",

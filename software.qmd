@@ -9,7 +9,7 @@ bibliography: publications/my_publications.bib
 csl: publications/agu.csl
 ---
 
-My developments are located on my [Github](https://github.com/tobiste/) page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!
+My developments are located on my [GitHub](https://github.com/tobiste/) page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!
 
 ## R packages
 
@@ -20,7 +20,7 @@ My developments are located on my [Github](https://github.com/tobiste/) page. Th
 ::: {.g-col-9}
 tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates [see @Stephan2023]. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/).
 
-[Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \| [GUI](https://tobiste.shinyapps.io/tectonicr-app/)
+[documentation](https://tobiste.github.io/tectonicr/index.html) \| [code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \| [GUI](https://tobiste.shinyapps.io/tectonicr-app/)
 :::
 
 ::: {.g-col-3}
@@ -34,26 +34,24 @@ tectonicr is a free and open-source R package for modeling and **analyzing the d
 Structural geology package for R, free and open-source. It provides functions to
 
 -   analyze and visualize orientation data such as faults, folds, bedding planes, and lineations.
-
 -   analyze and visualize the magnitudes of stress in the Mohr Circle.
-
 -   reconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles
 
-[Code](https://github.com/tobiste/structr)
+[code](https://github.com/tobiste/structr)
 
 ### laftr
 
 Calculates the ages from LA-ICP-MS based fission track dating.
 
-[Documentation](https://tobiste.github.io/laftr/) \| [Code](https://github.com/tobiste/laftr)
+[documentation](https://tobiste.github.io/laftr/) \| [code](https://github.com/tobiste/laftr)
 
 ### euler
 
-Rotation of plates in terms of quaternions: [Code](https://github.com/tobiste/euler)
+Rotation of plates in terms of quaternions: [code](https://github.com/tobiste/euler)
 
 ### euler.reco
 
-Finds best Euler pole solution for a given structure: [Code](https://github.com/tobiste/euler.reco)
+Finds best Euler pole solution for a given structure: [code](https://github.com/tobiste/euler.reco)
 
 ## Web applications
 
@@ -63,18 +61,17 @@ GUI for [tectonicr](#sec-tectonicr) as browser App (no R installation required):
 
 ### Mohr Circle App
 
-Plotting Mohr Circles for students and teachers: [GUI](https://tobiste.shinyapps.io/Mohr_Circle_App/) \| [Code](https://github.com/tobiste/Mohr_Circle_App)
+Plotting Mohr Circles for students and teachers: [GUI](https://tobiste.shinyapps.io/Mohr_Circle_App/) \| [code](https://github.com/tobiste/Mohr_Circle_App)
 
 ### apfu converter
 
-Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): [GUI](https://tobiste.shinyapps.io/apfu_converter/%22) \| [Code](https://github.com/tobiste/apfu_converter)
+Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): [GUI](https://tobiste.shinyapps.io/apfu_converter/%22) \| [code](https://github.com/tobiste/apfu_converter)
 
 ### Theriak-Domino helpers
 
 Web-application providing little helper functions to handle THERIAK DOMINO files:
 
 -   Therin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino
-
 -   GUZZLER table filter: Extracts minerals from the GUZZLER reaction table
 
-[GUI](https://tobiste.shinyapps.io/Bulk_to_therin/) \| [Code](https://github.com/tobiste/Bulk_to_therin)
+[GUI](https://tobiste.shinyapps.io/Bulk_to_therin/) \| [code](https://github.com/tobiste/Bulk_to_therin)
