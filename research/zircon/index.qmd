@@ -56,8 +56,3 @@ By comparing the detrital zircon age spectra of Peri-Gondwanan samples with thos
 -   **Understanding Crustal Growth and Evolution**: The distribution of zircon ages provides information about the timing and nature of magmatic and metamorphic events that contributed to the formation of continental crust. Our findings on the age distributions within each zircon province shed light on the crustal evolution of different regions within Peri-Gondwana.
 
 -   **Correlating Litho-Biostratigraphic Units and Terranes**: Detrital zircon provenance analysis can aid in correlating rock units and terranes across vast distances, even when they are now separated by tectonic processes. Our study's identification of similar zircon age patterns in geographically disparate regions supports the correlation of certain terranes and lithostratigraphic units.
-
-### Reference
-::: {#refs}
-:::
-

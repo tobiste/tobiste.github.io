@@ -4,6 +4,9 @@ format:
   html:
     toc: true
     toc-location: right
+citeproc: true
+bibliography: publications/my_publications.bib
+csl: publications/agu.csl
 ---
 
 My developments are located on my [Github](https://github.com/tobiste/) page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!
@@ -15,7 +18,7 @@ My developments are located on my [Github](https://github.com/tobiste/) page. Th
 ::: {.grid}
 
 ::: {.g-col-9}
-tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/).
+tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates [see @Stephan2023]. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/).
 
 [Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \| [GUI](https://tobiste.shinyapps.io/tectonicr-app/)
 :::

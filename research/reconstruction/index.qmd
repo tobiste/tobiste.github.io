@@ -49,8 +49,3 @@ In this project, we examine Paleozoic plate tectonics, focusing on the formation
 nocite: |
   @Stephan2019, @Kroner2023, Kroner2022
 ---
-
-### Reference
-::: {#refs}
-:::
-

@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -180,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="sec-tectonicr">tectonicr</h3>
 <div class="grid">
 <div class="g-col-9">
-<p>tectonicr is a free and open-source R package for modeling and <strong>analyzing the direction of the maximum horizontal stress</strong> (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates. You can download and install it directly from the CRAN server using <code>install.packages("tectonicr")</code> in R. A beta version is on <a href="https://github.com/tobiste/tectonicr/">github</a>.</p>
+<p>tectonicr is a free and open-source R package for modeling and <strong>analyzing the direction of the maximum horizontal stress</strong> (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates <span class="citation" data-cites="Stephan2023">(see <a href="#ref-Stephan2023" role="doc-biblioref">Stephan et al., 2023</a>)</span>. You can download and install it directly from the CRAN server using <code>install.packages("tectonicr")</code> in R. A beta version is on <a href="https://github.com/tobiste/tectonicr/">github</a>.</p>
 <p><a href="https://tobiste.github.io/tectonicr/index.html">Documentation</a> | <a href="https://github.com/tobiste/tectonicr/">Code</a> | <a href="https://cloud.r-project.org/web/packages/tectonicr/index.html">CRAN</a> | <a href="https://tobiste.shinyapps.io/tectonicr-app/">GUI</a></p>
 </div>
 <div class="g-col-3">
@@ -236,10 +256,15 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://tobiste.shinyapps.io/Bulk_to_therin/">GUI</a> | <a href="https://github.com/tobiste/Bulk_to_therin">Code</a></p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Stephan2023" class="csl-entry" role="listitem">
+Stephan, T., Enkelmann, E., &amp; Kroner, U. (2023). <span class="nocase">Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries</span>. <em>Scientific Reports</em>, <em>13</em>(1), 15590. <a href="https://doi.org/10.1038/s41598-023-42433-2">https://doi.org/10.1038/s41598-023-42433-2</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

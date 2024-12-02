@@ -32,7 +32,3 @@ Since these forces are at an angular relationship to the plate motion between tw
 My work in usable statistical tools for stress/strain orientations is nascent, but follows from my existing work in improving statistical communication in the fields of structural geology and plate motion reconstruction. <!-- For more information on that work, see the publications below: -->
 
 ![Global stress field [@Stephan2023, Figure 14].](../../pictures/Figure_14_world.png)
-
-### Reference
-::: {#refs}
-:::

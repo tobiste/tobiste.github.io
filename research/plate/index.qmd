@@ -37,7 +37,3 @@ In this interdisciplinary project, we use the quaternion formulation of rotation
 nocite: |
   @Schaeben2022
 ---
-
-### Reference
-::: {#refs}
-:::
