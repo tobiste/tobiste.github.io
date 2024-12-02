@@ -15,9 +15,9 @@ My developments are located on my [Github](https://github.com/tobiste/) page. Th
 ::: {.grid}
 
 ::: {.g-col-9}
-tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/)
+tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/).
 
-[Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html)
+[Documentation](https://tobiste.github.io/tectonicr/index.html) \| [Code](https://github.com/tobiste/tectonicr/) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \| [GUI](https://tobiste.shinyapps.io/tectonicr-app/)
 :::
 
 ::: {.g-col-3}
@@ -30,9 +30,9 @@ tectonicr is a free and open-source R package for modeling and **analyzing the d
 
 Structural geology package for R, free and open-source. It provides functions to
 
--   analyze and visualize orientation data of structural geology.
+-   analyze and visualize orientation data such as faults, folds, bedding planes, and lineations.
 
--   analyze stress (including visualization of the magnitudes of stress in the Mohr Circle).
+-   analyze and visualize the magnitudes of stress in the Mohr Circle.
 
 -   reconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles
 
@@ -40,7 +40,7 @@ Structural geology package for R, free and open-source. It provides functions to
 
 ### laftr
 
-Calculates the ages from LA-ICP-MS based fission track dating
+Calculates the ages from LA-ICP-MS based fission track dating.
 
 [Documentation](https://tobiste.github.io/laftr/) \| [Code](https://github.com/tobiste/laftr)
 
