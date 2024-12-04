@@ -53,6 +53,13 @@ Rotation of plates in terms of quaternions: [code](https://github.com/tobiste/eu
 
 Finds best Euler pole solution for a given structure: [code](https://github.com/tobiste/euler.reco)
 
+### geoprofiler
+
+Calculates distances of geo-coordinates along and across a user-defined profile line.
+Useful when one wants to plot the trend of values (e.g. geochemical compositions, ages, depth, magnitudes etc.) against the distance to a important structure.
+
+[Dcumentation](https://tobiste.github.io/geoprofiler/index.html) \| [code](https://github.com/tobiste/geoprofiler/)
+
 ## Web applications
 
 ### tectonicr
