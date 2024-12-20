@@ -2,6 +2,8 @@
 title: Publications
 ---
 
+-   Padgett, J., Enkelmann, E., Kellett, D., Moynihan, D., and **Stephan, T.** (accepted) "Cenozoic exhumation and fault reactivation in southeastern Yukon constrained by low-temperature thermochronology". *Canadian Journal of Earth Sciences*.
+
 -   Schaeben, H., Kroner, U., and **Stephan, T.** (2024): "Mathematical Fundamentals of Spherical Kinematics of Plate Tectonics in Terms of Quaternions". *Mathematical Models and Methods in Applied Sciences* 47(6). pp. 4469-4496. doi: [10.1002/mma.9823](https://doi.org/10.1002/mma.9823) \| [citation](/publications/Schaeben2024_MMAS.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Schaeben2024_MMAS.pdf)
 
 -   **Stephan, T.**, Enkelmann, E., and Kroner, U. (2023): "Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries". *Scientific Reports* 13:15590. doi: [10.1038/s41598-023-42433-2](https://doi.org/10.1038/s41598-023-42433-2) \| [citation](publications/Stephan2023_SciRep.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Stephan2023_SciRep.pdf)
