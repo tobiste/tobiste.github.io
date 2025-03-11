@@ -9,7 +9,7 @@ date: "11/30/2024"
 image: "cover.png"
 categories:
   - Pangea
-  - Varsican
+  - Variscan
   - Reconstruction
   - Mineral deposits
 citeproc: true

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.8)  11 MAR 2025 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.8)  11 MAR 2025 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv.tex
-(c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv.tex
+**c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv_long.tex
+(c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv_long.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
@@ -478,8 +478,8 @@ File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count300
 \l__pdf_internal_box=\box56
-) (cv.aux)
-\openout1 = `cv.aux'.
+) (cv_long.aux)
+\openout1 = `cv_long.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
@@ -590,9 +590,9 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 \c@mv@tabular=\count307
 \c@mv@boldtabular=\count308
 Package hyperref Info: Link coloring OFF on input line 39.
- (cv.out) (cv.out)
+ (cv_long.out) (cv_long.out)
 \@outlinefile=\write3
-\openout3 = `cv.out'.
+\openout3 = `cv_long.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -647,49 +647,61 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/sc' in size <14.4> not availab
 (Font)              Font shape `T1/FiraSans-OsF/bold/sc' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/sc' will be
 (Font)              scaled to size 14.4pt on input line 81.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <12> not available
-(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 119.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 85.
+ (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
+)
 
 [1{C:/Users/tstephan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_iln36p.enc}
 
 {C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_2mfh3o.enc}]
-Overfull \hbox (0.30678pt too wide) in paragraph at lines 137--139
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <12> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 169.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 169.
+
+
+[2]
+
+[3]
+Overfull \hbox (0.30678pt too wide) in paragraph at lines 279--281
 \T1/bch/m/it/10 (-20) Deutschen Gesellschaft für Ge-owis-senschaften (J. Appl. Reg. Geol.)\T1/bch/m/n/10 (-20) . []doi: 10.1127/zdgg/2023/0365[] 
  []
 
 
 
-[2]
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 192.
- (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
-File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
+[4]
 
-[3] 
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9] 
 enddocument/afterlastpage: lastpage setting LastPage.
-(cv.aux)
+(cv_long.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
-Package rerunfilecheck Info: File `cv.out' has not changed.
+Package rerunfilecheck Info: File `cv_long.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18172 strings out of 473904
- 329048 string characters out of 5725184
+ 18303 strings out of 473904
+ 330344 string characters out of 5725184
  1942908 words of memory out of 5000000
- 40626 multiletter control sequences out of 15000+600000
- 656303 words of font info for 134 fonts, out of 8000000 for 9000
+ 40640 multiletter control sequences out of 15000+600000
+ 667119 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,107p,10981b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,11n,107p,10986b,878s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tstephan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Bold.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Regular.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on cv.pdf (3 pages, 188296 bytes).
+Output written on cv_long.pdf (9 pages, 222867 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 38985 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 41089 words of extra memory for PDF output out of 42996 (max. 10000000)
 

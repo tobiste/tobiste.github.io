@@ -2,7 +2,7 @@
 title: Publications
 ---
 
--   Padgett, J., Enkelmann, E., Kellett, D., Moynihan, D., and **Stephan, T.** (accepted) "Cenozoic faulting in the Upper Hyland River Valley, Southeastern Yukon: A thermochronological perspective". *Canadian Journal of Earth Sciences*. doi: [10.1139/cjes-2024-0147](https://doi.org/10.1139/cjes-2024-0147)
+-   Padgett, J., Enkelmann, E., Kellett, D., Moynihan, D., and **Stephan, T.** (2025) "Cenozoic faulting in the Upper Hyland River Valley, Southeastern Yukon: A thermochronological perspective". *Canadian Journal of Earth Sciences*. doi: [10.1139/cjes-2024-0147](https://doi.org/10.1139/cjes-2024-0147)
 
 -   Schaeben, H., Kroner, U., and **Stephan, T.** (2024): "Mathematical Fundamentals of Spherical Kinematics of Plate Tectonics in Terms of Quaternions". *Mathematical Models and Methods in Applied Sciences* 47(6). pp. 4469-4496. doi: [10.1002/mma.9823](https://doi.org/10.1002/mma.9823) \| [citation](/publications/Schaeben2024_MMAS.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Schaeben2024_MMAS.pdf)
 
