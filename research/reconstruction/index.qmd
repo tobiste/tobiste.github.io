@@ -6,7 +6,7 @@ image: "../../pictures/Stephan2019_ESR_10.png"
 categories:
   - Plate motion
   - Pangea
-  - Varsican
+  - Variscan
   - Reconstruction
   - Mineral deposits
   - Supercontinent cycle
