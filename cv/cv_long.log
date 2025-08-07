@@ -1,51 +1,51 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.8)  11 MAR 2025 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.28)  7 AUG 2025 09:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv_long.tex
 (c:/Users/tstephan/Documents/GitHub/tobiste.github.io/cv/cv_long.tex
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-05-27>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
 (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
-Document Class: scrartcl 2023/07/07 v3.41 KOMA-Script document class (article)
+Document Class: scrartcl 2024/10/24 v3.43 KOMA-Script document class (article)
 (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.sty
-Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+Package: scrkbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
-Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
-Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
 ))) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
 )) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.sty
-Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
+Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip49
 \scr@dte@tocline@numbox=\box52
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 133.
+(tocbasic)             for `toc' on input line 135.
 Package scrartcl Info: You've used standard option `10pt'.
 (scrartcl)             This is correct!
 (scrartcl)             Internally I'm using `fontsize=10pt'.
 (scrartcl)             If you'd like to set the option with \KOMAoptions,
 (scrartcl)             you'd have to use `fontsize=10pt' there
 (scrartcl)             instead of `10pt', too.
-Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input line 2441.
+Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input line 2466.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize10pt.clo
-File: scrsize10pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (10pt)
+File: scrsize10pt.clo 2024/10/24 v3.43 KOMA-Script font size class option (10pt)
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.sty
-Package: typearea 2023/07/07 v3.41 KOMA-Script package (type area)
+Package: typearea 2024/10/24 v3.43 KOMA-Script package (type area)
 \ta@bcor=\skip50
-\ta@div=\count194
+\ta@div=\count196
 \ta@hblk=\skip51
 \ta@vblk=\skip52
 \ta@temp=\skip53
@@ -54,7 +54,9 @@ Package typearea Info: With paper sizes other than (almost) `A4' predefined
 (typearea)             DIV values do not exist. Using DIV calculation for good
 (typearea)             line width (unless using `version=3.24` or prior).
 
-DIV calculation for typearea with good linewidth.
+
+Package typearea Info: DIV calculation for classic typearea. on input line 1802.
+
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 6
 (typearea)             BCOR = 0.0pt
@@ -71,65 +73,65 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 1799.
+(typearea)              on input line 1802.
 )
-\c@part=\count195
-\c@section=\count196
-\c@subsection=\count197
-\c@subsubsection=\count198
-\c@paragraph=\count199
-\c@subparagraph=\count266
+\c@part=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
 \scr@dte@section@maxnumwidth=\skip55
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 5082.
+(scrartcl)           for `\section on input line 5107.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 5082.
+(scrartcl)           for `\section on input line 5107.
 \scr@dte@part@maxnumwidth=\skip56
 Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 5090.
+(scrartcl)           for `\part on input line 5115.
 \scr@dte@subsection@maxnumwidth=\skip57
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 5100.
+(scrartcl)           for `\subsection on input line 5125.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 5100.
+(scrartcl)           for `\subsection on input line 5125.
 \scr@dte@subsubsection@maxnumwidth=\skip58
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 5110.
+(scrartcl)           for `\subsubsection on input line 5135.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 5110.
+(scrartcl)           for `\subsubsection on input line 5135.
 \scr@dte@paragraph@maxnumwidth=\skip59
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 5121.
+(scrartcl)           for `\paragraph on input line 5146.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 5121.
+(scrartcl)           for `\paragraph on input line 5146.
 \scr@dte@subparagraph@maxnumwidth=\skip60
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 5131.
+(scrartcl)           for `\subparagraph on input line 5156.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 5131.
+(scrartcl)           for `\subparagraph on input line 5156.
 \abovecaptionskip=\skip61
 \belowcaptionskip=\skip62
 \c@pti@nb@sid@b@x=\box53
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6309.
+(tocbasic)             for `lof' on input line 6337.
 \scr@dte@figure@maxnumwidth=\skip63
-\c@figure=\count267
+\c@figure=\count269
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6325.
+(tocbasic)             for `lot' on input line 6353.
 \scr@dte@table@maxnumwidth=\skip64
-\c@table=\count268
-Class scrartcl Info: Redefining `\numberline' on input line 6495.
+\c@table=\count270
+Class scrartcl Info: Redefining `\numberline' on input line 6523.
 \bibindent=\dimen141
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2024/06/26 v24.7 The Babel package
-\babel@savecnt=\count269
+Package: babel 2025/03/10 v25.5 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count271
 \U@D=\dimen142
 \l@unhyphenated=\language79
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count270
+\bbl@dirlevel=\count272
 
 *************************************
 * Local config file bblopts.cfg used
@@ -162,11 +164,11 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count271
-\Gm@cntv=\count272
-\c@Gm@tempcnt=\count273
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
 \Gm@bindingoffset=\dimen143
 \Gm@wd@mp=\dimen144
 \Gm@odd@mp=\dimen145
@@ -188,7 +190,7 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
@@ -201,39 +203,42 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@height=\dimen151
 \Gin@req@width=\dimen152
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2024/03/29 v3.1b Micro-typographical refinements (RS)
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count274
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
 )
 \MT@toks=\toks21
 \MT@tempbox=\box55
-\MT@count=\count275
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1061.
-LaTeX Info: Redefining \leftprotrusion on input line 1062.
+\MT@count=\count277
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks22
-LaTeX Info: Redefining \rightprotrusion on input line 1081.
-LaTeX Info: Redefining \textls on input line 1392.
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen153
-LaTeX Info: Redefining \textmicrotypecontext on input line 2013.
-\MT@listname@count=\count276
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count278
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
-File: microtype-pdftex.def 2024/03/29 v3.1b Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 902.
-LaTeX Info: Redefining \lslig on input line 902.
+File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip68
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2024/03/29 v3.1b microtype main configuration file (RS)
-)) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count277
-\csq@gtype=\count278
-\csq@glevel=\count279
-\csq@qlevel=\count280
-\csq@maxlvl=\count281
-\csq@tshold=\count282
+\csq@reset=\count279
+\csq@gtype=\count280
+\csq@glevel=\count281
+\csq@qlevel=\count282
+\csq@maxlvl=\count283
+\csq@tshold=\count284
 \csq@ltx@everypar=\toks23
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -243,21 +248,21 @@ Package csquotes Info: ... configuration file loaded successfully.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
 )) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/doipubmed\doipubmed.sty
 Package: doipubmed 2007/08/20 1.01 (NLCT)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
@@ -283,45 +288,51 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              package `fancyhdr' on input line 10.
 
 (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2024/04/23 v4.2 Extensive control of page headers and footers
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip69
-\f@nch@O@elh=\skip70
-\f@nch@O@erh=\skip71
-\f@nch@O@olh=\skip72
-\f@nch@O@orh=\skip73
-\f@nch@O@elf=\skip74
-\f@nch@O@erf=\skip75
-\f@nch@O@olf=\skip76
-\f@nch@O@orf=\skip77
+\f@nch@offset@elh=\skip70
+\f@nch@offset@erh=\skip71
+\f@nch@offset@olh=\skip72
+\f@nch@offset@orh=\skip73
+\f@nch@offset@elf=\skip74
+\f@nch@offset@erf=\skip75
+\f@nch@offset@olf=\skip76
+\f@nch@offset@orf=\skip77
+\f@nch@height=\skip78
+\f@nch@footalignment=\skip79
+\f@nch@widthL=\skip80
+\f@nch@widthC=\skip81
+\f@nch@widthR=\skip82
+\@temptokenb=\toks25
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
-Package: lastpage 2024/07/03 v2.1b lastpage: 2.09 or 2e? (HMM)
+Package: lastpage 2025/01/27 v2.1e lastpage: 2.09 or 2e? (HMM)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
-Package: lastpage2e 2024/07/03 v2.1b Decide which 2e lastpage version to use (HMM)
+Package: lastpage2e 2025/01/27 v2.1e Decide which 2e lastpage version to use (HMM)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern.sty
-Package: lastpagemodern 2024-07-03 v2.1b Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count283
+Package: lastpagemodern 2025-01-27 v2.1e Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count285
 ) 
 )) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
 Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
-\SOUL@word=\toks25
-\SOUL@lasttoken=\toks26
-\SOUL@syllable=\toks27
-\SOUL@cmds=\toks28
-\SOUL@buffer=\toks29
-\SOUL@token=\toks30
+\SOUL@word=\toks26
+\SOUL@lasttoken=\toks27
+\SOUL@syllable=\toks28
+\SOUL@cmds=\toks29
+\SOUL@buffer=\toks30
+\SOUL@token=\toks31
 \SOUL@syllgoal=\dimen154
 \SOUL@syllwidth=\dimen155
 \SOUL@charkern=\dimen156
 \SOUL@hyphkern=\dimen157
 \SOUL@dimen=\dimen158
 \SOUL@dimeni=\dimen159
-\SOUL@minus=\count284
-\SOUL@comma=\count285
-\SOUL@apo=\count286
-\SOUL@grave=\count287
-\SOUL@spaceskip=\skip78
+\SOUL@minus=\count286
+\SOUL@comma=\count287
+\SOUL@apo=\count288
+\SOUL@grave=\count289
+\SOUL@spaceskip=\skip83
 \SOUL@ttwidth=\dimen160
 \SOUL@uldp=\dimen161
 \SOUL@ulht=\dimen162
@@ -338,10 +349,10 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count288
+\XKV@depth=\count290
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
@@ -358,7 +369,7 @@ LaTeX Info: Redefining \textsw on input line 47.
 LaTeX Info: Redefining \textssc on input line 48.
 LaTeX Info: Redefining \textulc on input line 49.
 )) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -383,23 +394,23 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count289
+\c@section@level=\count291
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen163
-\Hy@linkcounter=\count290
-\Hy@pagecounter=\count291
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count292
+\Hy@SavedSpaceFactor=\count294
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -411,7 +422,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count293
+\c@Hy@tempcnt=\count295
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen164
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -419,7 +430,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count294
+\Fld@menulength=\count296
 \Field@Width=\dimen165
 \Fld@charsize=\dimen166
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -433,19 +444,19 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count295
-\c@Item=\count296
-\c@Hfootnote=\count297
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count298
-\c@bookmark@seq@number=\count299
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -453,7 +464,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip79
+\Hy@SectionHShift=\skip84
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/breakurl\breakurl.sty
 Package: breakurl 2013/04/10 v1.40 Breakable hyperref URLs
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
@@ -476,7 +487,7 @@ LaTeX Font Info:    Trying to load font information for T1+bch on input line 39.
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count300
+\l__color_backend_stack_int=\count302
 \l__pdf_internal_box=\box56
 ) (cv_long.aux)
 \openout1 = `cv_long.aux'.
@@ -545,17 +556,17 @@ Package scrbase Info: activating american \indexname on input line 39.
 
 (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count301
+\scratchcounter=\count303
 \scratchdimen=\dimen167
 \scratchbox=\box57
-\nofMPsegments=\count302
-\nofMParguments=\count303
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count304
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count306
 \MPscratchDim=\dimen168
-\MPnumerator=\count305
-\makeMPintoPDFobject=\count306
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks35
 ) (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
@@ -574,6 +585,7 @@ Package microtype Info: Applying patch `toc' on input line 39.
 Package microtype Info: Applying patch `eqnum' on input line 39.
 Package microtype Info: Applying patch `footnote' on input line 39.
 Package microtype Info: Applying patch `verbatim' on input line 39.
+LaTeX Info: Redefining \microtypesetup on input line 39.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -587,8 +599,8 @@ Package microtype Info: No adjustment of character kerning.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-bch.cfg
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 )
-\c@mv@tabular=\count307
-\c@mv@boldtabular=\count308
+\c@mv@tabular=\count309
+\c@mv@boldtabular=\count310
 Package hyperref Info: Link coloring OFF on input line 39.
  (cv_long.out) (cv_long.out)
 \@outlinefile=\write3
@@ -606,7 +618,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count309
+\BKM@id=\count311
 ))
 LaTeX Font Info:    Trying to load font information for T1+FiraSans-OsF on input line 43.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/fira\t1firasans-osf.fd
@@ -620,10 +632,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `FiraSans-OsF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 53.
- (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -664,11 +672,6 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
 [2]
 
 [3]
-Overfull \hbox (0.30678pt too wide) in paragraph at lines 279--281
-\T1/bch/m/it/10 (-20) Deutschen Gesellschaft für Ge-owis-senschaften (J. Appl. Reg. Geol.)\T1/bch/m/n/10 (-20) . []doi: 10.1127/zdgg/2023/0365[] 
- []
-
-
 
 [4]
 
@@ -681,27 +684,27 @@ Overfull \hbox (0.30678pt too wide) in paragraph at lines 279--281
 [8]
 
 [9] 
-enddocument/afterlastpage: lastpage setting LastPage.
+enddocument/afterlastpage (AED): lastpage setting LastPage.
 (cv_long.aux)
  ***********
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-05-27>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `cv_long.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18303 strings out of 473904
- 330344 string characters out of 5725184
- 1942908 words of memory out of 5000000
- 40640 multiletter control sequences out of 15000+600000
- 667119 words of font info for 203 fonts, out of 8000000 for 9000
+ 18516 strings out of 473523
+ 335020 string characters out of 5713178
+ 934910 words of memory out of 5000000
+ 41216 multiletter control sequences out of 15000+600000
+ 667833 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,107p,10986b,878s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,11n,107p,10986b,886s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tstephan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Bold.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Regular.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on cv_long.pdf (9 pages, 222867 bytes).
+Output written on cv_long.pdf (9 pages, 222658 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
+ 226 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
  41089 words of extra memory for PDF output out of 42996 (max. 10000000)
 

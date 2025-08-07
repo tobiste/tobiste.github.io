@@ -222,6 +222,7 @@ OUTPUT cv_long.out
 OUTPUT cv_long.pdf
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.sty
+INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
@@ -231,9 +232,6 @@ INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\fira\t1firasans-
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\fira\t1firasans-osf.fd
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\fira\t1firasans-osf.fd
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fira\FiraSans-Bold-osf-t1.tfm
-INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
