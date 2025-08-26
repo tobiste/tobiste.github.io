@@ -14,18 +14,18 @@ volume = {13},
 year = {2023}
 }
 
-@article{Caracciolo2021,
-author = {Caracciolo, L. and Ravid{\`{a}}, D.C.G. and Chew, D. and Jan{\ss}en, M. and L{\"{u}}nsdorf, N.K. and Heins, W.A. and Stephan, T. and Stollhofen, H},
-doi = {10.1016/j.gloplacha.2021.103631},
-file = {:C$\backslash$:/Users/tobis/Downloads/Caracciolo et al. - 2021 - Reconstructing environmental signals across the Permian-Triassic boundary in the SE Germanic Basin A Quantita.pdf:pdf},
-issn = {09218181},
-journal = {Global and Planetary Change},
-month = {nov},
-pages = {103631},
-title = {{Reconstructing environmental signals across the Permian-Triassic boundary in the SE Germanic Basin: A Quantitative Provenance Analysis (QPA) approach}},
-url = {https://linkinghub.elsevier.com/retrieve/pii/S0921818121002162},
-volume = {206},
-year = {2021}
+@Article{Caracciolo2021,
+  author  = {Caracciolo, L. and Ravid{\`{a}}, D. C. G. and Chew, D. and Jan{\ss}en, M. and L{\"{u}}nsdorf, N. K. and Heins, W. A. and Stephan, T. and Stollhofen, H.},
+  journal = {Global and Planetary Change},
+  title   = {{Reconstructing environmental signals across the Permian-Triassic boundary in the SE Germanic Basin: A Quantitative Provenance Analysis (QPA) approach}},
+  year    = {2021},
+  issn    = {09218181},
+  month   = {nov},
+  pages   = {103631},
+  volume  = {206},
+  doi     = {10.1016/j.gloplacha.2021.103631},
+  file    = {:C$\backslash$:/Users/tobis/Downloads/Caracciolo et al. - 2021 - Reconstructing environmental signals across the Permian-Triassic boundary in the SE Germanic Basin A Quantita.pdf:pdf},
+  url     = {https://linkinghub.elsevier.com/retrieve/pii/S0921818121002162},
 }
 
 @article{Heinicke2019,
@@ -187,19 +187,20 @@ year = {2024}
 }
 
 @Article{Stephan2019a,
-  author   = {Stephan, Tobias and Kroner, Uwe and Romer, Rolf L.},
-  journal  = {Geological Magazine},
-  title    = {{The pre-orogenic detrital zircon record of the Peri-Gondwanan crust}},
-  year     = {2019},
-  issn     = {0016-7568},
-  month    = {feb},
-  number   = {2},
-  pages    = {281--307},
-  volume   = {156},
-  abstract = {We present a statistical approach to data mining and quantitatively evaluating detrital age spectra for sedimentary provenance analyses and palaeogeographic reconstructions. Multidimensional scaling coupled with density-based clustering allows the objective identification of provenance end-member populations and sedimentary mixing processes for a composite crust. We compiled 58 601 detrital zircon U–Pb ages from 770 Precambrian to Lower Palaeozoic shelf sedimentary rocks from 160 publications and applied statistical provenance analysis for the Peri-Gondwanan crust north of Africa and the adjacent areas. We have filtered the dataset to reduce the age spectra to the provenance signal, and compared the signal with age patterns of potential source regions. In terms of provenance, our results reveal three distinct areas, namely the Avalonian, West African and East African–Arabian zircon provinces. Except for the Rheic Ocean separating the Avalonian Zircon Province from Gondwana, the statistical analysis provides no evidence for the existence of additional oceanic lithosphere. This implies a vast and contiguous Peri-Gondwanan shelf south of the Rheic Ocean that is supplied by two contrasting super-fan systems, reflected in the zircon provinces of West Africa and East Africa–Arabia.},
-  doi      = {10.1017/S0016756818000031},
-  file     = {:C$\backslash$:/Users/tobis/AppData/Local/Mendeley Ltd/Mendeley Desktop/Downloaded/Stephan, Kroner, Romer - 2019 - The pre-orogenic detrital zircon record of the Peri-Gondwanan crust.pdf:pdf},
-  url      = {https://www.cambridge.org/core/product/identifier/S0016756818000031/type/journal{\_}article},
+  author    = {Stephan, Tobias and Kroner, Uwe and Romer, Rolf L.},
+  journal   = {Geological Magazine},
+  title     = {{The pre-orogenic detrital zircon record of the Peri-Gondwanan crust}},
+  year      = {2018},
+  issn      = {0016-7568},
+  month     = {feb},
+  number    = {2},
+  pages     = {281--307},
+  volume    = {156},
+  abstract  = {We present a statistical approach to data mining and quantitatively evaluating detrital age spectra for sedimentary provenance analyses and palaeogeographic reconstructions. Multidimensional scaling coupled with density-based clustering allows the objective identification of provenance end-member populations and sedimentary mixing processes for a composite crust. We compiled 58 601 detrital zircon U–Pb ages from 770 Precambrian to Lower Palaeozoic shelf sedimentary rocks from 160 publications and applied statistical provenance analysis for the Peri-Gondwanan crust north of Africa and the adjacent areas. We have filtered the dataset to reduce the age spectra to the provenance signal, and compared the signal with age patterns of potential source regions. In terms of provenance, our results reveal three distinct areas, namely the Avalonian, West African and East African–Arabian zircon provinces. Except for the Rheic Ocean separating the Avalonian Zircon Province from Gondwana, the statistical analysis provides no evidence for the existence of additional oceanic lithosphere. This implies a vast and contiguous Peri-Gondwanan shelf south of the Rheic Ocean that is supplied by two contrasting super-fan systems, reflected in the zircon provinces of West Africa and East Africa–Arabia.},
+  doi       = {10.1017/S0016756818000031},
+  file      = {:C$\backslash$:/Users/tobis/AppData/Local/Mendeley Ltd/Mendeley Desktop/Downloaded/Stephan, Kroner, Romer - 2019 - The pre-orogenic detrital zircon record of the Peri-Gondwanan crust.pdf:pdf},
+  publisher = {Cambridge University Press (CUP)},
+  url       = {https://www.cambridge.org/core/product/identifier/S0016756818000031/type/journal{\_}article},
 }
 
 @Article{Padgett2025,
@@ -208,7 +209,7 @@ year = {2024}
   title    = {{Cenozoic faulting in the Upper Hyland River Valley, Southeastern Yukon: A thermochronological perspective}},
   year     = {2025},
   issn     = {0008-4077},
-  month    = {jan},
+  month    = mar,
   number   = {5},
   pages    = {1002--1022},
   volume   = {62},
@@ -224,6 +225,12 @@ year = {2024}
   journal = {Tectonics},
   title   = {{All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera}},
   year    = {2025},
+}
+
+@Article{Stephan2025a,
+  author  = {Stephan, T. and Phillips, N. and Tiitto, H. and Perez, A. and Nwakanma, M. and Hollings, P.},
+  journal = {Journal of Structural Geology},
+  title   = {{Going with the flow --- Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)}},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
