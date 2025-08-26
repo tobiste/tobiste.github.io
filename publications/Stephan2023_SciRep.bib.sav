@@ -1,0 +1,14 @@
+@article{Stephan2023,
+abstract = {{\textless}p{\textgreater} The spatial analysis of horizontal stress orientation is important to study stress sources and understand tectonics and the deformation of the lithosphere. Additional to the stress sources, the geometry of stress fields depends on the underlying coordinate reference system, which causes spatial distortions that bias the analysis and interpretation of stresses. The bias can be avoided when the stress field is decomposed and transformed into the reference frame of its first-order stress source. We present a modified and extended theory based on the empirical link between the orientation of first-order stresses and the trajectories of lateral plate boundary forces. This link is applied to analyze the orientation of horizontal stresses, their patterns, and tectonic structures from the perspective of their first-order source or cause. By using only parameters for the relative motion between two neighboring plates, we model the first-order orientation of the maximum horizontal stress that statistically fits the orientation of {\textless}inline-formula{\textgreater} {\textless}alternatives{\textgreater} {\textless}tex-math{\textgreater}{\$}{\$}$\backslash$ge{\$}{\$}{\textless}/tex-math{\textgreater} {\textless}math{\textgreater} {\textless}mo{\textgreater}≥{\textless}/mo{\textgreater} {\textless}/math{\textgreater} {\textless}/alternatives{\textgreater} {\textless}/inline-formula{\textgreater} 80{\%} of the global stress data adjacent to plate boundaries. Considerable deviations of the observed stress from the predicted first-order stress direction can reveal the geometry of second-order stresses and confine areas where other stress sources dominate. The model's simple assumptions, independence from the sample size, potential application to regional to global scale analysis, and compatibility with other spatial interpolation algorithms make it a powerful method for analyzing stress fields. For immediate use, the presented method is implemented in the free and open-source software package , which is written in the computer language R. {\textless}/p{\textgreater}},
+author = {Stephan, Tobias and Enkelmann, Eva and Kroner, Uwe},
+doi = {10.1038/s41598-023-42433-2},
+issn = {2045-2322},
+journal = {Scientific Reports},
+month = {sep},
+number = {1},
+pages = {15590},
+title = {{Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries}},
+url = {https://www.nature.com/articles/s41598-023-42433-2},
+volume = {13},
+year = {2023}
+}

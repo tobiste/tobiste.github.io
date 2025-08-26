@@ -1,0 +1,14 @@
+@article{Schaeben2024,
+abstract = {To be a quantitative and testable tectonic model, plate tectonics requires spherical geometry and spherical kinematics in terms of finite rotations conveniently parametrized by their angle and axis and described by unit quaternions. In treatises on “Plate Tectonics” infinitesimal, instantaneous, and finite rotations, absolute and relative rotations are said to be applied to model the motion of tectonic plates. Even though these terms are strictly defined in mathematics, they are often casually used in geosciences. Here, their definitions are recalled and clarified as well as the terms rotation, orientation, and location on the sphere. For instance, infinitesimal rotations refer to a mathematical limit, when the angle of rotation tends to zero. Their rules do not apply to finite rotations, no matter how small their finite angles of rotation are. Mathematical approaches applying appropriate and feasible assumptions to model spherical motion of tectonic plates over geological times of hundreds of millions of years are derived including (i) sequences of incremental finite rotations, (ii) sequences of accumulating successive concatenations of finite rotations, and (iii) continuous rotations in terms of fully transient quaternions. The incremental and the accumulating approaches provide complementary views. While the relative Euler pole appears to migrate in the latter, it appears fixed in the former. Path, mean, and instantaneous velocity of the migrating Euler pole are derived as well as the angular and trajectoral velocity of the rotational motion about it. The approaches are illustrated by a geological example with actual data and a numerical yet geologically inspired example with artificial data. The former revisits the three‐plate scenario with stationary axes of two “absolute” rotations implying transient “relative” rotations about a migrating Euler pole and employs a proper plate‐circuit argument to determine them numerically without resorting to approximations. The latter applies an involved interplay of incremental and accumulating modeling inducing split–join cycles to approximate sinusoidal trajectories as reported to record plates' motion during the Gondwana breakup.},
+author = {Schaeben, Helmut and Kroner, Uwe and Stephan, Tobias},
+doi = {10.1002/mma.9823},
+issn = {0170-4214},
+journal = {Mathematical Methods in the Applied Sciences},
+month = {apr},
+number = {6},
+pages = {4469--4496},
+title = {{Mathematical fundamentals of spherical kinematics of plate tectonics in terms of quaternions}},
+url = {https://onlinelibrary.wiley.com/doi/10.1002/mma.9823},
+volume = {47},
+year = {2024}
+}
