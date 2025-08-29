@@ -4,7 +4,7 @@ title: Publications
 
 - **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025) "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*.
 
-- **Stephan, T.**, and Enkelmann, E. (accepted) "All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera". *Tectonics*. doi: [10.1029/2025TC009014]{https://doi.org/10.1029/2025TC009014}
+- **Stephan, T.**, and Enkelmann, E. (accepted) "All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera". *Tectonics*. doi: [10.1029/2025TC009014](https://doi.org/10.1029/2025TC009014)
 
 -   Padgett, J., Enkelmann, E., Kellett, D., Moynihan, D., and **Stephan, T.** (2025) "Cenozoic faulting in the Upper Hyland River Valley, Southeastern Yukon: A thermochronological perspective". *Canadian Journal of Earth Sciences* 62(5): 1002-1022. doi: [10.1139/cjes-2024-0147](https://doi.org/10.1139/cjes-2024-0147) \| [citation](publications/Padgett2025_CJES.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Padgett2025_CJES.pdf)
 
