@@ -2,7 +2,7 @@
 title: Publications
 ---
 
-- **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025) "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*.
+- **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025) "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*. doi: [10.1016/j.jsg.2025.105542](https://doi.org/10.1016/j.jsg.2025.105542)
 
 - **Stephan, T.**, and Enkelmann, E. (accepted) "All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera". *Tectonics*. doi: [10.1029/2025TC009014](https://doi.org/10.1029/2025TC009014)
 
