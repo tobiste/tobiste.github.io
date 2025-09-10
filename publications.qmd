@@ -2,8 +2,10 @@
 title: Publications
 ---
 
-- **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025) "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*. doi: [10.1016/j.jsg.2025.105542](https://doi.org/10.1016/j.jsg.2025.105542) \| [citation](publications/Stephan2025_JSG.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Stephan2025_JSG.pdf)
+[Web of Science](https://www.webofscience.com/wos/author/record/AAV-2685-2021)
 
+
+- **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025) "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*. doi: [10.1016/j.jsg.2025.105542](https://doi.org/10.1016/j.jsg.2025.105542) \| [citation](publications/Stephan2025_JSG.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Stephan2025_JSG.pdf)
 
 - **Stephan, T.**, and Enkelmann, E. (2025) "All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera". *Tectonics*. doi: [10.1029/2025TC009014](https://doi.org/10.1029/2025TC009014) \| [citation](publications/Stephan2025_Tectonics.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Stephan2025_Tectonics.pdf)
 
@@ -34,3 +36,5 @@ title: Publications
 -   **Stephan, T.**, Kroner, U., and Romer, R. L. (2018): "The pre-orogenic detrital zircon record of the Peri-Gondwanan crust". *Geological Magazine* 156(2): 281–307. doi: [10.1017/s0016756818000031](https://doi.org/10.1017/s0016756818000031) \| [citation](publications/Stephan2019_GeolMag.bib)
 
 -   **Stephan, T.**, Kroner, U., Hahn, T., Hallas, P., and Heuse, T. (2016): "Fold / cleavage relationships as indicator for late Variscan sinistral transpression at the Rheno-Hercynian – Saxo-Thuringian boundary zone, Central European Variscides". *Tectonophysics* 681: 250–262. doi: [10.1016/j.tecto.2016.03.005](https://doi.org/10.1016/j.tecto.2016.03.005) \| [citation](publications/Stephan2016_TECTONO.bib)
+
+
