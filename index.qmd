@@ -2,7 +2,7 @@
 title: "Tobias Stephan"
 #pagetitle: "Hello there!"
 subtitle: "Lecturer and Postdoctoral Associate <br> Department of Geology <br> Lakehead University <br> Thunder Bay, ON"
-image: pictures/tobi2.jpg
+image: pictures/tobi3.jpg
 about: #https://quarto.org/docs/websites/website-about.html
   template: trestles
   #image-shape: round
