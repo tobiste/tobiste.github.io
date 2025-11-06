@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/stress/index.html",
+      "/research/plate/index.html",
+      "/research/zircon/index.html",
+      "/research/reconstruction/index.html"
+    ]
+  }
+]
