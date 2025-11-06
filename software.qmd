@@ -27,7 +27,7 @@ tectonicr is a free and open-source R package for modeling and **analyzing the d
 :::
 
 ::: {.g-col-3}
-![](pictures/logo_hi.png)
+![](pictures/logo_tectonicr_hi.png)
 :::
 
 :::
@@ -47,13 +47,30 @@ You can download and install it directly from the CRAN server using `install.pac
 
 ### structr (beta)
 
+::: {.grid}
+
+::: {.g-col-9}
+
 Structural geology package for R, free and open-source. It provides functions to
 
 -   analyze and visualize orientation data such as faults, folds, bedding planes, and lineations.
 -   analyze and visualize the magnitudes of stress in the Mohr Circle.
 -   reconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles
+-   paleostress analysis using slip inversion
+-   vorticity and strain analysis
+-   simulation of deformation using deformation and velocity gradient tensors
+-   easy import: import your structural data directly from StraboSpot projects
 
+[documentation](https://tobiste.github.io/structr/index.html) \|
 [code](https://github.com/tobiste/structr)
+
+:::
+
+::: {.g-col-3}
+![](pictures/logo_structr_hi.png)
+:::
+
+:::
 
 ### laftr
 
