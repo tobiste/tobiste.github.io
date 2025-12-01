@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tobias Stephan">
+<meta name="description" content="Tobias Stephan’s blog">
 
 <title>Tobias Stephan</title>
 <style>
@@ -72,20 +73,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts_2025 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-posts_2025'] = new List('listing-posts_2025', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -130,8 +131,8 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Tobias Stephan">
-<meta property="og:description" content="Tobias Stephan is an Assistant Professor at Lakehead University, researching lithospheric deformation and teaching structural geology, tectonics and metamorphic petrology.">
-<meta property="og:image" content="../blog/compositions/cover.jpg">
+<meta property="og:description" content="Tobias Stephan’s blog">
+<meta property="og:image" content="../blog/2025/compositions/cover.jpg">
 <meta property="og:site_name" content="Tobias Stephan">
 </head>
 
@@ -157,12 +158,12 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
-<span class="menu-text">Research</span></a>
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../software.html"> 
@@ -173,8 +174,8 @@ window.Quarto = {
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../cv/cv.pdf"> <i class="bi bi-file-pdf-fill" role="img">
@@ -194,7 +195,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGF0YQ==">Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvY2hlbWlzdHJ5">Geochemistry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k=">Metamorphic petrology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VEhFUklBSy1ET01JTk8=">THERIAK-DOMINO <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGF0YQ==">Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvY2hlbWlzdHJ5">Geochemistry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k=">Metamorphic petrology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -203,6 +204,11 @@ window.Quarto = {
 <h1 class="title">Blog</h1>
 </div>
 
+<div>
+  <div class="description">
+    Tobias Stephan’s blog
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page-left">
@@ -217,55 +223,29 @@ window.Quarto = {
 </header>
 
 
-<p>Coming soon…</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="cell">
+<style type="text/css">
+#title-block-header .description {
+    display: none;
+}
+</style>
+</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2025</h2>
+<div id="listing-posts_2025" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3klMkNUSEVSSUFLLURPTUlOTw==" data-listing-date-sort="1764392400000" data-listing-file-modified-sort="1764552208420" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1084">
+<div class="quarto-post image-right" data-index="0" data-categories="R2VvY2hlbWlzdHJ5JTJDRGF0YSUyQ1I=" data-listing-date-sort="1764478800000" data-listing-file-modified-sort="1764589863921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3411">
 <div class="thumbnail">
-<p><a href="../blog/theriak-domino/index.html" class="no-external"></a></p><a href="../blog/theriak-domino/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/theriak-domino/ps_Moss-029_MnNCKFMASHT.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/theriak-domino/index.html" class="no-external"></a></p>
+<p><a href="../blog/2025/compositions/index.html" class="no-external"></a></p><a href="../blog/2025/compositions/index.html" class="no-external">
+<p><img loading="lazy" src="../blog/2025/compositions/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2025/compositions/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../blog/theriak-domino/index.html" class="no-external">Quick-Guide to THERIAK-DOMINO</a>
+<a href="../blog/2025/compositions/index.html" class="no-external">Statistics and composition data</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../blog/theriak-domino/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k='); return false;">
-Metamorphic petrology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VEhFUklBSy1ET01JTk8='); return false;">
-THERIAK-DOMINO
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/theriak-domino/index.html" class="no-external">A simple step-by-step guide to use generate metamorphic phase equilibria diagrams</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="../blog/theriak-domino/index.html" class="no-external"></a></p><a href="../blog/theriak-domino/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R2VvY2hlbWlzdHJ5JTJDRGF0YSUyQ1I=" data-listing-date-sort="1764392400000" data-listing-file-modified-sort="1764552009480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3346">
-<div class="thumbnail">
-<p><a href="../blog/compositions/index.html" class="no-external"></a></p><a href="../blog/compositions/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/compositions/cover.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/compositions/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/compositions/index.html" class="no-external">Statistics and composition data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/compositions/index.html" class="no-external"></a>
+<a href="../blog/2025/compositions/index.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R2VvY2hlbWlzdHJ5'); return false;">
@@ -279,11 +259,53 @@ R
 </div>
 </div>
 <div class="listing-description">
-<a href="../blog/compositions/index.html" class="no-external">The blog describes how compositional data (geochemical compositons, concentrations, etc.) are treated to calculate summary statistics</a>
+<a href="../blog/2025/compositions/index.html" class="no-external">Learn about the numeric nature of compositional data (e.g., geochemical compositons and concentrations) and how to treat them for statistical analysis</a>
 </div>
 </div>
 <div class="metadata">
-<p><a href="../blog/compositions/index.html" class="no-external"></a></p><a href="../blog/compositions/index.html" class="no-external">
+<a href="../blog/2025/compositions/index.html" class="no-external">
+<div class="listing-date">
+November 30, 2025
+</div>
+<div class="listing-author">
+Tobias Stephan
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3klMkNUdXRvcmlhbA==" data-listing-date-sort="1764392400000" data-listing-file-modified-sort="1764589004968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1084">
+<div class="thumbnail">
+<p><a href="../blog/2025/theriak-domino/index.html" class="no-external"></a></p><a href="../blog/2025/theriak-domino/index.html" class="no-external">
+<p><img loading="lazy" src="../blog/2025/theriak-domino/ps_Moss-029_MnNCKFMASHT.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2025/theriak-domino/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/2025/theriak-domino/index.html" class="no-external">Quick-Guide to THERIAK-DOMINO</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../blog/2025/theriak-domino/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k='); return false;">
+Metamorphic petrology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">
+Tutorial
+</div>
+</div>
+<div class="listing-description">
+<a href="../blog/2025/theriak-domino/index.html" class="no-external">A few simple steps to generate metamorphic phase equilibria diagrams</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../blog/2025/theriak-domino/index.html" class="no-external">
+<div class="listing-date">
+November 29, 2025
+</div>
+<div class="listing-author">
+Tobias Stephan
+</div>
 </a>
 </div>
 </div>
@@ -291,7 +313,13 @@ R
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

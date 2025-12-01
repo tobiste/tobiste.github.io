@@ -1,15 +1,29 @@
 ---
 title: Blog
-listing: 
-  type: default
-  contents: /
-  date-format: iso
-  categories: true
-  fields: [title, description, categories, image]
-  sort-ui: false
-  filter-ui: false
-  field-display-names: 
-    title: "Project"
+author: ""
+description: "Tobias Stephan's blog"
+listing:
+  - id: posts_2025
+    contents: "2025/**/index.qmd"
+    sort: "date desc"
+    categories: true
+page-layout: full
+toc-title: Year
+toc-location: right
+date-format: "MMMM D, YYYY"
+code-tools: false
+comments: false
+engine: knitr
+freeze: false
 ---
 
-Coming soon...
+```{css, echo=FALSE}
+#title-block-header .description {
+    display: none;
+}
+```
+
+## 2025
+
+:::{#posts_2025}
+:::

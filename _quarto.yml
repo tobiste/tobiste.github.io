@@ -29,11 +29,11 @@ website:
     right:
       - text: "About"
         href: index.qmd
+      - blog/index.qmd
       - research/index.qmd
-      - publications.qmd
       - software.qmd
       - teaching.qmd
-      - blog/index.qmd
+      - publications.qmd
       - href: cv/cv.pdf
         text: "Curriculum Vitæ"
         icon: file-pdf-fill

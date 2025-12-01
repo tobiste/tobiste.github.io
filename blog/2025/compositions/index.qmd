@@ -1,8 +1,8 @@
 ---
 title: "Statistics and composition data"
-description: "The blog describes how compositional data (geochemical compositons, concentrations, etc.) are treated to calculate summary statistics"
+description: "Learn about the numeric nature of compositional data (e.g., geochemical compositons and concentrations) and how to treat them for statistical analysis"
 author: "Tobias Stephan"
-date: "11/29/2025"
+date: "11/30/2025"
 image: "cover.jpg"
 categories:
   - Geochemistry
@@ -21,6 +21,23 @@ format:
 #| message: false
 #| warning: false
 #| include: false
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.height = 6 * 0.618,
+  fig.retina = 3,
+  dev = "ragg_png",
+  fig.align = "center",
+  out.width = "90%",
+  collapse = TRUE,
+  cache.extra = 1234  # Change number to invalidate cache
+)
+
+options(
+  digits = 4,
+  width = 300,
+  dplyr.summarise.inform = FALSE
+)
+
 set.seed(20250411)
 ```
 
@@ -413,7 +430,7 @@ oxides_beta_boot <- sapply(1:B, function(i) {
 ```{r boot2}
 #| eval: true
 #| include: false
-oxides_beta_boot <- readRDS('~/GitHub/tobiste.github.io/blog/compositions/boot.rds')
+oxides_beta_boot <- readRDS('~/GitHub/tobiste.github.io/blog/2025/compositions/boot.rds')
 ```
 
 We can inspect the distribution  of these bootstrapped samples means:
@@ -495,7 +512,7 @@ ppcomp(distlist, legendtext = names(distlist))
 So far we only looked at 1-dimension data. But how do we deal with more 
 dimension, i.e., more than just one element (or oxide) concentration?
 
-The Beta distribution is the 1-dimensional equivalent of a the **Dirichlet distribution**, which just has some more parameters to describe the multidimensional shapes. Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.
+The Beta distribution is the 1-dimensional equivalent of a the **Dirichlet distribution** (named after German mathematician *Johann Peter Gustav Lejeune Dirichlet*, pronounced [ləˈʒœn diʀiˈkleː]), which just has some more parameters to describe the multidimensional shapes. Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.
 
 ```{r}
 #| message: false
@@ -612,7 +629,7 @@ TernaryPlot(
 #| message: false
 #| warning: false
 #| include: false
-ragg::agg_jpeg("~/GitHub/tobiste.github.io/blog/compositions/cover.jpg",
+ragg::agg_jpeg("~/GitHub/tobiste.github.io/blog/2025/compositions/cover.jpg",
   res = 150,
   width = 5,
   height = 5.2,

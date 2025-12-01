@@ -1,15 +1,12 @@
 ---
 title: "Quick-Guide to THERIAK-DOMINO"
-description: "A simple step-by-step guide to use generate metamorphic phase equilibria diagrams"
+description: "A few simple steps to generate metamorphic phase equilibria diagrams"
 author: "Tobias Stephan"
 date: "11/29/2025"
 image: "ps_Moss-029_MnNCKFMASHT.png"
 categories:
   - Metamorphic petrology
-  - THERIAK-DOMINO
-editor: 
-  markdown: 
-    wrap: 72
+  - Tutorial
 format:
   html:
     toc: true
@@ -18,7 +15,7 @@ format:
 
 This blog post gives a brief and most simple walk-through for
 `THERIAK-DOMINO` to generate some phase equilibria diagrams
-(pseudosection) modeled from the composition of metamorphic rocks.
+(pseudosections) modeled from the composition of metamorphic rocks.
 
 ## A: Calculate phases / isopleths
 
@@ -191,7 +188,7 @@ To quickly find the reaction belonging to a number, you may use my
 4.  Type in the mineral of interest to see in which reaction lines the
     mineral is involved.
 
-## More help
+## Additional ressources
 
 -   A more detailed quick-guide:
     <https://cdn.serc.carleton.edu/files/research_education/equilibria/theriak-domino_getting_started.v3.pdf>
