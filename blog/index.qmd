@@ -1,0 +1,15 @@
+---
+title: Blog
+listing: 
+  type: default
+  contents: /
+  date-format: iso
+  categories: true
+  fields: [title, description, categories, image]
+  sort-ui: false
+  filter-ui: false
+  field-display-names: 
+    title: "Project"
+---
+
+Coming soon...

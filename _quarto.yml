@@ -16,7 +16,7 @@ author-meta: "Tobias Stephan"
 
 website:
   title: "Tobias Stephan"
-  description: "Tobias Stephan is a postdoc and lecturer at Lakehead University, researching lithospheric deformation and teaching data structural geology & tectonics."
+  description: "Tobias Stephan is an Assistant Professor at Lakehead University, researching lithospheric deformation and teaching structural geology, tectonics and metamorphic petrology."
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer:
     left: |
@@ -33,6 +33,7 @@ website:
       - publications.qmd
       - software.qmd
       - teaching.qmd
+      - blog/index.qmd
       - href: cv/cv.pdf
         text: "Curriculum Vitæ"
         icon: file-pdf-fill

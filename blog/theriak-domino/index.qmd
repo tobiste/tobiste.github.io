@@ -1,0 +1,201 @@
+---
+title: "Quick-Guide to THERIAK-DOMINO"
+description: "A simple step-by-step guide to use generate metamorphic phase equilibria diagrams"
+author: "Tobias Stephan"
+date: "11/29/2025"
+image: "ps_Moss-029_MnNCKFMASHT.png"
+categories:
+  - Metamorphic petrology
+  - THERIAK-DOMINO
+editor: 
+  markdown: 
+    wrap: 72
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+This blog post gives a brief and most simple walk-through for
+`THERIAK-DOMINO` to generate some phase equilibria diagrams
+(pseudosection) modeled from the composition of metamorphic rocks.
+
+## A: Calculate phases / isopleths
+
+1.  We need to define the chemical composition within a preferred
+    chemical system relevant for the metamorphic reactions. In the
+    `therin.txt` file, you need to add these compositions following the
+    following structure to the end of the file:
+
+```         
+500     4000 
+0 SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?) * HT-9 MnNCKFMASHT
+```
+
+Here, the first line gives the expected temperature (in °C) and pressure
+(kbar) for the modeling, and the second line specifies the
+concentrations of the elements relevant for our metamorphism.
+
+To generate this line from your geochemical data, you may use my **Bulk
+to therin** app
+
+-   Go to [Bulk_to_therin](https://tobiste.shinyapps.io/Bulk_to_therin/)
+    and upload your major element composition (wt. %).
+
+-   Select your desired chemical system and other optional parameters.
+
+-   Copy the result under `THERIN (mol)` and paste it at the end of your
+    `therin.txt` file.
+
+2.  Next run `start.bat` file in the `Working` subfolder of your
+    Theriak-Domino directory. Then type
+
+```         
+domino
+```
+
+3.  **data base definition**: Select **database** for the modelling
+    (e.g. `tcds55_p07.txt`)
+
+4.  **definition of X-axis**: Define X-axis and its range (`TC` for
+    Temperature (in ° Celsius), and then two numbers indicating the
+    minimum and maximum temperature):
+
+```         
+TC 300 800
+```
+
+5.  **definition of X-axis**: Define Y-axis and its range (`P` for
+    pressure followed by the minimum maximum pressure in kbar):
+
+```         
+P 1000 7000
+```
+
+6.  **definition of calculation type**: Type `.` for equilibrium phase
+    diagram (*eq*) or jump to part B for mineral composition isopleth
+
+7.  **labeling of reactions, precision and smoothness**: type `1` for
+    assemblages
+
+CALCULATION STARTS
+
+## B: (Optional): Calculate phases AND isopleths
+
+1.  For *eq* **and** isopleths of phase compositions (e.g. garnet),
+    follow steps up to 3. and type: `script`
+
+2.  New JOB filename: `domjob.bat`
+
+3.  script name for eq diagram: `script_001_eq`
+
+4.  Follow steps described in A3 - A7
+
+5.  Almandine file name `script_002_alm`
+
+6.  Follow steps described in B4 - B8. Define the calculation type. The
+    input must follow this structure: `phase key nr min max step`.
+
+-   `phase` must be a mineral phase from the database (`GT07W2` for
+    garnet data in the database `tcds55_p07.txt`)
+
+-   `nr` is 1
+
+-   `key` is an end-member of that mineral phase (e.g. `alm` for
+    almandine, `gr` for grossular, `py` pyrope, `spss` spessartine) as
+    defined in the database file for that `phase`
+
+-   `min`, `max` and `step` specify the range and the step-size for
+    which isopleths the compositions should be calculated for
+    (`` 0 1 0.02` `` means from 0 to 100% in 2% steps.)
+
+```         
+GT07W2 alm 1 0 1 0.02
+```
+
+7.  To label the reactions, type: `1`
+
+8.  Repeat steps 3-7 for additional garnet phases.
+
+For example:
+
+```         
+GT07W2 alm 1 0.5 0.8 0.01 
+GT07W2 py 1 0.01 0.05 0.01 
+GT07W2 gr 1 0.2 0.5 0.01 
+GT07W2 spss 1 0.05 0.3 0.01
+```
+
+9.  Final database definition
+
+`end`
+
+10. To start the scripts type and run `domjob`
+
+## C: Export mineral reactions as table and plot
+
+Next, we have to clean up the labels of the reactions lines and then
+plot a phase diagram. Therefore, we run the two routines GUZZLER and
+EXPLOT (GUZZLER: cleans the labels, while EXPLOT, creates the plot and saves it 
+in the `plot.ps` file).
+
+In the command shell type and run the following functions in this
+sequence:
+
+1.  `guzzler`
+    -   **Enter input name**. Usually you can just hit ENTER here,
+        unless your specified a script. In that case you may check all
+        the different `*.plt` file in your working directory and repeat
+        all this steps for each file.
+    -   **Specify the extent of the X-axis** (temperature): min and max
+        values (can be the ones specified earlier in domino, followed by
+        a width value, e.g. 15)
+    -   **Specify the extent of the Y-axis** (pressure) min and max values
+        (can be the ones specified earlier in domino, followed by a
+        height value, e.g. 15)
+    -   **Specify the size of the labels**: 0.2
+    -   **Specify if you want to label the plot**: 3 (means YES)
+2.  `explot`
+    -   **Enter output name**: Same as above, but now for all `*.cln`
+        files in your working directory.
+
+Now make a copy of the generated `.ps` or `.svg` file and repeat the
+same procedure, but this time we create a plot without labels (so you
+have a look-up file and a clean plot for further editing).
+
+3.  Type and execute `guzzler`: Specify if you want to label the plot: 0
+    (means No)
+
+4.  Type and execute `explot`
+
+Finally generated the phase diagrams as a postscript file (`*.ps`) and
+`*.svg`, which you can further edit with vector graphics software, such
+as the free [inkscape](https://inkscape.org/) program.
+
+## D: Quickly search the reaction table for mineral phases
+
+If you open the postscript file, you will see a complicated equilibrium
+phase diagram with some reactions numbered instead of labeled (because
+there is not enough room for labels.) To see a list of reactions and
+numbers, open the file table (created by GUZZLER) in the Working folder.
+
+To quickly find the reaction belonging to a number, you may use my
+**GUZZLER Filter** app:
+
+1.  Go to <https://tobiste.shinyapps.io/Bulk_to_therin/>
+
+2.  Open the `GUZZLER Filter` tab
+
+3.  Upload your reaction table (`table`)
+
+4.  Type in the mineral of interest to see in which reaction lines the
+    mineral is involved.
+
+## More help
+
+-   A more detailed quick-guide:
+    <https://cdn.serc.carleton.edu/files/research_education/equilibria/theriak-domino_getting_started.v3.pdf>
+-   Official manual:
+    <https://earth.geology.yale.edu/~ajs/SupplementaryData/2016/theriakd/Documentation/TheriakDominoGuide.pdf>
+-   Create pixel-maps:
+    <https://muse.union.edu/hollochk/kurt-hollocher/some-theriak-domino-tips-and-tools/>

@@ -4,6 +4,13 @@
     "items": []
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/theriak-domino/index.html",
+      "/blog/compositions/index.html"
+    ]
+  },
+  {
     "listing": "/projects/index.html",
     "items": []
   },

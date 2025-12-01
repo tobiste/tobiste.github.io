@@ -8,7 +8,9 @@ title: Teaching
 
 -   **Structural Geology and Tectonics** <span style="color:grey">(Lakehead University, GEOL 3310)
 
-#### Teaching assistant
+-   **Metamorphic Petrology** <span style="color:grey">(Lakehead University, GEOL 3217)
+
+#### Teaching assistants
 
 -   **3D Modeling** [(Technische Universität Bergakademie Freiberg, 2018)]{style="color:grey"}
 

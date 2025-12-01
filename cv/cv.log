@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.28)  18 SEP 2025 17:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.28)  30 NOV 2025 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -656,11 +656,11 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/sc' in size <14.4> not availab
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/sc' will be
 (Font)              scaled to size 14.4pt on input line 81.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <12> not available
-(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 119.
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 118.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
+(Font)              scaled to size 12.0pt on input line 118.
 
-Overfull \hbox (6.007pt too wide) in paragraph at lines 128--129
+Overfull \hbox (6.007pt too wide) in paragraph at lines 127--128
 \T1/bch/m/n/10 (-20) a-lyz-ing the Stress Field in the North-ern Cordillera^^Q. \T1/bch/m/it/10 (-20) Tec-ton-ics \T1/bch/m/n/10 (-20) 44(9). []doi: 10.1029/2025TC009014[]. 
  []
 
@@ -669,14 +669,14 @@ Overfull \hbox (6.007pt too wide) in paragraph at lines 128--129
 [1{C:/Users/tstephan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_iln36p.enc}
 
 {C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_2mfh3o.enc}]
-Overfull \hbox (0.30678pt too wide) in paragraph at lines 138--140
+Overfull \hbox (0.30678pt too wide) in paragraph at lines 137--139
 \T1/bch/m/it/10 (-20) Deutschen Gesellschaft für Ge-owis-senschaften (J. Appl. Reg. Geol.)\T1/bch/m/n/10 (-20) . []doi: 10.1127/zdgg/2023/0365[] 
  []
 
 
 
 [2]
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 193.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 192.
  (C:\Users\tstephan\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
@@ -702,7 +702,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,10981b,844s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tstephan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Bold.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Regular.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on cv.pdf (4 pages, 191292 bytes).
+Output written on cv.pdf (4 pages, 191507 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)
