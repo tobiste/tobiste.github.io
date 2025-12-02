@@ -207,7 +207,10 @@ window.Quarto = {
   <li><a href="#how-to-properly-do-the-descriptive-inference" id="toc-how-to-properly-do-the-descriptive-inference" class="nav-link" data-scroll-target="#how-to-properly-do-the-descriptive-inference">How to properly do the descriptive inference?</a></li>
   <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
   <li><a href="#which-distrbution-model-describes-my-data-the-best" id="toc-which-distrbution-model-describes-my-data-the-best" class="nav-link" data-scroll-target="#which-distrbution-model-describes-my-data-the-best">Which distrbution model describes my data the best?</a></li>
-  <li><a href="#ternary-systems" id="toc-ternary-systems" class="nav-link" data-scroll-target="#ternary-systems">Ternary systems</a></li>
+  <li><a href="#ternary-systems" id="toc-ternary-systems" class="nav-link" data-scroll-target="#ternary-systems">Ternary systems</a>
+  <ul class="collapse">
+  <li><a href="#kernel-density-estimates" id="toc-kernel-density-estimates" class="nav-link" data-scroll-target="#kernel-density-estimates">Kernel density estimates</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -391,7 +394,7 @@ window.Quarto = {
 </details>
 </div>
 <p>The only problems with these log-based transformations is that <span class="math inline">\(\log(0) = \infty\)</span> and <span class="math inline">\(\log(1) = 0\)</span> and <span class="math inline">\(\text{logit}(0) = -\infty\)</span> and <span class="math inline">\(\text{logit}(1) = \infty\)</span>, which creates problems when the values are near 0 and 1.</p>
-<p>Some concentration data are measured as 0 (not detected) or 1 (pure component). In these cases, the log-transformation will create infinity values. Of course, we could replace such values by some adjustments, e.g.&nbsp;by assigning a constant to the below detection limits (BD), e.g.&nbsp;BD/2, or using some imputation algorithms. However any such adjustment will ultimately add bias. Moreover, the log-transformations are highly non-linear near 0 and 1. Small changes in small concentrations get magnified, and hence their distances will be distorted. This affects distance based methods to estimate the similarity among the data (e.g.&nbsp;clustering and regression algorithms).</p>
+<p>Some concentration data are measured as 0 (not detected) or 1 (pure component). In these cases, the log-transformation will create infinity values. Of course, we could replace such values by some adjustments, e.g.&nbsp;by assigning a constant to the below detection limits (BD), e.g. BD/2, or using some imputation algorithms. However any such adjustment will ultimately add bias. Moreover, the log-transformations are highly non-linear near 0 and 1. Small changes in small concentrations get magnified, and hence their distances will be distorted. This affects distance based methods to estimate the similarity among the data (e.g.&nbsp;clustering and regression algorithms).</p>
 </section>
 <section id="what-is-the-more-correct-way" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-the-more-correct-way">What is the more correct way?</h2>
@@ -443,7 +446,7 @@ window.Quarto = {
 </ul>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Show the code for the underlying functions for the summary statistics of a Beta dsitributions</summary>
+<summary>Show the code for the underlying functions for the summary statistics of a Beta dsitribution</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit of Beta distribution to data</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>fitbeta <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">range =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">na.rm =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"mle"</span>, ...) {</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(method)) {</span>
@@ -730,7 +733,13 @@ window.Quarto = {
 <section id="ternary-systems" class="level2">
 <h2 class="anchored" data-anchor-id="ternary-systems">Ternary systems</h2>
 <p>So far we only looked at 1-dimension data. But how do we deal with more dimension, i.e., more than just one element (or oxide) concentration?</p>
-<p>The Beta distribution is the 1-dimensional equivalent of a the <strong>Dirichlet distribution</strong> (named after German mathematician <em>Johann Peter Gustav Lejeune Dirichlet</em>, pronounced [ləˈʒœn diʀiˈkleː]), which just has some more parameters to describe the multidimensional shapes. Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.</p>
+<p>The Beta distribution is the univariate equivalent of a the <strong>Dirichlet distribution</strong> (named after German mathematician <em>Johann Peter Gustav Lejeune Dirichlet</em>, pronounced [ləˈʒœn diʀiˈkleː]), which just has some more parameters to describe the multidimensional shapes. Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.</p>
+<p>Notation: <span class="math display">\[  B(\alpha) \]</span> where the shape parameters <span class="math inline">\(\alpha = (a_1, \ldots, a_K)\)</span> for <span class="math inline">\(K\)</span> dimensions. As you may see, for <span class="math inline">\(K=2\)</span>, the distribution can be explained by 2 shape parameters, that is the Beta distribution where a concentration values represent the proportion of 2 components (e.g.&nbsp;0% of element A or 100% of element B).</p>
+<p>In the following steps, we will use our example data and calculate the ACF components and plot them in a ternary diagram, here color-coded by the sample name.</p>
+<p>ACF diagrams are commonly used in metamorphic petrology to asses their protolith composition (see <a href="https://www2.tulane.edu/~sanelson/eens212/triangular_plots_metamophic_petrology.htm">here</a> for more details). The letters stands for <span class="math inline">\(A = (Al_2O_3 + Fe_2O_3) - (Na_2O + K2O)\)</span>, <span class="math inline">\(C = CaO - \frac{10}{3} P_2O_5\)</span>, and <span class="math inline">\(F = FeO + MgO + MnO\)</span>.</p>
+<blockquote class="blockquote">
+<p>The ternary plotting functions are provided by the {Ternary} package.</p>
+</blockquote>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Aar_ACF <span class="ot">&lt;-</span> <span class="fu">cbind</span>(</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  Aar<span class="sc">$</span>Al2O3 <span class="sc">+</span> Aar<span class="sc">$</span>Fe2O3t <span class="sc">-</span> (Aar<span class="sc">$</span>Na2O <span class="sc">+</span> Aar<span class="sc">$</span>K2O),</span>
@@ -745,14 +754,15 @@ window.Quarto = {
 <span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPlot</span>(</span>
 <span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"ACF"</span>,</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">alab =</span> <span class="fu">expression</span>(<span class="st">"Al"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">+</span> <span class="st">"Fe"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">-</span> <span class="st">"(Na"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span> <span class="sc">+</span> <span class="st">"K"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O)"</span>),</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">clab =</span> <span class="fu">expression</span>(<span class="st">"CaO"</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">*</span> <span class="st">"(P"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">5</span>] <span class="sc">*</span> <span class="st">")"</span>),</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">blab =</span> <span class="fu">expression</span>(<span class="st">"FeO"</span> <span class="sc">+</span> <span class="st">"MgO"</span> <span class="sc">+</span> <span class="st">"MnO"</span>),</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">lab.font =</span> <span class="dv">4</span>,</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.font =</span> <span class="dv">1</span>,</span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">clockwise =</span> <span class="cn">FALSE</span>, <span class="at">grid.lines =</span> <span class="dv">5</span>, <span class="at">grid.minor.lines =</span> <span class="dv">1</span></span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(Aar_ACF[, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">cex =</span> .<span class="dv">8</span>, <span class="at">col =</span> assigned_colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">atip =</span> <span class="st">"A"</span>, <span class="at">btip =</span> <span class="st">"F"</span>, <span class="at">ctip =</span> <span class="st">"C"</span>,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">alab =</span> <span class="fu">expression</span>(<span class="st">"Al"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">+</span> <span class="st">"Fe"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">-</span> <span class="st">"(Na"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span> <span class="sc">+</span> <span class="st">"K"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O)"</span>),</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">clab =</span> <span class="fu">expression</span>(<span class="st">"CaO"</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">*</span> <span class="st">"(P"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">5</span>] <span class="sc">*</span> <span class="st">")"</span>),</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">blab =</span> <span class="fu">expression</span>(<span class="st">"FeO"</span> <span class="sc">+</span> <span class="st">"MgO"</span> <span class="sc">+</span> <span class="st">"MnO"</span>),</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">lab.font =</span> <span class="dv">4</span>,</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.font =</span> <span class="dv">1</span>,</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">clockwise =</span> <span class="cn">FALSE</span>, <span class="at">grid.lines =</span> <span class="dv">5</span>, <span class="at">grid.minor.lines =</span> <span class="dv">1</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(Aar_ACF[, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">cex =</span> .<span class="dv">8</span>, <span class="at">col =</span> assigned_colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -761,91 +771,200 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>Analogous to the Beta distribution, we need to fit a Dirichlet distribution to our data, to calculate summary statistics (mean, mode, variance, ….).</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Show the code for the underlying functions for the summary statistics of a Dirichlet dsitribution</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>fit_dirichlet <span class="ot">&lt;-</span> <span class="cf">function</span>(x, ...){</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  compositions<span class="sc">::</span><span class="fu">acomp</span>(x) <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    compositions<span class="sc">::</span><span class="fu">fitDirichlet</span>(...)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>dirichlet_variance <span class="ot">&lt;-</span> <span class="cf">function</span>(x, ...){</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">fit_dirichlet</span>(x, ...)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  alpha <span class="ot">&lt;-</span> fit<span class="sc">$</span>alpha</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  alpha0 <span class="ot">&lt;-</span> <span class="fu">sum</span>(alpha)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  alphabar <span class="ot">&lt;-</span> alpha<span class="sc">/</span>alpha0</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  (alphabar <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> alphabar)) <span class="sc">/</span> (alpha0 <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>dirichlet_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x, ...){</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">fit_dirichlet</span>(x, ...)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  alpha <span class="ot">&lt;-</span> fit<span class="sc">$</span>alpha</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  alpha0 <span class="ot">&lt;-</span> <span class="fu">sum</span>(alpha)</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  alpha<span class="sc">/</span>alpha0</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>dirichlet_mode <span class="ot">&lt;-</span> <span class="cf">function</span>(x, ...){</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">fit_dirichlet</span>(x, ...)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>  alpha <span class="ot">&lt;-</span> fit<span class="sc">$</span>alpha</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">any</span>(alpha <span class="sc">&gt;</span> <span class="dv">1</span>))</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>  alpha0 <span class="ot">&lt;-</span> <span class="fu">sum</span>(alpha)</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>  K <span class="ot">&lt;-</span> <span class="fu">ncol</span>(x)</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  (alpha <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> (alpha0 <span class="sc">-</span> K)</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit a Dirichlet distribution</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fit_dirichlet</span>(Aar_ACF)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="do">## $alpha</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 32.865  6.642 10.885</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="do">## $loglikelihood</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 7427</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="do">## $df</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 171</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Dirichlet mean</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dirichlet_mean</span>(Aar_ACF)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.6522 0.1318 0.2160</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Dirichlet mode</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="fu">dirichlet_mean</span>(Aar_ACF)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.6522 0.1318 0.2160</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Dirichlet variance</span></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="fu">dirichlet_variance</span>(Aar_ACF)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.004414 0.002227 0.003295</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we can add the mean and the mode to our ternary diagram:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPlot</span>(</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"ACF"</span>,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">atip =</span> <span class="st">"A"</span>, <span class="at">btip =</span> <span class="st">"F"</span>, <span class="at">ctip =</span> <span class="st">"C"</span>,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">alab =</span> <span class="fu">expression</span>(<span class="st">"Al"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">+</span> <span class="st">"Fe"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">-</span> <span class="st">"(Na"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span> <span class="sc">+</span> <span class="st">"K"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O)"</span>),</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">clab =</span> <span class="fu">expression</span>(<span class="st">"CaO"</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">*</span> <span class="st">"(P"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">5</span>] <span class="sc">*</span> <span class="st">")"</span>),</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">blab =</span> <span class="fu">expression</span>(<span class="st">"FeO"</span> <span class="sc">+</span> <span class="st">"MgO"</span> <span class="sc">+</span> <span class="st">"MnO"</span>),</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">lab.font =</span> <span class="dv">4</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.font =</span> <span class="dv">1</span>,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">clockwise =</span> <span class="cn">FALSE</span>, <span class="at">grid.lines =</span> <span class="dv">5</span>, <span class="at">grid.minor.lines =</span> <span class="dv">1</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(Aar_ACF[, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">cex =</span> .<span class="dv">8</span>, <span class="at">col =</span> <span class="st">"grey"</span>)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>arithm_mean_ACF <span class="ot">&lt;-</span> <span class="fu">apply</span>(Aar_ACF, <span class="dv">2</span>, mean)</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(arithm_mean_ACF, <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">1.5</span>, <span class="at">col =</span> <span class="st">"grey20"</span>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(<span class="fu">dirichlet_mean</span>(Aar_ACF), <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">cex =</span> <span class="fl">1.5</span>, <span class="at">col =</span> <span class="st">"#440154FF"</span>)</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(<span class="fu">dirichlet_mode</span>(Aar_ACF), <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">cex =</span> <span class="fl">1.5</span>, <span class="at">col =</span> <span class="st">"#5DC863FF"</span>)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>,</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Dirichlet mean"</span>, <span class="st">"Dirichlet mode"</span>, <span class="st">"Arithmetic mean"</span>),</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#440154FF"</span>, <span class="st">"#5DC863FF"</span>, <span class="st">"grey20"</span>), <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">1</span>),</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For fun, I also added the arithmetic mean (basically the mean of each component). You can see how off this one is compared to the data… No? Ok - let’s compare with the density estimate for the data.</p>
+<section id="kernel-density-estimates" class="level3">
+<h3 class="anchored" data-anchor-id="kernel-density-estimates">Kernel density estimates</h3>
 <p>My code below defines a <strong>Dirichlet kernel</strong> that will be used to calculate densities in a ternary diagram. In case your are interested, the functions create a grid of equally spaced points within the ternary diagram, then loops through every grid point and calculate the Dirichlet distribution for the close neighbors, and finally adds all the distributions.</p>
+<p>Why not using a classical density estimate? This would result in calculated densities outside of the ternary diagram.</p>
+<blockquote class="blockquote">
+<p>The Dirichlet Kernel takes into account the bound nature of multivariate (here three components) compositional data.</p>
+</blockquote>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Show the code for the underlying functions</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the distance between two compositions x and y in a ternary system.</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x and y are both three-element vectors.</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>tern_distance <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>(<span class="fl">0.5</span> <span class="sc">*</span> ((x[<span class="dv">1</span>] <span class="sc">-</span> y[<span class="dv">1</span>])<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (x[<span class="dv">2</span>] <span class="sc">-</span> y[<span class="dv">2</span>])<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (x[<span class="dv">3</span>] <span class="sc">-</span> y[<span class="dv">3</span>])<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Dirichlet KDE for ternary diagrams. </span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co"># h is the bandwidth (usually a value between 0 and 1), </span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># and n is the grid resolution (amount of points per axis)</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>kde_Dirichlet <span class="ot">&lt;-</span> <span class="cf">function</span>(x, h, <span class="at">n =</span> <span class="dv">100</span>, ...) {</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>  vals <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n)</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  kdegrid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> vals, <span class="at">y =</span> vals, <span class="at">z =</span> vals) <span class="sc">|&gt;</span></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">subset</span>(x <span class="sc">+</span> y <span class="sc">+</span> z <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  x[x <span class="sc">&lt;=</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> .Machine<span class="sc">$</span>double.eps<span class="sc">^</span><span class="fl">0.5</span></span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> x <span class="sc">/</span> <span class="fu">rowSums</span>(x)</span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>  dummy <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c) {</span>
-<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    a <span class="sc">+</span> b <span class="sc">+</span> c</span>
-<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>  dumy_grid <span class="ot">&lt;-</span> Ternary<span class="sc">::</span><span class="fu">TernaryPointValues</span>(dummy, <span class="at">resolution =</span> n)</span>
-<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>  nx <span class="ot">&lt;-</span> <span class="fu">nrow</span>(x)</span>
-<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  values <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(kdegrid)), <span class="cf">function</span>(i) {</span>
-<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>    kcenter <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(kdegrid[i, ])</span>
-<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>    xd <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(nx), <span class="cf">function</span>(k) {</span>
-<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tern_distance</span>(x[k, ], kcenter)</span>
-<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>    idx <span class="ot">&lt;-</span> xd <span class="sc">&lt;=</span> h</span>
-<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(idx) <span class="sc">&gt;</span> <span class="dv">2</span>) {</span>
-<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>      dirichlet_params <span class="ot">&lt;-</span> compositions<span class="sc">::</span><span class="fu">acomp</span>(x[idx, ]) <span class="sc">|&gt;</span> </span>
-<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>        compositions<span class="sc">::</span><span class="fu">fitDirichlet</span>()</span>
-<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>      dirichlet_density <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c) {</span>
-<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>          compositions<span class="sc">::</span><span class="fu">dDirichlet</span>(<span class="fu">cbind</span>(a, b, c), <span class="at">alpha =</span> dirichlet_params<span class="sc">$</span>alpha, ...)</span>
-<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a>      res <span class="ot">&lt;-</span> Ternary<span class="sc">::</span><span class="fu">TernaryPointValues</span>(dirichlet_density, <span class="at">resolution =</span> n)</span>
-<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>      res[<span class="st">"z"</span>, ]</span>
-<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span></span>
-<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a>  dumy_grid[<span class="st">"z"</span>, ] <span class="ot">&lt;-</span> <span class="fu">Reduce</span>(<span class="st">"+"</span>, values)</span>
-<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a>  dumy_grid</span>
-<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the distance between two compositions x and y in a ternary system.</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x and y are both three-element vectors.</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>tern_distance <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>(<span class="fl">0.5</span> <span class="sc">*</span> ((x[<span class="dv">1</span>] <span class="sc">-</span> y[<span class="dv">1</span>])<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (x[<span class="dv">2</span>] <span class="sc">-</span> y[<span class="dv">2</span>])<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (x[<span class="dv">3</span>] <span class="sc">-</span> y[<span class="dv">3</span>])<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Dirichlet KDE for ternary diagrams. </span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co"># h is the bandwidth (usually a value between 0 and 1), </span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co"># and n is the grid resolution (amount of points per axis)</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>kde_Dirichlet <span class="ot">&lt;-</span> <span class="cf">function</span>(x, h, <span class="at">n =</span> <span class="dv">100</span>, ...) {</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  vals <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  kdegrid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> vals, <span class="at">y =</span> vals, <span class="at">z =</span> vals) <span class="sc">|&gt;</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">subset</span>(x <span class="sc">+</span> y <span class="sc">+</span> z <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  x[x <span class="sc">&lt;=</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> .Machine<span class="sc">$</span>double.eps<span class="sc">^</span><span class="fl">0.5</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> x <span class="sc">/</span> <span class="fu">rowSums</span>(x)</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>  dummy <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c) {</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>    a <span class="sc">+</span> b <span class="sc">+</span> c</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>  dumy_grid <span class="ot">&lt;-</span> Ternary<span class="sc">::</span><span class="fu">TernaryPointValues</span>(dummy, <span class="at">resolution =</span> n)</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>  nx <span class="ot">&lt;-</span> <span class="fu">nrow</span>(x)</span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>  values <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(kdegrid)), <span class="cf">function</span>(i) {</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>    kcenter <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(kdegrid[i, ])</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>    xd <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(nx), <span class="cf">function</span>(k) {</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tern_distance</span>(x[k, ], kcenter)</span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>    idx <span class="ot">&lt;-</span> xd <span class="sc">&lt;=</span> h</span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(idx) <span class="sc">&gt;</span> <span class="dv">2</span>) {</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>      dirichlet_params <span class="ot">&lt;-</span> compositions<span class="sc">::</span><span class="fu">acomp</span>(x[idx, ]) <span class="sc">|&gt;</span> </span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a>        compositions<span class="sc">::</span><span class="fu">fitDirichlet</span>()</span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>      dirichlet_density <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c) {</span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a>          compositions<span class="sc">::</span><span class="fu">dDirichlet</span>(<span class="fu">cbind</span>(a, b, c), <span class="at">alpha =</span> dirichlet_params<span class="sc">$</span>alpha, ...)</span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>      res <span class="ot">&lt;-</span> Ternary<span class="sc">::</span><span class="fu">TernaryPointValues</span>(dirichlet_density, <span class="at">resolution =</span> n)</span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>      res[<span class="st">"z"</span>, ]</span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span></span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a>  dumy_grid[<span class="st">"z"</span>, ] <span class="ot">&lt;-</span> <span class="fu">Reduce</span>(<span class="st">"+"</span>, values)</span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a>  dumy_grid</span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Now we apply the kernel density function to our data:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ACF_kde <span class="ot">&lt;-</span> <span class="fu">kde_Dirichlet</span>(Aar_ACF, <span class="at">h =</span> <span class="fl">0.25</span>, <span class="at">n =</span> <span class="dv">75</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">TernaryPlot</span>(</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"ACF"</span>,</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">atip =</span> <span class="st">"A"</span>, <span class="at">btip =</span> <span class="st">"F"</span>, <span class="at">ctip =</span> <span class="st">"C"</span>,</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">alab =</span> <span class="fu">expression</span>(<span class="st">"Al"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">+</span> <span class="st">"Fe"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">-</span> <span class="st">"(Na"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span> <span class="sc">+</span> <span class="st">"K"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O)"</span>),</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">clab =</span> <span class="fu">expression</span>(<span class="st">"CaO"</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">*</span> <span class="st">"(P"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">5</span>] <span class="sc">*</span> <span class="st">")"</span>),</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">blab =</span> <span class="fu">expression</span>(<span class="st">"FeO"</span> <span class="sc">+</span> <span class="st">"MgO"</span> <span class="sc">+</span> <span class="st">"MnO"</span>),</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">point =</span> <span class="st">"up"</span>,</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">lab.font =</span> <span class="dv">2</span>, <span class="at">tip.font =</span> <span class="dv">2</span>,</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.font =</span> <span class="dv">1</span>,</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">clockwise =</span> <span class="cn">FALSE</span>, <span class="at">grid.lines =</span> <span class="dv">5</span>, <span class="at">grid.minor.lines =</span> <span class="dv">1</span>,</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.first =</span> <span class="fu">ColourTernary</span>(ACF_kde, <span class="at">spectrum =</span> viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">512</span>))</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ACF_kde <span class="ot">&lt;-</span> <span class="fu">kde_Dirichlet</span>(Aar_ACF, <span class="at">h =</span> <span class="fl">0.25</span>, <span class="at">n =</span> <span class="dv">75</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">TernaryPlot</span>(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"ACF"</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">atip =</span> <span class="st">"A"</span>, <span class="at">btip =</span> <span class="st">"F"</span>, <span class="at">ctip =</span> <span class="st">"C"</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">alab =</span> <span class="fu">expression</span>(<span class="st">"Al"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">+</span> <span class="st">"Fe"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">3</span>] <span class="sc">-</span> <span class="st">"(Na"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span> <span class="sc">+</span> <span class="st">"K"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O)"</span>),</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">clab =</span> <span class="fu">expression</span>(<span class="st">"CaO"</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">*</span> <span class="st">"(P"</span>[<span class="dv">2</span>] <span class="sc">*</span> <span class="st">"O"</span>[<span class="dv">5</span>] <span class="sc">*</span> <span class="st">")"</span>),</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">blab =</span> <span class="fu">expression</span>(<span class="st">"FeO"</span> <span class="sc">+</span> <span class="st">"MgO"</span> <span class="sc">+</span> <span class="st">"MnO"</span>),</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">point =</span> <span class="st">"up"</span>,</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">lab.font =</span> <span class="dv">2</span>, <span class="at">tip.font =</span> <span class="dv">2</span>,</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.font =</span> <span class="dv">1</span>,</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">clockwise =</span> <span class="cn">FALSE</span>, <span class="at">grid.lines =</span> <span class="dv">5</span>, <span class="at">grid.minor.lines =</span> <span class="dv">1</span>,</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.first =</span> <span class="fu">ColourTernary</span>(ACF_kde, <span class="at">spectrum =</span> viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">512</span>))</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(arithm_mean_ACF, <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="st">"grey40"</span>)</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(<span class="fu">dirichlet_mean</span>(Aar_ACF), <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#440154FF"</span>)</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>Ternary<span class="sc">::</span><span class="fu">TernaryPoints</span>(<span class="fu">dirichlet_mode</span>(Aar_ACF), <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#5DC863FF"</span>)</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>,</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Dirichlet mean"</span>, <span class="st">"Dirichlet mode"</span>, <span class="st">"Arithmetic mean"</span>),</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#440154FF"</span>, <span class="st">"#5DC863FF"</span>, <span class="st">"grey40"</span>), <span class="at">pch =</span> <span class="dv">1</span>,</span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><a href="https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/" class="uri">https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/</a></li>
+<li>Learn more about Beta and Dirichlet distributions: <a href="https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/" class="uri">https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/</a></li>
+<li>Learn more about compositional data in geosciences: <a href="https://www.ucl.ac.uk/~ucfbpve/geostats/latex/index.html#x1-7000014" class="uri">https://www.ucl.ac.uk/~ucfbpve/geostats/latex/index.html#x1-7000014</a></li>
+<li>R package for more statistical tools to handle compositional data: <a href="https://cran.r-project.org/web/packages/compositions/index.html"><code>compositions</code></a></li>
 </ul>
 
 

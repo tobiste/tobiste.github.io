@@ -14,6 +14,9 @@ format:
     toc-location: right
     code-fold: false
     code-summary: "Show the code"
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup}
@@ -61,17 +64,24 @@ Aar <- Aar[c(1, 3:13)]
 head(Aar)
 ```
 
-They show the concentrations of certain oxides and elements. Geologists would then like to know if some of these concentrations correlate, if the samples are clustered, or simply how these concentrations are distributed.
-To find this out, we often explore them visually by plotting them, and sometimes perform statistical analyses. 
+They show the concentrations of certain oxides and elements.
+Geologists would then like to know if some of these concentrations correlate, if the samples are clustered, or simply how these concentrations are distributed.
+To find this out, we often explore them visually by plotting them, and sometimes perform statistical analyses.
 What we often forget is that every statistical analysis makes very specific assumptions about the nature of the underlying data.
 
 ## Why are most people doing it wrong?
 
-The geochemical composition of rocks is commonly expressed as a weight percentage (wt%) or parts per million (ppm). Thus, these *proportions* are typically vectors of positive (or non-negative) numbers, where the sum is often a constant, such as 100%. However, they often do not actually add up to 100% due to data uncertainties, the detection limits of low-concentration elements or loss of ignition during laboratory analysis. This means the numbers cannot be smaller than 0 or exceed the constant (100%). In other words, these number vectors only form a subset of the real number system. In a ternary system, a composition cannot lie outside a ternary diagram.
+The geochemical composition of rocks is commonly expressed as a weight percentage (wt%) or parts per million (ppm).
+Thus, these *proportions* are typically vectors of positive (or non-negative) numbers, where the sum is often a constant, such as 100%.
+However, they often do not actually add up to 100% due to data uncertainties, the detection limits of low-concentration elements or loss of ignition during laboratory analysis.
+This means the numbers cannot be smaller than 0 or exceed the constant (100%).
+In other words, these number vectors only form a subset of the real number system.
+In a ternary system, a composition cannot lie outside a ternary diagram.
 
-We can plot the histograms of the data for each oxide and add a vertical line to indicate the location of the mean. 
+We can plot the histograms of the data for each oxide and add a vertical line to indicate the location of the mean.
 
-> Here I loop through all the columns using the `lapply()` function. The `invisible()` function at the end of the command chain makes sure that the output is the plot only.
+> Here I loop through all the columns using the `lapply()` function.
+> The `invisible()` function at the end of the command chain makes sure that the output is the plot only.
 
 ```{r}
 #| fig.width: 8
@@ -94,7 +104,10 @@ lapply(seq_len(p), function(i) {
 ```
 
 The fact that these numbers only occur within an interval has significant implications for the description of distributions.
-Firstly, we cannot assume that compositions are drawn from a Normal distribution. This means that our classical statistical parameters (mean, standard deviation, etc.) are somewhat meaningless when it comes to describing how the compositions are distributed. Standard stats may give misleading results, especially when values cluster near 0 or 1, or the distribution is skewed. For example, a mean near $0.95$ with standard deviation $\sigma^2 = 0.10$ implies impossible values above 1 as the standard deviation does not respect the bounded nature of data and rarely reflects real uncertainty for skewed data.
+Firstly, we cannot assume that compositions are drawn from a Normal distribution.
+This means that our classical statistical parameters (mean, standard deviation, etc.) are somewhat meaningless when it comes to describing how the compositions are distributed.
+Standard stats may give misleading results, especially when values cluster near 0 or 1, or the distribution is skewed.
+For example, a mean near $0.95$ with standard deviation $\sigma^2 = 0.10$ implies impossible values above 1 as the standard deviation does not respect the bounded nature of data and rarely reflects real uncertainty for skewed data.
 Since cluster analysis, regression and density estimation all rely on these parameters, most statistical analysis and visual exploration tools (e.g. box plots) will carry the same flaw: **they do not represent the true distribution of your data!**
 
 ```{r}
@@ -112,12 +125,13 @@ rownames(stats) <- colnames(Aar_oxides)
 print(stats)
 ```
 
-One simple solution is to calculate the statistics on the logarithmic scale. 
-This will stretch all numbers close to 0 and 1 out to negative and positive infinity, respectively. This makes "normally" distributed data approach a symmetric, hence, Gaussian distribution in log space, known as the **log-normal distribution**, allowing us to use classic statistical estimators. 
+One simple solution is to calculate the statistics on the logarithmic scale.
+This will stretch all numbers close to 0 and 1 out to negative and positive infinity, respectively.
+This makes "normally" distributed data approach a symmetric, hence, Gaussian distribution in log space, known as the **log-normal distribution**, allowing us to use classic statistical estimators.
 
 A calculated mean in log space needs to transformed back into real space using the `exp()` function.
-This is essentially the **geometric mean**: 
-$$ \text{geometric mean}(x) = \text{exp}\Bigl(\frac{\sum_{i=1}^{n} \ln{x_i}}{n}\Bigr)  $$
+This is essentially the **geometric mean**: $$ \text{geometric mean}(x) = \text{exp}\Bigl(\frac{\sum_{i=1}^{n} \ln{x_i}}{n}\Bigr)  $$
+
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code for the geometric mean in R"
@@ -150,8 +164,7 @@ lapply(
   invisible()
 ```
 
-Some zero-value issues can be avoided using the **Logit transformation**:
- $$ \text{logit}(x) = \log{\frac{x}{1-x}} $$
+Some zero-value issues can be avoided using the **Logit transformation**: $$ \text{logit}(x) = \log{\frac{x}{1-x}} $$
 
 ```{r}
 #| code-fold: true
@@ -164,17 +177,22 @@ logit_mean <- function(x, ...) {
 }
 ```
 
+The only problems with these log-based transformations is that $\log(0) = \infty$ and $\log(1) = 0$ and $\text{logit}(0) = -\infty$ and $\text{logit}(1) = \infty$, which creates problems when the values are near 0 and 1.
 
-The only problems with these log-based transformations is that $\log(0) = \infty$ and $\log(1) = 0$ and $\text{logit}(0) = -\infty$ and $\text{logit}(1) = \infty$, which creates problems when the values are near 0 and 1. 
-
-Some concentration data are measured as 0 (not detected) or 1 (pure component). In these cases, the log-transformation will create infinity values. 
-Of course, we could replace such values by some adjustments, e.g. by assigning a constant to the below detection limits (BD), e.g. BD/2, or using some imputation algorithms. 
+Some concentration data are measured as 0 (not detected) or 1 (pure component).
+In these cases, the log-transformation will create infinity values.
+Of course, we could replace such values by some adjustments, e.g. by assigning a constant to the below detection limits (BD), e.g.
+BD/2, or using some imputation algorithms.
 However any such adjustment will ultimately add bias.
-Moreover, the log-transformations are highly non-linear near 0 and 1. Small changes in small concentrations get magnified, and hence their distances will be distorted. This affects distance based methods to estimate the similarity among the data (e.g. clustering and regression algorithms).
+Moreover, the log-transformations are highly non-linear near 0 and 1.
+Small changes in small concentrations get magnified, and hence their distances will be distorted.
+This affects distance based methods to estimate the similarity among the data (e.g. clustering and regression algorithms).
 
 ## What is the more correct way?
 
-The good news is that mathematicians have found ways to handle distributions for such unconventional number systems, without having to transform our data. For numbers defined on an interval, we can use the **Beta distribution**. While a Normal distribution is described by a mean ($\mu$) and a standard deviation ($\sigma^2$), a Beta distribution is described by two shape parameters ($a$ and $b$, which are both non-negative real numbers). 
+The good news is that mathematicians have found ways to handle distributions for such unconventional number systems, without having to transform our data.
+For numbers defined on an interval, we can use the **Beta distribution**.
+While a Normal distribution is described by a mean ($\mu$) and a standard deviation ($\sigma^2$), a Beta distribution is described by two shape parameters ($a$ and $b$, which are both non-negative real numbers).
 
 Notation:
 
@@ -182,7 +200,7 @@ Notation:
 
 -   Beta distribution: $B(a, b)$
 
-Here is how they look like and how the parameters change the overall shape of the density functions. 
+Here is how they look like and how the parameters change the overall shape of the density functions.
 
 ```{r}
 #| fig.width: 10
@@ -210,14 +228,13 @@ legend("topleft", col = cols, lty = 1, legend = c("a=b=1", "a=1, b=3", "a=3, b=1
 See how they resemble the distribution of our geochemical data!
 Analogous to the normal distribution, the goal now is to find these parameters that best describe the distribution of our data.
 
-
 ## How to properly do the descriptive inference?
 
 -   Open your R editor (e.g. RStudio)
 
 -   Import your geochemical data
 
--   Load the following packages 
+-   Load the following packages
 
 -   and load these functions for calculating summary statistics for the Beta distribution:
 
@@ -225,7 +242,7 @@ Analogous to the normal distribution, the goal now is to find these parameters t
 #| message: false
 #| warning: false
 #| code-fold: true
-#| code-summary: "Show the code for the underlying functions for the summary statistics of a  Beta dsitributions"
+#| code-summary: "Show the code for the underlying functions for the summary statistics of a Beta dsitribution"
 # Fit of Beta distribution to data
 fitbeta <- function(x, range = c(0, 1), na.rm = FALSE, method = "mle", ...) {
   if (is.null(method)) {
@@ -345,6 +362,7 @@ fitbeta(element)
 ```
 
 The mean and the standard deviation of the Beta-distributed sample is
+
 ```{r}
 beta_mean(element)
 beta_sd(element)
@@ -356,7 +374,7 @@ Or use the `beta_summary()` function to get them all (mean, median, and quantile
 beta_summary(element)
 ```
 
-Now compare the differences of the statistical estimators for the different distributions. 
+Now compare the differences of the statistical estimators for the different distributions.
 Here are the different estimates for the mean:
 
 ```{r}
@@ -390,30 +408,32 @@ setNames(
 )
 ```
 
-You can see that the Log-Normal distribution gives very different mean and standard deviation values. 
-The means all look similar, yet they are not identical. 
-The standard deviation do look more different. The log- and logit transformed values are hard to interpret, and a back-transformation into real space is not straight-forward. 
+You can see that the Log-Normal distribution gives very different mean and standard deviation values.
+The means all look similar, yet they are not identical.
+The standard deviation do look more different.
+The log- and logit transformed values are hard to interpret, and a back-transformation into real space is not straight-forward.
 
-So what's the problem? A normal distributed data is described by  $\mu \pm \sigma^2$, meaning the data is symmetric about the mean. However, since our data is clamped between 0 and 1, strongly skewed values can lead to negative predicted values or values that are larger than 1. But we know this is not allowed! Hence, this estimators cannot describe nor predict the data.
-This problem becomes more significant the more skewed and tailed our data is. 
+So what's the problem?
+A normal distributed data is described by $\mu \pm \sigma^2$, meaning the data is symmetric about the mean.
+However, since our data is clamped between 0 and 1, strongly skewed values can lead to negative predicted values or values that are larger than 1.
+But we know this is not allowed!
+Hence, this estimators cannot describe nor predict the data.
+This problem becomes more significant the more skewed and tailed our data is.
 
-On the other hand, the Beta standard deviation indicates how concentrated or dispersed the distribution is around the mean, considering the Beta’s shape (smaller SD means data are more concentrated or peaked near the mean, while larger SD means more dispersed, flatter, more skewed data). It is only a summary measure, not a bound! So for heavily skewed Beta (a ≪ b or a ≫  b), it is better to report quantiles or **confidence intervals** instead.
+On the other hand, the Beta standard deviation indicates how concentrated or dispersed the distribution is around the mean, considering the Beta’s shape (smaller SD means data are more concentrated or peaked near the mean, while larger SD means more dispersed, flatter, more skewed data).
+It is only a summary measure, not a bound!
+So for heavily skewed Beta (a ≪ b or a ≫ b), it is better to report quantiles or **confidence intervals** instead.
 
 ## Inference
 
-The central limit theory states that the distribution of sample means will be 
-approximately normal if the sample size is large, regardless of the original population's distribution.
-This theorem provides an alternative statistical inference technique, called **bootstrapping**, which does 
-not require assumptions on the underlying population distribution. Hence it 
-provides non-parametric estimate of a statistic.
+The central limit theory states that the distribution of sample means will be approximately normal if the sample size is large, regardless of the original population's distribution.
+This theorem provides an alternative statistical inference technique, called **bootstrapping**, which does not require assumptions on the underlying population distribution.
+Hence it provides non-parametric estimate of a statistic.
 
-Bootstrapping uses re-sampling of the data with replacement, to estimate the 
-sampling distribution of a statistic, such as the Beta mean.
+Bootstrapping uses re-sampling of the data with replacement, to estimate the sampling distribution of a statistic, such as the Beta mean.
 
-Here we calculate oxides' Beta mean for 10,000 bootstrap samples. 
-<!-- Since this can be a time-expensive calculation, we will run several parallel -->
-<!-- resamplings on all available core of our computer (unfortunately this is a bit -->
-<!-- more complicated on Windows operated computers...) -->
+Here we calculate oxides' Beta mean for 10,000 bootstrap samples.
+<!-- Since this can be a time-expensive calculation, we will run several parallel --> <!-- resamplings on all available core of our computer (unfortunately this is a bit --> <!-- more complicated on Windows operated computers...) -->
 
 ```{r boot1}
 #| eval: false
@@ -433,7 +453,7 @@ oxides_beta_boot <- sapply(1:B, function(i) {
 oxides_beta_boot <- readRDS('~/GitHub/tobiste.github.io/blog/2025/compositions/boot.rds')
 ```
 
-We can inspect the distribution  of these bootstrapped samples means:
+We can inspect the distribution of these bootstrapped samples means:
 
 ```{r}
 #| fig.width: 8
@@ -471,7 +491,6 @@ lapply(seq_len(p), function(i) {
   invisible()
 ```
 
-
 ## Which distrbution model describes my data the best?
 
 In case you're still not convinced, the {fitdistrplus} package offers some visual and statistical parameters to compare the goodness of fit of different distributions:
@@ -491,7 +510,7 @@ names(distlist) <- c("normal", "lognormal", "logis", "beta")
 gofstat(distlist, fitnames = names(distlist))
 ```
 
-Here we check which distribution better fits the SiO2 concentrations, and the lowest Akaike's and Bayesian Information criteria, as well as the low statistics all indicate that the Beta distribution best explain the concentrations. 
+Here we check which distribution better fits the SiO2 concentrations, and the lowest Akaike's and Bayesian Information criteria, as well as the low statistics all indicate that the Beta distribution best explain the concentrations.
 We can also have a visual representation of the data fits:
 
 ```{r}
@@ -506,13 +525,23 @@ qqcomp(distlist, legendtext = names(distlist))
 ppcomp(distlist, legendtext = names(distlist))
 ```
 
-
 ## Ternary systems
 
-So far we only looked at 1-dimension data. But how do we deal with more 
-dimension, i.e., more than just one element (or oxide) concentration?
+So far we only looked at 1-dimension data.
+But how do we deal with more dimension, i.e., more than just one element (or oxide) concentration?
 
-The Beta distribution is the 1-dimensional equivalent of a the **Dirichlet distribution** (named after German mathematician *Johann Peter Gustav Lejeune Dirichlet*, pronounced [ləˈʒœn diʀiˈkleː]), which just has some more parameters to describe the multidimensional shapes. Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.
+The Beta distribution is the univariate equivalent of a the **Dirichlet distribution** (named after German mathematician *Johann Peter Gustav Lejeune Dirichlet*, pronounced \[ləˈʒœn diʀiˈkleː\]), which just has some more parameters to describe the multidimensional shapes.
+Otherwise nothing changes: estimate the shape parameters of the distribution, and then calculate the summary statistic.
+
+Notation: $$  B(\alpha) $$ where the shape parameters $\alpha = (a_1, \ldots, a_K)$ for $K$ dimensions.
+As you may see, for $K=2$, the distribution can be explained by 2 shape parameters, that is the Beta distribution where a concentration values represent the proportion of 2 components (e.g. 0% of element A or 100% of element B).
+
+In the following steps, we will use our example data and calculate the ACF components and plot them in a ternary diagram, here color-coded by the sample name.
+
+ACF diagrams are commonly used in metamorphic petrology to asses their protolith composition (see [here](https://www2.tulane.edu/~sanelson/eens212/triangular_plots_metamophic_petrology.htm) for more details).
+The letters stands for $A = (Al_2O_3 + Fe_2O_3) - (Na_2O + K2O)$, $C = CaO - \frac{10}{3} P_2O_5$, and $F = FeO + MgO + MnO$.
+
+> The ternary plotting functions are provided by the {Ternary} package.
 
 ```{r}
 #| message: false
@@ -532,6 +561,7 @@ assigned_colors <- palette_colors[as.numeric(my_categories)]
 
 Ternary::TernaryPlot(
   main = "ACF",
+  atip = "A", btip = "F", ctip = "C",
   alab = expression("Al"[2] * "O"[3] + "Fe"[2] * "O"[3] - "(Na"[2] * "O" + "K"[2] * "O)"),
   clab = expression("CaO" + 10 / 3 * "(P"[2] * "O"[5] * ")"),
   blab = expression("FeO" + "MgO" + "MnO"),
@@ -542,7 +572,100 @@ Ternary::TernaryPlot(
 Ternary::TernaryPoints(Aar_ACF[, 1:3], pch = 16, cex = .8, col = assigned_colors)
 ```
 
-My code below defines a **Dirichlet kernel** that will be used to calculate densities in a ternary diagram. In case your are interested, the functions create a grid of equally spaced points within the ternary diagram, then loops through every grid point and calculate the Dirichlet distribution for the close neighbors, and finally adds all the distributions.
+Analogous to the Beta distribution, we need to fit a Dirichlet distribution to our data, to calculate summary statistics (mean, mode, variance, ....).
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code for the underlying functions for the summary statistics of a Dirichlet dsitribution"
+fit_dirichlet <- function(x, ...){
+  compositions::acomp(x) |> 
+    compositions::fitDirichlet(...)
+}
+
+dirichlet_variance <- function(x, ...){
+  fit <- fit_dirichlet(x, ...)
+  alpha <- fit$alpha
+  alpha0 <- sum(alpha)
+  alphabar <- alpha/alpha0
+  (alphabar * (1 - alphabar)) / (alpha0 + 1)
+}
+
+dirichlet_mean <- function(x, ...){
+  fit <- fit_dirichlet(x, ...)
+  alpha <- fit$alpha
+  alpha0 <- sum(alpha)
+  alpha/alpha0
+}
+
+dirichlet_mode <- function(x, ...){
+  fit <- fit_dirichlet(x, ...)
+  alpha <- fit$alpha
+  stopifnot(any(alpha > 1))
+  alpha0 <- sum(alpha)
+  K <- ncol(x)
+  (alpha - 1) / (alpha0 - K)
+}
+```
+
+```{r}
+# Fit a Dirichlet distribution
+fit_dirichlet(Aar_ACF)
+
+# Dirichlet mean
+dirichlet_mean(Aar_ACF)
+
+# Dirichlet mode
+dirichlet_mean(Aar_ACF)
+
+# Dirichlet variance
+dirichlet_variance(Aar_ACF)
+```
+
+Now we can add the mean and the mode to our ternary diagram:
+
+```{r}
+#| message: false
+#| warning: false
+#| fig.width: 10
+#| fig.height: 8
+Ternary::TernaryPlot(
+  main = "ACF",
+  atip = "A", btip = "F", ctip = "C",
+  alab = expression("Al"[2] * "O"[3] + "Fe"[2] * "O"[3] - "(Na"[2] * "O" + "K"[2] * "O)"),
+  clab = expression("CaO" + 10 / 3 * "(P"[2] * "O"[5] * ")"),
+  blab = expression("FeO" + "MgO" + "MnO"),
+  lab.font = 4,
+  axis.font = 1,
+  clockwise = FALSE, grid.lines = 5, grid.minor.lines = 1
+)
+Ternary::TernaryPoints(Aar_ACF[, 1:3], pch = 16, cex = .8, col = "grey")
+
+arithm_mean_ACF <- apply(Aar_ACF, 2, mean)
+
+Ternary::TernaryPoints(arithm_mean_ACF, pch = 1, cex = 1.5, col = "grey20")
+Ternary::TernaryPoints(dirichlet_mean(Aar_ACF), pch = 16, cex = 1.5, col = "#440154FF")
+Ternary::TernaryPoints(dirichlet_mode(Aar_ACF), pch = 16, cex = 1.5, col = "#5DC863FF")
+
+legend("topright",
+  legend = c("Dirichlet mean", "Dirichlet mode", "Arithmetic mean"),
+  col = c("#440154FF", "#5DC863FF", "grey20"), pch = c(16, 16, 1),
+)
+```
+
+For fun, I also added the arithmetic mean (basically the mean of each component).
+You can see how off this one is compared to the data...
+No?
+Ok - let's compare with the density estimate for the data.
+
+### Kernel density estimates
+
+My code below defines a **Dirichlet kernel** that will be used to calculate densities in a ternary diagram.
+In case your are interested, the functions create a grid of equally spaced points within the ternary diagram, then loops through every grid point and calculate the Dirichlet distribution for the close neighbors, and finally adds all the distributions.
+
+Why not using a classical density estimate?
+This would result in calculated densities outside of the ternary diagram.
+
+> The Dirichlet Kernel takes into account the bound nature of multivariate (here three components) compositional data.
 
 ```{r}
 #| message: false
@@ -622,6 +745,15 @@ TernaryPlot(
   clockwise = FALSE, grid.lines = 5, grid.minor.lines = 1,
   panel.first = ColourTernary(ACF_kde, spectrum = viridis::magma(512))
 )
+
+Ternary::TernaryPoints(arithm_mean_ACF, pch = 1, cex = 1, col = "grey40")
+Ternary::TernaryPoints(dirichlet_mean(Aar_ACF), pch = 1, cex = 1, col = "#440154FF")
+Ternary::TernaryPoints(dirichlet_mode(Aar_ACF), pch = 1, cex = 1, col = "#5DC863FF")
+
+legend("topright",
+  legend = c("Dirichlet mean", "Dirichlet mode", "Arithmetic mean"),
+  col = c("#440154FF", "#5DC863FF", "grey40"), pch = 1,
+)
 ```
 
 ```{r}
@@ -653,4 +785,6 @@ dev.off()
 
 ## References
 
--   <https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/>
+-   Learn more about Beta and Dirichlet distributions: <https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/>
+-   Learn more about compositional data in geosciences: <https://www.ucl.ac.uk/~ucfbpve/geostats/latex/index.html#x1-7000014>
+-   R package for more statistical tools to handle compositional data: [`compositions`](https://cran.r-project.org/web/packages/compositions/index.html)
