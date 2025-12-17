@@ -4,9 +4,9 @@ title: Teaching
 
 #### Lead Instructor
 
--   **Geological Case Studies** [(Lakehead University, GEOL 4313)]{style="color:grey"} \| [Syllabus <i class="bi bi-file-pdf-fill"></i>](teaching/GEOL4313_Syllabus_2026.pdf)
+-   **Geological Case Studies** [(Lakehead University, GEOL 4313)]{style="color:grey"} \| [Syllabus <i class="bi bi-file-pdf-fill"></i>](teaching/GEOL4313_Syllabus_2026W.pdf)
 
--   **Structural Geology and Tectonics** <span style="color:grey">(Lakehead University, GEOL 3310) \| [Syllabus <i class="bi bi-file-pdf-fill"></i>](teaching/GEOL3310_Syllabus_2026.pdf)
+-   **Structural Geology and Tectonics** <span style="color:grey">(Lakehead University, GEOL 3310) \| [Syllabus <i class="bi bi-file-pdf-fill"></i>](teaching/GEOL3310_Syllabus_2025s.pdf)
 
 -   **Metamorphic Petrology** <span style="color:grey">(Lakehead University, GEOL 3217) \| [Syllabus <i class="bi bi-file-pdf-fill"></i>](teaching/GEOL3217_Syllabus_2026.pdf)
 
