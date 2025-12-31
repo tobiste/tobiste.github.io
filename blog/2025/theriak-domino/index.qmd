@@ -24,7 +24,7 @@ This blog post gives a brief and most simple walk-through for
     `therin.txt` file, you need to add these compositions following the
     following structure to the end of the file:
 
-```         
+```bash          
 500     4000 
 0 SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?) * HT-9 MnNCKFMASHT
 ```
@@ -47,10 +47,11 @@ to therin** app
 2.  Next run `start.bat` file in the `Working` subfolder of your
     Theriak-Domino directory. Then type
 
-```         
+```bash         
 domino
 ```
-
+ followed by `<enter>`
+ 
 3.  **data base definition**: Select **database** for the modelling
     (e.g. `tcds55_p07.txt`)
 
@@ -58,14 +59,14 @@ domino
     Temperature (in ° Celsius), and then two numbers indicating the
     minimum and maximum temperature):
 
-```         
+```bash         
 TC 300 800
 ```
 
 5.  **definition of X-axis**: Define Y-axis and its range (`P` for
     pressure followed by the minimum maximum pressure in kbar):
 
-```         
+```bash         
 P 1000 7000
 ```
 
@@ -106,7 +107,7 @@ CALCULATION STARTS
     which isopleths the compositions should be calculated for
     (`` 0 1 0.02` `` means from 0 to 100% in 2% steps.)
 
-```         
+```bash         
 GT07W2 alm 1 0 1 0.02
 ```
 
@@ -116,7 +117,7 @@ GT07W2 alm 1 0 1 0.02
 
 For example:
 
-```         
+```bash         
 GT07W2 alm 1 0.5 0.8 0.01 
 GT07W2 py 1 0.01 0.05 0.01 
 GT07W2 gr 1 0.2 0.5 0.01 
@@ -125,10 +126,16 @@ GT07W2 spss 1 0.05 0.3 0.01
 
 9.  Final database definition
 
-`end`
+```bash
+end
+```
 
-10. To start the scripts type and run `domjob`
+10. To start the scripts type and run
 
+
+```bash
+domjob
+```
 ## C: Export mineral reactions as table and plot
 
 Next, we have to clean up the labels of the reactions lines and then
@@ -139,7 +146,7 @@ in the `plot.ps` file).
 In the command shell type and run the following functions in this
 sequence:
 
-1.  `guzzler`
+1.  `{bash, echo=FALSE} guzzler`
     -   **Enter input name**. Usually you can just hit ENTER here,
         unless your specified a script. In that case you may check all
         the different `*.plt` file in your working directory and repeat
@@ -152,7 +159,7 @@ sequence:
         height value, e.g. 15)
     -   **Specify the size of the labels**: 0.2
     -   **Specify if you want to label the plot**: 3 (means YES)
-2.  `explot`
+2.  `{bash, echo=FALSE} explot`
     -   **Enter output name**: Same as above, but now for all `*.cln`
         files in your working directory.
 
@@ -160,10 +167,10 @@ Now make a copy of the generated `.ps` or `.svg` file and repeat the
 same procedure, but this time we create a plot without labels (so you
 have a look-up file and a clean plot for further editing).
 
-3.  Type and execute `guzzler`: Specify if you want to label the plot: 0
+3.  Type and execute `{bash, echo=FALSE} guzzler`: Specify if you want to label the plot: 0
     (means No)
 
-4.  Type and execute `explot`
+4.  Type and execute `{bash, echo=FALSE} explot`
 
 Finally generated the phase diagrams as a postscript file (`*.ps`) and
 `*.svg`, which you can further edit with vector graphics software, such
