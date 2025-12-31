@@ -14,7 +14,7 @@ format:
 ---
 
 This blog post gives a brief and most simple walk-through for
-`THERIAK-DOMINO` to generate some phase equilibria diagrams
+`THERIAK-DOMINO` to generate phase equilibria diagrams
 (pseudosections) modeled from the composition of metamorphic rocks.
 
 ## A: Calculate phases / isopleths
@@ -41,10 +41,10 @@ to therin** app
 
 -   Select your desired chemical system and other optional parameters.
 
--   Copy the result under `THERIN (mol)` and paste it at the end of your
+-   Copy the result under *THERIN (mol)* and paste it at the end of your
     `therin.txt` file.
 
-2.  Next run `start.bat` file in the `Working` subfolder of your
+2.  Next run `start.bat` file in the *Working* subfolder of your
     Theriak-Domino directory. Then type
 
 ```bash         
@@ -146,7 +146,7 @@ in the `plot.ps` file).
 In the command shell type and run the following functions in this
 sequence:
 
-1.  `{bash, echo=FALSE} guzzler`
+1.  `guzzler`
     -   **Enter input name**. Usually you can just hit ENTER here,
         unless your specified a script. In that case you may check all
         the different `*.plt` file in your working directory and repeat
@@ -159,18 +159,18 @@ sequence:
         height value, e.g. 15)
     -   **Specify the size of the labels**: 0.2
     -   **Specify if you want to label the plot**: 3 (means YES)
-2.  `{bash, echo=FALSE} explot`
+2.  `explot`
     -   **Enter output name**: Same as above, but now for all `*.cln`
         files in your working directory.
 
-Now make a copy of the generated `.ps` or `.svg` file and repeat the
+Now make a copy of the generated `*.ps` or `*.svg` file and repeat the
 same procedure, but this time we create a plot without labels (so you
 have a look-up file and a clean plot for further editing).
 
-3.  Type and execute `{bash, echo=FALSE} guzzler`: Specify if you want to label the plot: 0
+3.  Type and execute `guzzler`: Specify if you want to label the plot: 0
     (means No)
 
-4.  Type and execute `{bash, echo=FALSE} explot`
+4.  Type and execute `explot`
 
 Finally generated the phase diagrams as a postscript file (`*.ps`) and
 `*.svg`, which you can further edit with vector graphics software, such
@@ -188,9 +188,9 @@ To quickly find the reaction belonging to a number, you may use my
 
 1.  Go to <https://tobiste.shinyapps.io/Bulk_to_therin/>
 
-2.  Open the `GUZZLER Filter` tab
+2.  Open the *GUZZLER Filter* tab
 
-3.  Upload your reaction table (`table`)
+3.  Upload your reaction table (*table*)
 
 4.  Type in the mineral of interest to see in which reaction lines the
     mineral is involved.
