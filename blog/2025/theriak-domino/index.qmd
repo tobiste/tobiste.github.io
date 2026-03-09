@@ -14,7 +14,7 @@ format:
 ---
 
 This blog post gives a brief and most simple walk-through for
-`THERIAK-DOMINO` to generate phase equilibria diagrams
+`THERIAK-DOMINO` to generate phase isochemical equilibria diagrams
 (pseudosections) modeled from the composition of metamorphic rocks.
 
 ## A: Calculate phases / isopleths

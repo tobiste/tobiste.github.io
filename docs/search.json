@@ -67,7 +67,7 @@
     "href": "blog/2025/theriak-domino/index.html",
     "title": "Quick-Guide to THERIAK-DOMINO",
     "section": "",
-    "text": "This blog post gives a brief and most simple walk-through for THERIAK-DOMINO to generate phase equilibria diagrams (pseudosections) modeled from the composition of metamorphic rocks."
+    "text": "This blog post gives a brief and most simple walk-through for THERIAK-DOMINO to generate phase isochemical equilibria diagrams (pseudosections) modeled from the composition of metamorphic rocks."
   },
   {
     "objectID": "blog/2025/theriak-domino/index.html#a-calculate-phases-isopleths",

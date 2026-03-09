@@ -21,26 +21,32 @@
 %\date{April 15, 2019}
 %\cvplace{Thunder Bay, ON}
 
+\usepackage{xcolor}
+\definecolor{myred}{HTML}{B63679}
+\definecolor{myblack}{HTML}{000004}
+\definecolor{mylgray}{gray}{0.8}
+\definecolor{mygray}{gray}{0.6}
+
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\lhead{\color{gray}\textsf{\MakeUppercase{Curriulum vit\ae}}}
+\lhead{\textcolor{mylgray}{\textsf{\MakeUppercase{Curriulum vit\ae}}}}
 \chead{}
-\rhead{\color{gray}\textsf{Tobias Stephan}}
+\rhead{\textcolor{mylgray}{\textsf{Tobias Stephan}}}
 %\rhead{}
 %\cfoot{\thepage/11}
-\cfoot{\color{gray}\textsf{\thepage\ of \pageref{LastPage}}}
+\cfoot{\textcolor{mylgray}{\textsf{\thepage\ of \pageref{LastPage}}}}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 
-\setkomafont{section}{\Large\scshape\MakeLowercase}
-\setkomafont{subsection}{\large}
+\setkomafont{section}{\color{mygray}\Large\scshape\MakeLowercase}
+\setkomafont{subsection}{\color{mygray}\large}
 
 
 \begin{document}
 
 \addcontentsline{toc}{chapter}{Curriculum Vitae}
 
-\begin{cv}{\textsf{Dr Tobias Stephan}}
+\begin{cv}{\textcolor{myred}{\textsf{Dr Tobias Stephan}}}
     \medskip
     % \noindent\begin{minipage}{.74\linewidth}%
     %\medskip
@@ -94,7 +100,7 @@
     \begin{cvlist}{}
     \item[since 2025/12] \textbf{Assistant Professor}\\ \textit{Lakehead University,
             Department of Geology, Thunder Bay, ON, Canada}
-        \item[2023/04--2023/11] \textbf{Postdoctoral associate / Lecturer}\\ \textit{Lakehead University,
+    \item[2023/04--2023/11] \textbf{Postdoctoral associate / Lecturer}\\ \textit{Lakehead University,
             Department of Geology, Thunder Bay, ON, Canada}
         % \item[2024/09--2023/11] \textbf {Lecturer}\\ \textit{Lakehead University, Department of
         %     Geology, Thunder Bay, ON, Canada}      
@@ -121,6 +127,8 @@
         %\item[total times cited:] 267\footnote[1]{Web of Science} (362\footnote[2]{Google Scholar})
         % \item[h-index:] 6\footnotemark[1] (7\footnotemark[2])
         %\item[-] Duschl, F., \ul{Stephan, T.}, K\"ohler, S., Drews, M., Koehn, D., and Stollhofen, H. \enquote{How continents (de-)form: A paleostress chart for Central Europe}. submitted to \textit{Geology} in August 2024.
+
+        \item[-] \ul{Stephan, T.}, Pinto, T. F., and Enkelmann, E. (submitted): \enquote{Technical Note: Cluster Analysis of Inverse Thermochronology Models}. \textit{Geochronology}
 
         \item[16] \ul{Stephan, T.}, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025): \enquote{Going with the flow --- Changes of  Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)}. \textit{Journal of Structural Geology} 201. \doi{10.1016/j.jsg.2025.105542}.         
         
@@ -173,15 +181,15 @@
         \item[\texttt{structr}] Free and open-source R package for analyzing and visualizing orientation data for structural geology.
         \url{https://github.com/tobiste/structr}
         \item[\texttt{geoprofiler}] Creates Swath profiles and Distance vs X plots by measuring the accurate distances parallel and perpendicular to user-defined lines (\doi{10.32614/CRAN.package.geoprofiler}).
-        \url{https://tobiste.github.io/geoprofiler/}
-        \item[\texttt{ptrotR}] Free and open-source R package for plate motion reconstruction.\\
-        \url{https://github.com/tobiste/ptrotR}
-        \item[\texttt{laftr}] Free and open-source R package to calculate the ages from LA-ICP-MS based fission track dating using the zeta approach.
-        \url{https://github.com/tobiste/laftr}
-        \item[\texttt{euler}] Free and open-source R package for describing plate motion in terms of quaternions.\newline
-        \url{https://github.com/tobiste/euler}
-        \item[\texttt{euler.reco}] Free and open-source R package. Provides algorithms to find and evaluate the Euler pole solution describing the orientation of geological structures.\\
-        \url{https://github.com/tobiste/euler.reco}
+        %\url{https://tobiste.github.io/geoprofiler/}
+        %\item[\texttt{ptrotR}] Free and open-source R package for plate motion reconstruction.\\
+        %\url{https://github.com/tobiste/ptrotR}
+        %\item[\texttt{laftr}] Free and open-source R package to calculate the ages from LA-ICP-MS based fission track dating using the zeta approach.
+        %\url{https://github.com/tobiste/laftr}
+        %\item[\texttt{euler}] Free and open-source R package for describing plate motion in terms of quaternions.\newline
+        % \url{https://github.com/tobiste/euler}
+        %\item[\texttt{euler.reco}] Free and open-source R package. Provides algorithms to find and evaluate the Euler pole solution describing the orientation of geological structures.\\
+        % \url{https://github.com/tobiste/euler.reco}
     \end{cvlist}
 
     %\newpage
@@ -202,7 +210,7 @@
         \item[Memberships] The Geological Association of Canada (GAC), Canadian Tectonics
         Group (CTG)%, American Geophysical Union (AGU), European Geological Union (EGU), German Geological Union and Society (DGGV)
         \item[Reviewer for journals] Geology, Gondwana Research, Terra Nova, Geological
-        Society of America, Scientific Reports, Proceedings of the Geologists'
+        Society of America, Scientific Reports, GSA Bulletin, Proceedings of the Geologists'
         Association, Basin Research, Lithosphere, Discover Geoscience, Tectonics
         \item[Reviewer for grant proposals] National Science Center, Poland
         \item[Committee board member] Jack Henderson Best PhD Thesis Award from the Canadian
