@@ -16,8 +16,10 @@ about: #https://quarto.org/docs/websites/website-about.html
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/tobias-stephan-4247267b/
-    - text: ResearchGate
+    - text: "{{< iconify academicons:researchgate-square >}} ResearchGate"
       href: https://www.researchgate.net/profile/Tobias-Stephan-4
+    - text: University profile
+      href: https://www.lakeheadu.ca/users/S/tstephan/node/347135
 ---
 
 I am an Assistant Professor at the [Department of Geology at Lakehead University](https://www.lakeheadu.ca/programs/departments/geology) in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.
