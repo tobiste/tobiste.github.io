@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.2.20)  24 MAR 2026 13:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.2.20)  26 MAR 2026 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,15 +694,15 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 Here is how much of TeX's memory you used:
  18395 strings out of 473523
  333828 string characters out of 5713178
- 936900 words of memory out of 5000000
+ 935900 words of memory out of 5000000
  41206 multiletter control sequences out of 15000+600000
  657591 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,11n,107p,10981b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tstephan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Bold.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Regular.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on cv.pdf (3 pages, 188590 bytes).
+Output written on cv.pdf (3 pages, 189125 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)
  38985 words of extra memory for PDF output out of 42996 (max. 10000000)
 
