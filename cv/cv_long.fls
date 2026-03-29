@@ -266,6 +266,9 @@ INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\vf\public\fira\FiraS
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fira\FiraSans-Bold-osf-t1--base.tfm
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\vf\bitstrea\charter\bchb8t.vf
 INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\tfm\bitstrea\charter\bchb8r.tfm
+INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\tfm\bitstrea\charter\bchri8t.tfm
+INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\vf\bitstrea\charter\bchri8t.vf
+INPUT C:\Users\tstephan\AppData\Local\Programs\MiKTeX\fonts\tfm\bitstrea\charter\bchri8r.tfm
 INPUT cv_long.aux
 INPUT .\cv_long.out
 INPUT .\cv_long.out
