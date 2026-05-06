@@ -29,6 +29,8 @@ website:
     right:
       - text: "About"
         href: index.qmd
+      - text: "People"
+        href: people.qmd
       - blog/index.qmd
       - research/index.qmd
       - software.qmd

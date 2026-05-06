@@ -9,54 +9,34 @@ bibliography: publications/my_publications.bib
 csl: publications/agu.csl
 ---
 
-My developments are located on my [GitHub](https://github.com/tobiste/) page. 
-They are free and open-source and I try to keep them up to date. 
-Feel free to contribute, comment or open an issue!
+My developments are located on my [GitHub](https://github.com/tobiste/) page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!
 
 ## R packages
 
 ### tectonicr {#sec-tectonicr}
 
-::: {.grid}
+::::: grid
+::: g-col-9
+tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates [see @Stephan2023]. You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. A beta version is on [github](https://github.com/tobiste/tectonicr/).
 
-::: {.g-col-9}
-tectonicr is a free and open-source R package for modeling and **analyzing the direction of the maximum horizontal stress** (SHmax) based on the empirical link between the orientation of intraplate stress and 
-the direction of the relative motion of neighboring plates [see @Stephan2023]. 
-You can download and install it directly from the CRAN server using `install.packages("tectonicr")` in R. 
-A beta version is on [github](https://github.com/tobiste/tectonicr/).
-
-[documentation](https://tobiste.github.io/tectonicr/index.html) \|  [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \|
-[code](https://github.com/tobiste/tectonicr/) \|
-[GUI](https://tobiste.shinyapps.io/tectonicr-app/)
-
+[documentation](https://tobiste.github.io/tectonicr/index.html) \| [CRAN](https://cloud.r-project.org/web/packages/tectonicr/index.html) \| [code](https://github.com/tobiste/tectonicr/) \| [GUI](https://tobiste.shinyapps.io/tectonicr-app/)
 :::
 
-::: {.g-col-3}
+::: g-col-3
 ![](pictures/logo_tectonicr_hi.png)
 :::
-
-:::
+:::::
 
 ### geoprofiler
 
-geoprofiler is a free, open-source R package that allows you to create SWATH profiles and 
-"data transects", which are geological parameters plotted against the distance along a 
-user-defined profile line.
-This is useful whenever you want to analyze the trend of values (e.g., geochemical compositions, ages, depth, and magnitudes) with the distance to an important structure. 
-You can download and install it directly from the CRAN server using `install.packages("geoprofiler")` in R. 
-A beta version is available through [github](https://github.com/tobiste/geoprofiler/).
+geoprofiler is a free, open-source R package that allows you to create SWATH profiles and "data transects", which are geological parameters plotted against the distance along a user-defined profile line. This is useful whenever you want to analyze the trend of values (e.g., geochemical compositions, ages, depth, and magnitudes) with the distance to an important structure. You can download and install it directly from the CRAN server using `install.packages("geoprofiler")` in R. A beta version is available through [github](https://github.com/tobiste/geoprofiler/).
 
-[documentation](https://tobiste.github.io/geoprofiler/index.html) \|
-[CRAN](https://cloud.r-project.org/web/packages/geoprofiler/index.html) \|
-[code](https://github.com/tobiste/geoprofiler/)
-
+[documentation](https://tobiste.github.io/geoprofiler/index.html) \| [CRAN](https://cloud.r-project.org/web/packages/geoprofiler/index.html) \| [code](https://github.com/tobiste/geoprofiler/)
 
 ### structr (beta)
 
-::: {.grid}
-
-::: {.g-col-9}
-
+::::: grid
+::: g-col-9
 Structural geology package for R, free and open-source. It provides functions to
 
 -   analyze and visualize orientation data such as faults, folds, bedding planes, and lineations.
@@ -67,25 +47,21 @@ Structural geology package for R, free and open-source. It provides functions to
 -   simulation of deformation using deformation and velocity gradient tensors
 -   easy import: import your structural data directly from StraboSpot projects
 
-[documentation](https://tobiste.github.io/structr/index.html) \|
-[code](https://github.com/tobiste/structr)
-
+[documentation](https://tobiste.github.io/structr/index.html) \| [code](https://github.com/tobiste/structr)
 :::
 
-::: {.g-col-3}
+::: g-col-3
 ![](pictures/logo_structr.png)
 :::
-
-:::
+:::::
 
 ### thermoclustr
 
-Clustering, advanced statistics and densities of thermochronology cooling paths from inverse models:  [code](https://github.com/tobiste/thermoclustr)
+Clustering, advanced statistics and densities of thermochronology cooling paths from inverse models: [code](https://github.com/tobiste/thermoclustr)
 
 ### geocreep
 
-Estimate uncertainties in strain rates from flow laws, grain-size piezometry, and fugacity computations:
-[code](https://github.com/tobiste/geocreep)
+Estimate uncertainties in strain rates from flow laws, grain-size piezometry, and fugacity computations: [code](https://github.com/tobiste/geocreep)
 
 ### laftr
 
@@ -100,8 +76,6 @@ Rotation of plates in terms of quaternions: [code](https://github.com/tobiste/eu
 ### euler.reco
 
 Finds best Euler pole solution for a given structure: [code](https://github.com/tobiste/euler.reco)
-
-
 
 ## Web applications
 
