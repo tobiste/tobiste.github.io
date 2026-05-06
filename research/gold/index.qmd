@@ -1,6 +1,6 @@
 ---
 title: "Structural control of orogenic gold deposits in Archean settings"
-description: "We study how fluids and remobilized gold can flow in deep crustal conditions and how they channeled by strain partitioning. Our approach integrates structural geology, metamorphic petrology and geostatistics to understand the spatial concentration of metals in the crust during deformation."
+description: "We study how fluids and remobilized gold can flow in deep crustal conditions and how they are channeled by strain partitioning. Our approach integrates structural geology, metamorphic petrology and geostatistics to understand the spatial concentration of metals in the crust during deformation."
 format:
   html:
     toc: true
