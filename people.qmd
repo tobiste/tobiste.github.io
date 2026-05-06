@@ -6,7 +6,8 @@ format: html
 
 ![](pictures/bergen_shear_zone.jpg)
 
-> *Alert! We are currently hiring graduate students! If you are interested in studying structural geology, tectonics and metamorphic petrology, please contact [tstephan\@lakeheadu.ca](tstephan@lakeheadu.ca) and include your CV and transcript.*
+> *Alert! We are hiring graduate students! If you are interested in studying structural geology, tectonics and metamorphic petrology, please contact [tstephan\@lakeheadu.ca](tstephan@lakeheadu.ca) and include your CV and transcript.*
+
 
 ::::: grid
 ::: g-col-3

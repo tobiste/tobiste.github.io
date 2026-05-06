@@ -6,6 +6,7 @@ listing:
   date-format: iso
   categories: true
   fields: [title, description, categories, image]
+  sort: "date desc" # Sorts newest posts first
   sort-ui: false
   filter-ui: false
   field-display-names: 
