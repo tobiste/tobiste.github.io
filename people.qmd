@@ -71,11 +71,12 @@ Brooke studies deformation-induced fluid flow at the White River Gold Mine (ON).
 
 ::::: grid
 ::: g-col-3
+![](pictures/no-face.jpg)
 :::
 
 ::: g-col-9
 [**Logan Pelaia**]{style="font-size: 130%;"}
 
-Logan is working with Moses and studies the 3D structure and deformation gradients of the Triple-J Shear Zone (ON)
+Logan is working with Moses and studies the 3D structure and deformation gradients of the Triple-J Shear Zone (ON).
 :::
 :::::
