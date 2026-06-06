@@ -14,30 +14,30 @@ format:
 
 # Installation guide for THERIAK-DOMINO on UNIX systems
 
-These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g. Ubuntu), including a Windows Subsystem for Linux (WSL).
+These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g. Ubuntu), including a [Windows Subsystem for Linux (WSL)](#wsl).
 
 1.  Install Linux essential commands and *gfortran* compiler:
 
-  ```         
+  ```bash        
   sudo apt update && sudo apt install -y build-essential
   sudo apt-get install gfortran
   ```
 
 2.  Clone the THERIAK-DOMINO from GitHub into your directory of choice (here `td` in the root directory):
 
-  ```         
+  ```bash       
   git clone https://github.com/Theriak-Domino/theriak-domino.git td
   ```
 
 3.  Switch to newly created `td` directory:
 
-  ```         
+  ```bash         
   cd td/src
   ```
 
 4.  Open and edit makefile
 
-  ```         
+  ```bash         
   nano MakefileLin
   ```
 
@@ -53,24 +53,21 @@ Save and close file by `CTRL+S` `CTRL+X`
 
 6.  Now install
 
-  ```         
+  ```bash         
   make -fMakefile all
   ```
 
 7.  Copy installed files into "`dist/Programs/`" directory:
 
-  ```         
+  ```bash         
   cp -a  ~/td/build/. ~/td/dist/Programs/
   cp -a ~/td/src/. ~/td/dist/Programs/
-  ```
-  
-  ```         
-  cd ../dist/Working/
   ```
 
 8.  Edit paths in `linux_bashr_addition` file...
 
-  ```         
+  ```bash         
+  cd ../dist/Working/
   nano linux_bashr_addition
   ```
 
@@ -95,22 +92,22 @@ Save and close file by `CTRL+S` followed by `CTRL+X`
 
 10. Make a convenience copy
 
-  ```         
+  ```bash         
   cp linux_bashr_addition .bashrc
   ```
 
 11. Done. To start THERIAK-DOMINO just source that bash file and run a subroutine, e.g. `domino`:
 
-  ```         
+  ```bash         
   source .bashrc # needs to be only executed once per session
   domino
   ```
 
-## Run UNIX on Windows
+## Run UNIX on Windows {#wsl}
 
 open a Windows terminal and run:
 
-  ```         
+  ```bash         
   wsl --install
   ```
 
@@ -122,7 +119,7 @@ This install Ubuntu by default. If a different distribution is desired, run `wsl
 
 To start `wsl`, open the terminal and run
 
-  ```         
+  ```bash         
   wsl.exe
   ```
 
@@ -138,7 +135,7 @@ To start `wsl`, open the terminal and run
 
 5.  Open a terminal and run
 
-    ```         
+    ```bash         
     wsl.exe
     code
     ```
