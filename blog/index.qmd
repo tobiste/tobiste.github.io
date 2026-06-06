@@ -7,6 +7,10 @@ listing:
     contents: "2025/**/index.qmd"
     sort: "date desc"
     categories: true
+  - id: posts_2026
+    contents: "2026/**/index.qmd"
+    sort: "date desc"
+    categories: true
 page-layout: full
 toc-title: Year
 toc-location: right
@@ -22,6 +26,11 @@ freeze: false
     display: none;
 }
 ```
+
+## 2026
+
+:::{#posts_2026}
+:::
 
 ## 2025
 

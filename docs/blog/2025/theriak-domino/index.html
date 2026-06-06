@@ -178,9 +178,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#a-calculate-phases-isopleths" id="toc-a-calculate-phases-isopleths" class="nav-link active" data-scroll-target="#a-calculate-phases-isopleths">A: Calculate phases / isopleths</a></li>
-  <li><a href="#b-optional-calculate-phases-and-isopleths" id="toc-b-optional-calculate-phases-and-isopleths" class="nav-link" data-scroll-target="#b-optional-calculate-phases-and-isopleths">B: (Optional): Calculate phases AND isopleths</a></li>
+  <li><a href="#isopleths" id="toc-isopleths" class="nav-link" data-scroll-target="#isopleths">B: (Optional): Calculate phases AND isopleths</a></li>
   <li><a href="#c-export-mineral-reactions-as-table-and-plot" id="toc-c-export-mineral-reactions-as-table-and-plot" class="nav-link" data-scroll-target="#c-export-mineral-reactions-as-table-and-plot">C: Export mineral reactions as table and plot</a></li>
   <li><a href="#d-quickly-search-the-reaction-table-for-mineral-phases" id="toc-d-quickly-search-the-reaction-table-for-mineral-phases" class="nav-link" data-scroll-target="#d-quickly-search-the-reaction-table-for-mineral-phases">D: Quickly search the reaction table for mineral phases</a></li>
+  <li><a href="#some-tipps" id="toc-some-tipps" class="nav-link" data-scroll-target="#some-tipps">Some tipps</a>
+  <ul class="collapse">
+  <li><a href="#batch-modelling" id="toc-batch-modelling" class="nav-link" data-scroll-target="#batch-modelling">Batch modelling</a></li>
+  </ul></li>
   <li><a href="#additional-ressources" id="toc-additional-ressources" class="nav-link" data-scroll-target="#additional-ressources">Additional ressources</a></li>
   </ul>
 </nav>
@@ -263,8 +267,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>CALCULATION STARTS</p>
 </section>
-<section id="b-optional-calculate-phases-and-isopleths" class="level2">
-<h2 class="anchored" data-anchor-id="b-optional-calculate-phases-and-isopleths">B: (Optional): Calculate phases AND isopleths</h2>
+<section id="isopleths" class="level2">
+<h2 class="anchored" data-anchor-id="isopleths">B: (Optional): Calculate phases AND isopleths</h2>
 <ol type="1">
 <li><p>For <em>eq</em> <strong>and</strong> isopleths of phase compositions (e.g.&nbsp;garnet), follow steps up to 3. and type: <code>script</code></p></li>
 <li><p>New JOB filename: <code>domjob.bat</code></p></li>
@@ -333,6 +337,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Upload your reaction table (<em>table</em>)</p></li>
 <li><p>Type in the mineral of interest to see in which reaction lines the mineral is involved.</p></li>
 </ol>
+</section>
+<section id="some-tipps" class="level2">
+<h2 class="anchored" data-anchor-id="some-tipps">Some tipps</h2>
+<section id="batch-modelling" class="level3">
+<h3 class="anchored" data-anchor-id="batch-modelling">Batch modelling</h3>
+<p>In case you wan to run a bunch of samples over the weekend, you can create scripts and run them through a batch file. You can create those scripts through domino via script (as described in <a href="#isopleths">B</a>). But it its easier and faster to do that yourself:</p>
+<p>Each sample and their modelling parameters must be in a single script file (txt file), and they all must this structure:</p>
+<pre><code>script.script_001.txt
+script_001.plt
+tcds55_m11.txt
+    1.0000    300    0.010000   0.1000000E-08   0.1000000E-08   0.1000000E+01 0.1000000E-03     25      25     500
+0  SI(126.3225)AL(25.0095)FE(1.3919)MG(2.1338)CA(2.1756)NA(7.8736)K(8.7477)TI(0.0501)H(80)O(?)  *  022  NCKFMASHT
+ 
+ 
+ 
+ 
+ 
+TC  150  800
+P  1000  8000
+.
+1
+ 0.0000000E+00   0.0000000E+00
+_script_001_pix\
+</code></pre>
+<p>This is stored in a file called <code>script_001.txt</code>. The first line is the name of the script file, the second gives the name of the final plot file, third line specifies the database, the next two lines give the input parameters, the next 5 lines are empty, the next lines gives the temperature and pressure ranges, the <code>.</code> indicates that a phase equilibrium diagram should be created…</p>
+<p>You can then copy this file, create a new script <code>script_002.txt</code>, and modify it to input the new parameters. You can create multiple files like this.</p>
+<p>Next you create a file called <code>domjob.bat</code>. This is a batch file that tells THERIAK-DOMINO the order in which the subroutines should be executed. The batch file has the following structure:</p>
+<pre><code>domino  script_001.txt
+guzzler script_001.plt  script_001.cln  script_001.rxn
+explot  script_001.cln  script_001.ps
+domino  script_002.txt
+guzzler script_002.plt  script_002.cln  script_002.rxn
+explot  script_002.cln  script_002.ps
+domino  script_003.txt
+guzzler script_003.plt  script_003.cln  script_003.rxn
+explot  script_003.cln  script_003.ps
+domino  script_004.txt
+guzzler script_004.plt  script_004.cln  script_004.rxn
+explot  script_004.cln  script_004.ps</code></pre>
+<blockquote class="blockquote">
+<p>The names of the script files doesn’t matter as long as they are correctly spelled in both the script files and the <code>domjob</code> batch file.</p>
+</blockquote>
+<p>Finally, you start <code>domino</code> and type <code>domjob</code> followed by ENTER</p>
+</section>
 </section>
 <section id="additional-ressources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-ressources">Additional ressources</h2>

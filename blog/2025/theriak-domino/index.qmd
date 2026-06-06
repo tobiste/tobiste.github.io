@@ -78,7 +78,7 @@ P 1000 7000
 
 CALCULATION STARTS
 
-## B: (Optional): Calculate phases AND isopleths
+## B: (Optional): Calculate phases AND isopleths {#isopleths}
 
 1.  For *eq* **and** isopleths of phase compositions (e.g. garnet),
     follow steps up to 3. and type: `script`
@@ -194,6 +194,59 @@ To quickly find the reaction belonging to a number, you may use my
 
 4.  Type in the mineral of interest to see in which reaction lines the
     mineral is involved.
+
+## Some tipps
+
+### Batch modelling
+In case you wan to run a bunch of samples over the weekend, you can create scripts and run them through a batch file.
+You can create those scripts through domino via script (as described in [B](#isopleths)). But it its easier and faster to do that yourself:
+
+Each sample and their modelling parameters must be in a single script file (txt file), and they all must this structure:
+```
+script.script_001.txt
+script_001.plt
+tcds55_m11.txt
+    1.0000    300    0.010000   0.1000000E-08   0.1000000E-08   0.1000000E+01 0.1000000E-03     25      25     500
+0  SI(126.3225)AL(25.0095)FE(1.3919)MG(2.1338)CA(2.1756)NA(7.8736)K(8.7477)TI(0.0501)H(80)O(?)  *  022  NCKFMASHT
+ 
+ 
+ 
+ 
+ 
+TC  150  800
+P  1000  8000
+.
+1
+ 0.0000000E+00   0.0000000E+00
+_script_001_pix\
+
+```
+
+This is stored in a file called `script_001.txt`. The first line is the name of the script file, the second gives the name of the final plot file, third line specifies the database, the next two lines give the input parameters, the next 5 lines are empty, the next lines gives the temperature and pressure ranges, the `.` indicates that a phase equilibrium diagram should be created...
+
+You can then copy this file, create a new script `script_002.txt`, and modify it to input the new parameters. You can create multiple files like this.
+
+
+Next you create a file called `domjob.bat`. This is a batch file that tells THERIAK-DOMINO the order in which the subroutines should be executed. The batch file has the following structure:
+
+```
+domino  script_001.txt
+guzzler script_001.plt  script_001.cln  script_001.rxn
+explot  script_001.cln  script_001.ps
+domino  script_002.txt
+guzzler script_002.plt  script_002.cln  script_002.rxn
+explot  script_002.cln  script_002.ps
+domino  script_003.txt
+guzzler script_003.plt  script_003.cln  script_003.rxn
+explot  script_003.cln  script_003.ps
+domino  script_004.txt
+guzzler script_004.plt  script_004.cln  script_004.rxn
+explot  script_004.cln  script_004.ps
+```
+
+> The names of the script files doesn't matter as long as they are correctly spelled in both the script files and the `domjob` batch file.
+
+Finally, you start `domino` and type `domjob` followed by ENTER
 
 ## Additional ressources
 

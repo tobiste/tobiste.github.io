@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tobias Stephan">
-<meta name="description" content="Tobias Stephan’s blog">
+<meta name="dcterms.date" content="2026-06-06">
+<meta name="description" content="Some steps to install THERIAK-DOMIN on UNIX based systems">
 
 <title>Tobias Stephan</title>
 <style>
@@ -25,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-325f3ff2f131f9421fc6e27256f8a6fd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2db483df1e845d8c84cdd1b792124a60.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-325f3ff2f131f9421fc6e27256f8a6fd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-2db483df1e845d8c84cdd1b792124a60.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,97 +69,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts_2025 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts_2025'] = new List('listing-posts_2025', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts_2026 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts_2026'] = new List('listing-posts_2026', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="Tobias Stephan">
-<meta property="og:description" content="Tobias Stephan’s blog">
-<meta property="og:image" content="../blog/2025/compositions/cover.jpg">
+<meta property="og:description" content="Some steps to install THERIAK-DOMIN on UNIX based systems">
 <meta property="og:site_name" content="Tobias Stephan">
 </head>
 
@@ -171,7 +83,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tobias Stephan</span>
     </a>
   </div>
@@ -182,35 +94,35 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../people.html"> 
+    <a class="nav-link" href="../../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
+    <a class="nav-link" href="../../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../software.html"> 
+    <a class="nav-link" href="../../../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../teaching.html"> 
+    <a class="nav-link" href="../../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publications.html"> 
+    <a class="nav-link" href="../../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/cv.pdf"> <i class="bi bi-file-pdf-fill" role="img">
+    <a class="nav-link" href="../../../cv/cv.pdf"> <i class="bi bi-file-pdf-fill" role="img">
 </i> 
 <span class="menu-text">Curriculum Vitæ</span></a>
   </li>  
@@ -226,26 +138,56 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RGF0YQ==">Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VvY2hlbWlzdHJ5">Geochemistry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5zdGFsbGF0aW9u">Installation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k=">Metamorphic petrology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installation-guide-for-theriak-domino-on-unix-systems" id="toc-installation-guide-for-theriak-domino-on-unix-systems" class="nav-link active" data-scroll-target="#installation-guide-for-theriak-domino-on-unix-systems">Installation guide for THERIAK-DOMINO on UNIX systems</a>
+  <ul class="collapse">
+  <li><a href="#run-unix-on-windows" id="toc-run-unix-on-windows" class="nav-link" data-scroll-target="#run-unix-on-windows">Run UNIX on Windows</a></li>
+  <li><a href="#how-to-use-wsl" id="toc-how-to-use-wsl" class="nav-link" data-scroll-target="#how-to-use-wsl">How to use WSL:</a>
+  <ul class="collapse">
+  <li><a href="#from-terminal-directly" id="toc-from-terminal-directly" class="nav-link" data-scroll-target="#from-terminal-directly">From terminal directly</a></li>
+  <li><a href="#using-vs-code" id="toc-using-vs-code" class="nav-link" data-scroll-target="#using-vs-code">Using VS Code</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
+<h1 class="title">Installation guide for THERIAK-DOMINO on UNIX</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Metamorphic petrology</div>
+    <div class="quarto-category">Installation</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Tobias Stephan’s blog
+    Some steps to install THERIAK-DOMIN on UNIX based systems
   </div>
 </div>
 
 
 <div class="quarto-title-meta column-page-left">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tobias Stephan </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 6, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -255,146 +197,99 @@ window.Quarto = {
 </header>
 
 
-<div class="cell">
-<style type="text/css">
-#title-block-header .description {
-    display: none;
-}
-</style>
-</div>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2026</h2>
-<div id="listing-posts_2026" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3klMkNJbnN0YWxsYXRpb24=" data-listing-date-sort="1780718400000" data-listing-file-modified-sort="1780748827211" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="560">
-<div class="thumbnail">
-<p><a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external"></a></p><a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external">Installation guide for THERIAK-DOMINO on UNIX</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k='); return false;">
-Metamorphic petrology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SW5zdGFsbGF0aW9u'); return false;">
-Installation
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external">Some steps to install THERIAK-DOMIN on UNIX based systems</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/2026/install_theriakdomino_LIN/index.html" class="no-external">
-<div class="listing-date">
-June 6, 2026
-</div>
-<div class="listing-author">
-Tobias Stephan
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="installation-guide-for-theriak-domino-on-unix-systems" class="level1">
+<h1>Installation guide for THERIAK-DOMINO on UNIX systems</h1>
+<p>These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g.&nbsp;Ubuntu), including a Windows Subsystem for Linux (WSL).</p>
+<ol type="1">
+<li>Install Linux essential commands and <em>gfortran</em> compiler:</li>
+</ol>
+<pre><code>sudo apt update &amp;&amp; sudo apt install -y build-essential
+sudo apt-get install gfortran</code></pre>
+<ol start="2" type="1">
+<li>Clone the THERIAK-DOMINO from GitHub into your directory of choice (here <code>td</code> in the root directory):</li>
+</ol>
+<pre><code>git clone https://github.com/Theriak-Domino/theriak-domino.git td</code></pre>
+<ol start="3" type="1">
+<li>Switch to newly created <code>td</code> directory:</li>
+</ol>
+<pre><code>cd td/src</code></pre>
+<ol start="4" type="1">
+<li>Open and edit makefile</li>
+</ol>
+<pre><code>nano MakefileLin</code></pre>
+<ol start="5" type="1">
+<li>Uncomment the gfortran compiler line and comment out the others in the head of that file so that it reads as ….</li>
+</ol>
+<pre><code>COMPILER=gortran
+# COMPILER=ifort
+# COMPILER=ifx</code></pre>
+<p>Save and close file by <code>CTRL+S</code> <code>CTRL+X</code></p>
+<ol start="6" type="1">
+<li>Now install</li>
+</ol>
+<pre><code>make -fMakefile all</code></pre>
+<ol start="7" type="1">
+<li>Copy installed files into “<code>dist/Programs/</code>” directory:</li>
+</ol>
+<pre><code>cp -a  ~/td/build/. ~/td/dist/Programs/
+cp -a ~/td/src/. ~/td/dist/Programs/</code></pre>
+<pre><code>cd ../dist/Working/</code></pre>
+<ol start="8" type="1">
+<li>Edit paths in <code>linux_bashr_addition</code> file…</li>
+</ol>
+<pre><code>nano linux_bashr_addition</code></pre>
+<p>…so that it reads as</p>
+<pre><code>PS1="`whoami` \#&gt; "
+alias  ther="cd ~/td/dist/Working/"
+alias ls="ls -aF --color"
+
+#
+export THERDOM=~/td/dist/Programs/
+export PATH=$PATH:$THERDOM
+echo ~.bash_profile read
+echo pwd: $PWD
+#</code></pre>
+<blockquote class="blockquote">
+<p>This is so that THERIAK-DOMINO knows where to find the underlying subroutines</p>
+</blockquote>
+<p>Save and close file by <code>CTRL+S</code> followed by <code>CTRL+X</code></p>
+<ol start="10" type="1">
+<li>Make a convenience copy</li>
+</ol>
+<pre><code>cp linux_bashr_addition .bashrc</code></pre>
+<ol start="11" type="1">
+<li>Done. To start THERIAK-DOMINO just source that bash file and run a subroutine, e.g.&nbsp;<code>domino</code>:</li>
+</ol>
+<pre><code>source .bashrc # needs to be only executed once per session
+domino</code></pre>
+<section id="run-unix-on-windows" class="level2">
+<h2 class="anchored" data-anchor-id="run-unix-on-windows">Run UNIX on Windows</h2>
+<p>open a Windows terminal and run:</p>
+<pre><code>wsl --install</code></pre>
+<p>This install Ubuntu by default. If a different distribution is desired, run <code>wsl --list --online</code> to see a list of available distros and run <code>wsl --install -d &lt;DistroName&gt;</code></p>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2025</h2>
-<div id="listing-posts_2025" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R2VvY2hlbWlzdHJ5JTJDRGF0YSUyQ1I=" data-listing-date-sort="1764478800000" data-listing-file-modified-sort="1765984455551" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3948">
-<div class="thumbnail">
-<p><a href="../blog/2025/compositions/index.html" class="no-external"></a></p><a href="../blog/2025/compositions/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/2025/compositions/cover.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/2025/compositions/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/2025/compositions/index.html" class="no-external">Statistics and composition data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/2025/compositions/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VvY2hlbWlzdHJ5'); return false;">
-Geochemistry
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YQ=='); return false;">
-Data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/2025/compositions/index.html" class="no-external">Learn about the numeric nature of compositional data (e.g., geochemical compositions and concentrations) and how to treat them for statistical analysis</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/2025/compositions/index.html" class="no-external">
-<div class="listing-date">
-November 30, 2025
-</div>
-<div class="listing-author">
-Tobias Stephan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3klMkNUdXRvcmlhbA==" data-listing-date-sort="1764392400000" data-listing-file-modified-sort="1780749919534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1420">
-<div class="thumbnail">
-<p><a href="../blog/2025/theriak-domino/index.html" class="no-external"></a></p><a href="../blog/2025/theriak-domino/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/2025/theriak-domino/ps_Moss-029_MnNCKFMASHT.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/2025/theriak-domino/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/2025/theriak-domino/index.html" class="no-external">Quick-Guide to THERIAK-DOMINO</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/2025/theriak-domino/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0YW1vcnBoaWMlMjBwZXRyb2xvZ3k='); return false;">
-Metamorphic petrology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">
-Tutorial
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/2025/theriak-domino/index.html" class="no-external">A few simple steps to generate metamorphic phase equilibria diagrams</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/2025/theriak-domino/index.html" class="no-external">
-<div class="listing-date">
-November 29, 2025
-</div>
-<div class="listing-author">
-Tobias Stephan
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="how-to-use-wsl" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-wsl">How to use WSL:</h2>
+<section id="from-terminal-directly" class="level3">
+<h3 class="anchored" data-anchor-id="from-terminal-directly">From terminal directly</h3>
+<p>To start <code>wsl</code>, open the terminal and run</p>
+<pre><code>wsl.exe</code></pre>
+</section>
+<section id="using-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="using-vs-code">Using VS Code</h3>
+<ol type="1">
+<li><p>Install the WSL Extension</p></li>
+<li><p>Open VS Code on Windows.</p></li>
+<li><p>Click on the Extensions icon on the left sidebar (or press <code>Ctrl+Shift+X</code>).</p></li>
+<li><p>Search for and install the official WSL Extension by Microsoft.</p></li>
+<li><p>Open a terminal and run</p>
+<pre><code>wsl.exe
+code</code></pre></li>
+</ol>
 
 
-
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -819,13 +714,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><span class="faux-block">Tobias Stephan (he/him)</span> <span class="faux-block"><a href="https://orcid.org/0000-0002-9290-014X"><img class="manImg" src="../pictures/ORCID_iD.png" alt="ORCID" style="height:15px"> 0000-0002-9290-014X</a></span></p>
+<p><span class="faux-block">Tobias Stephan (he/him)</span> <span class="faux-block"><a href="https://orcid.org/0000-0002-9290-014X"><img class="manImg" src="../../../pictures/ORCID_iD.png" alt="ORCID" style="height:15px"> 0000-0002-9290-014X</a></span></p>
 </div>   
     <div class="nav-footer-center">
 <p>Lakehead University respectfully acknowledges its campuses are located on the traditional lands of Fort William First Nation, Signatory to the Robinson Superior Treaty of 1850 and the Ojibwe, Odawa, and Pottawatomi nations, collectively known as the Three Fires Confederacy.</p>
 </div>
     <div class="nav-footer-right">
-<p><span class="faux-block">Made with <a href="https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111"><img class="manImg" src="../pictures/Rlogo.png" alt="R" style="height:15px"></a> and <a href="https://quarto.org/"><img class="manImg" src="../pictures/logo-quarto2.png" alt="Quarto" style="height:15px"></a></span></p>
+<p><span class="faux-block">Made with <a href="https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111"><img class="manImg" src="../../../pictures/Rlogo.png" alt="R" style="height:15px"></a> and <a href="https://quarto.org/"><img class="manImg" src="../../../pictures/logo-quarto2.png" alt="Quarto" style="height:15px"></a></span></p>
 </div>
   </div>
 </footer>

@@ -1,0 +1,144 @@
+---
+title: "Installation guide for THERIAK-DOMINO on UNIX"
+description: "Some steps to install THERIAK-DOMIN on UNIX based systems"
+author: "Tobias Stephan"
+date: "06/06/2026"
+categories:
+  - Metamorphic petrology
+  - Installation
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+# Installation guide for THERIAK-DOMINO on UNIX systems
+
+These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g. Ubuntu), including a Windows Subsystem for Linux (WSL).
+
+1.  Install Linux essential commands and *gfortran* compiler:
+
+  ```         
+  sudo apt update && sudo apt install -y build-essential
+  sudo apt-get install gfortran
+  ```
+
+2.  Clone the THERIAK-DOMINO from GitHub into your directory of choice (here `td` in the root directory):
+
+  ```         
+  git clone https://github.com/Theriak-Domino/theriak-domino.git td
+  ```
+
+3.  Switch to newly created `td` directory:
+
+  ```         
+  cd td/src
+  ```
+
+4.  Open and edit makefile
+
+  ```         
+  nano MakefileLin
+  ```
+
+5.  Uncomment the gfortran compiler line and comment out the others in the head of that file so that it reads as ....
+
+  ```         
+  COMPILER=gortran
+  # COMPILER=ifort
+  # COMPILER=ifx
+  ```
+
+Save and close file by `CTRL+S` `CTRL+X`
+
+6.  Now install
+
+  ```         
+  make -fMakefile all
+  ```
+
+7.  Copy installed files into "`dist/Programs/`" directory:
+
+  ```         
+  cp -a  ~/td/build/. ~/td/dist/Programs/
+  cp -a ~/td/src/. ~/td/dist/Programs/
+  ```
+  
+  ```         
+  cd ../dist/Working/
+  ```
+
+8.  Edit paths in `linux_bashr_addition` file...
+
+  ```         
+  nano linux_bashr_addition
+  ```
+
+...so that it reads as
+
+  ```         
+  PS1="`whoami` \#> "
+  alias  ther="cd ~/td/dist/Working/"
+  alias ls="ls -aF --color"
+  
+  #
+  export THERDOM=~/td/dist/Programs/
+  export PATH=$PATH:$THERDOM
+  echo ~.bash_profile read
+  echo pwd: $PWD
+  #
+  ```
+
+> This is so that THERIAK-DOMINO knows where to find the underlying subroutines
+
+Save and close file by `CTRL+S` followed by `CTRL+X`
+
+10. Make a convenience copy
+
+  ```         
+  cp linux_bashr_addition .bashrc
+  ```
+
+11. Done. To start THERIAK-DOMINO just source that bash file and run a subroutine, e.g. `domino`:
+
+  ```         
+  source .bashrc # needs to be only executed once per session
+  domino
+  ```
+
+## Run UNIX on Windows
+
+open a Windows terminal and run:
+
+  ```         
+  wsl --install
+  ```
+
+This install Ubuntu by default. If a different distribution is desired, run `wsl --list --online` to see a list of available distros and run `wsl --install -d <DistroName>`
+
+## How to use WSL:
+
+### From terminal directly
+
+To start `wsl`, open the terminal and run
+
+  ```         
+  wsl.exe
+  ```
+
+### Using VS Code
+
+1.  Install the WSL Extension
+
+2.  Open VS Code on Windows.
+
+3.  Click on the Extensions icon on the left sidebar (or press `Ctrl+Shift+X`).
+
+4.  Search for and install the official WSL Extension by Microsoft.
+
+5.  Open a terminal and run
+
+    ```         
+    wsl.exe
+    code
+    ```

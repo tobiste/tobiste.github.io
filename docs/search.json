@@ -84,46 +84,11 @@
     "text": "I am an Assistant Professor at the Department of Geology at Lakehead University in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.\nMy main research interest is the relationship between the deformation of rocks and the plate tectonic motion. To analyze these patterns from the micro-scale (thin sections) to large scale (tectonic plates), I use techniques from structural geology, metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis. My research is based on field work, lab work, and computer modelling.\nI teach courses on structural geology, tectonics, metamorphic petrology, and data science for geology.\n\n\n\n\n\n\n\nI am currently seeking two motivated graduate students to join my research group. If you are interested in studying structural geology and/or metamorphic petrology, please contact me at tstephan@lakeheadu.ca and include your CV and transcript."
   },
   {
-    "objectID": "blog/2025/theriak-domino/index.html",
-    "href": "blog/2025/theriak-domino/index.html",
-    "title": "Quick-Guide to THERIAK-DOMINO",
+    "objectID": "blog/2026/install_theriakdomino_LIN/index.html",
+    "href": "blog/2026/install_theriakdomino_LIN/index.html",
+    "title": "Installation guide for THERIAK-DOMINO on UNIX",
     "section": "",
-    "text": "This blog post gives a brief and most simple walk-through for THERIAK-DOMINO to generate phase isochemical equilibria diagrams (pseudosections) modeled from the composition of metamorphic rocks."
-  },
-  {
-    "objectID": "blog/2025/theriak-domino/index.html#a-calculate-phases-isopleths",
-    "href": "blog/2025/theriak-domino/index.html#a-calculate-phases-isopleths",
-    "title": "Quick-Guide to THERIAK-DOMINO",
-    "section": "A: Calculate phases / isopleths",
-    "text": "A: Calculate phases / isopleths\n\nWe need to define the chemical composition within a preferred chemical system relevant for the metamorphic reactions. In the therin.txt file, you need to add these compositions following the following structure to the end of the file:\n\n500     4000 \n0 SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?) * HT-9 MnNCKFMASHT\nHere, the first line gives the expected temperature (in °C) and pressure (kbar) for the modeling, and the second line specifies the concentrations of the elements relevant for our metamorphism.\nTo generate this line from your geochemical data, you may use my Bulk to therin app\n\nGo to Bulk_to_therin and upload your major element composition (wt. %).\nSelect your desired chemical system and other optional parameters.\nCopy the result under THERIN (mol) and paste it at the end of your therin.txt file.\n\n\nNext run start.bat file in the Working subfolder of your Theriak-Domino directory. Then type\n\ndomino\nfollowed by &lt;enter&gt;\n\ndata base definition: Select database for the modelling (e.g. tcds55_p07.txt)\ndefinition of X-axis: Define X-axis and its range (TC for Temperature (in ° Celsius), and then two numbers indicating the minimum and maximum temperature):\n\nTC 300 800\n\ndefinition of X-axis: Define Y-axis and its range (P for pressure followed by the minimum maximum pressure in kbar):\n\nP 1000 7000\n\ndefinition of calculation type: Type . for equilibrium phase diagram (eq) or jump to part B for mineral composition isopleth\nlabeling of reactions, precision and smoothness: type 1 for assemblages\n\nCALCULATION STARTS"
-  },
-  {
-    "objectID": "blog/2025/theriak-domino/index.html#b-optional-calculate-phases-and-isopleths",
-    "href": "blog/2025/theriak-domino/index.html#b-optional-calculate-phases-and-isopleths",
-    "title": "Quick-Guide to THERIAK-DOMINO",
-    "section": "B: (Optional): Calculate phases AND isopleths",
-    "text": "B: (Optional): Calculate phases AND isopleths\n\nFor eq and isopleths of phase compositions (e.g. garnet), follow steps up to 3. and type: script\nNew JOB filename: domjob.bat\nscript name for eq diagram: script_001_eq\nFollow steps described in A3 - A7\nAlmandine file name script_002_alm\nFollow steps described in B4 - B8. Define the calculation type. The input must follow this structure: phase key nr min max step.\n\n\nphase must be a mineral phase from the database (GT07W2 for garnet data in the database tcds55_p07.txt)\nnr is 1\nkey is an end-member of that mineral phase (e.g. alm for almandine, gr for grossular, py pyrope, spss spessartine) as defined in the database file for that phase\nmin, max and step specify the range and the step-size for which isopleths the compositions should be calculated for (0 1 0.02` means from 0 to 100% in 2% steps.)\n\nGT07W2 alm 1 0 1 0.02\n\nTo label the reactions, type: 1\nRepeat steps 3-7 for additional garnet phases.\n\nFor example:\nGT07W2 alm 1 0.5 0.8 0.01 \nGT07W2 py 1 0.01 0.05 0.01 \nGT07W2 gr 1 0.2 0.5 0.01 \nGT07W2 spss 1 0.05 0.3 0.01\n\nFinal database definition\n\nend\n\nTo start the scripts type and run\n\ndomjob"
-  },
-  {
-    "objectID": "blog/2025/theriak-domino/index.html#c-export-mineral-reactions-as-table-and-plot",
-    "href": "blog/2025/theriak-domino/index.html#c-export-mineral-reactions-as-table-and-plot",
-    "title": "Quick-Guide to THERIAK-DOMINO",
-    "section": "C: Export mineral reactions as table and plot",
-    "text": "C: Export mineral reactions as table and plot\nNext, we have to clean up the labels of the reactions lines and then plot a phase diagram. Therefore, we run the two routines GUZZLER and EXPLOT (GUZZLER: cleans the labels, while EXPLOT, creates the plot and saves it in the plot.ps file).\nIn the command shell type and run the following functions in this sequence:\n\nguzzler\n\nEnter input name. Usually you can just hit ENTER here, unless your specified a script. In that case you may check all the different *.plt file in your working directory and repeat all this steps for each file.\nSpecify the extent of the X-axis (temperature): min and max values (can be the ones specified earlier in domino, followed by a width value, e.g. 15)\nSpecify the extent of the Y-axis (pressure) min and max values (can be the ones specified earlier in domino, followed by a height value, e.g. 15)\nSpecify the size of the labels: 0.2\nSpecify if you want to label the plot: 3 (means YES)\n\nexplot\n\nEnter output name: Same as above, but now for all *.cln files in your working directory.\n\n\nNow make a copy of the generated *.ps or *.svg file and repeat the same procedure, but this time we create a plot without labels (so you have a look-up file and a clean plot for further editing).\n\nType and execute guzzler: Specify if you want to label the plot: 0 (means No)\nType and execute explot\n\nFinally generated the phase diagrams as a postscript file (*.ps) and *.svg, which you can further edit with vector graphics software, such as the free inkscape program."
-  },
-  {
-    "objectID": "blog/2025/theriak-domino/index.html#d-quickly-search-the-reaction-table-for-mineral-phases",
-    "href": "blog/2025/theriak-domino/index.html#d-quickly-search-the-reaction-table-for-mineral-phases",
-    "title": "Quick-Guide to THERIAK-DOMINO",
-    "section": "D: Quickly search the reaction table for mineral phases",
-    "text": "D: Quickly search the reaction table for mineral phases\nIf you open the postscript file, you will see a complicated equilibrium phase diagram with some reactions numbered instead of labeled (because there is not enough room for labels.) To see a list of reactions and numbers, open the file table (created by GUZZLER) in the Working folder.\nTo quickly find the reaction belonging to a number, you may use my GUZZLER Filter app:\n\nGo to https://tobiste.shinyapps.io/Bulk_to_therin/\nOpen the GUZZLER Filter tab\nUpload your reaction table (table)\nType in the mineral of interest to see in which reaction lines the mineral is involved."
-  },
-  {
-    "objectID": "blog/2025/theriak-domino/index.html#additional-ressources",
-    "href": "blog/2025/theriak-domino/index.html#additional-ressources",
-    "title": "Quick-Guide to THERIAK-DOMINO",
-    "section": "Additional ressources",
-    "text": "Additional ressources\n\nA more detailed quick-guide: https://cdn.serc.carleton.edu/files/research_education/equilibria/theriak-domino_getting_started.v3.pdf\nOfficial manual: https://earth.geology.yale.edu/~ajs/SupplementaryData/2016/theriakd/Documentation/TheriakDominoGuide.pdf\nCreate pixel-maps: https://muse.union.edu/hollochk/kurt-hollocher/some-theriak-domino-tips-and-tools/"
+    "text": "These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g. Ubuntu), including a Windows Subsystem for Linux (WSL).\n\nInstall Linux essential commands and gfortran compiler:\n\nsudo apt update && sudo apt install -y build-essential\nsudo apt-get install gfortran\n\nClone the THERIAK-DOMINO from GitHub into your directory of choice (here td in the root directory):\n\ngit clone https://github.com/Theriak-Domino/theriak-domino.git td\n\nSwitch to newly created td directory:\n\ncd td/src\n\nOpen and edit makefile\n\nnano MakefileLin\n\nUncomment the gfortran compiler line and comment out the others in the head of that file so that it reads as ….\n\nCOMPILER=gortran\n# COMPILER=ifort\n# COMPILER=ifx\nSave and close file by CTRL+S CTRL+X\n\nNow install\n\nmake -fMakefile all\n\nCopy installed files into “dist/Programs/” directory:\n\ncp -a  ~/td/build/. ~/td/dist/Programs/\ncp -a ~/td/src/. ~/td/dist/Programs/\ncd ../dist/Working/\n\nEdit paths in linux_bashr_addition file…\n\nnano linux_bashr_addition\n…so that it reads as\nPS1=\"`whoami` \\#&gt; \"\nalias  ther=\"cd ~/td/dist/Working/\"\nalias ls=\"ls -aF --color\"\n\n#\nexport THERDOM=~/td/dist/Programs/\nexport PATH=$PATH:$THERDOM\necho ~.bash_profile read\necho pwd: $PWD\n#\n\nThis is so that THERIAK-DOMINO knows where to find the underlying subroutines\n\nSave and close file by CTRL+S followed by CTRL+X\n\nMake a convenience copy\n\ncp linux_bashr_addition .bashrc\n\nDone. To start THERIAK-DOMINO just source that bash file and run a subroutine, e.g. domino:\n\nsource .bashrc # needs to be only executed once per session\ndomino\n\n\nopen a Windows terminal and run:\nwsl --install\nThis install Ubuntu by default. If a different distribution is desired, run wsl --list --online to see a list of available distros and run wsl --install -d &lt;DistroName&gt;\n\n\n\n\n\nTo start wsl, open the terminal and run\nwsl.exe\n\n\n\n\nInstall the WSL Extension\nOpen VS Code on Windows.\nClick on the Extensions icon on the left sidebar (or press Ctrl+Shift+X).\nSearch for and install the official WSL Extension by Microsoft.\nOpen a terminal and run\nwsl.exe\ncode"
   },
   {
     "objectID": "blog/2025/compositions/index.html",
@@ -182,8 +147,57 @@
     "text": "References\n\nLearn more about Beta and Dirichlet distributions: https://www.andrewheiss.com/blog/2023/09/18/understanding-dirichlet-beta-intuition/\nLearn more about compositional data in geosciences: https://www.ucl.ac.uk/~ucfbpve/geostats/latex/index.html#x1-7000014\nR package for more statistical tools to handle compositional data: compositions"
   },
   {
+    "objectID": "blog/2025/theriak-domino/index.html",
+    "href": "blog/2025/theriak-domino/index.html",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "",
+    "text": "This blog post gives a brief and most simple walk-through for THERIAK-DOMINO to generate phase isochemical equilibria diagrams (pseudosections) modeled from the composition of metamorphic rocks."
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#a-calculate-phases-isopleths",
+    "href": "blog/2025/theriak-domino/index.html#a-calculate-phases-isopleths",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "A: Calculate phases / isopleths",
+    "text": "A: Calculate phases / isopleths\n\nWe need to define the chemical composition within a preferred chemical system relevant for the metamorphic reactions. In the therin.txt file, you need to add these compositions following the following structure to the end of the file:\n\n500     4000 \n0 SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?) * HT-9 MnNCKFMASHT\nHere, the first line gives the expected temperature (in °C) and pressure (kbar) for the modeling, and the second line specifies the concentrations of the elements relevant for our metamorphism.\nTo generate this line from your geochemical data, you may use my Bulk to therin app\n\nGo to Bulk_to_therin and upload your major element composition (wt. %).\nSelect your desired chemical system and other optional parameters.\nCopy the result under THERIN (mol) and paste it at the end of your therin.txt file.\n\n\nNext run start.bat file in the Working subfolder of your Theriak-Domino directory. Then type\n\ndomino\nfollowed by &lt;enter&gt;\n\ndata base definition: Select database for the modelling (e.g. tcds55_p07.txt)\ndefinition of X-axis: Define X-axis and its range (TC for Temperature (in ° Celsius), and then two numbers indicating the minimum and maximum temperature):\n\nTC 300 800\n\ndefinition of X-axis: Define Y-axis and its range (P for pressure followed by the minimum maximum pressure in kbar):\n\nP 1000 7000\n\ndefinition of calculation type: Type . for equilibrium phase diagram (eq) or jump to part B for mineral composition isopleth\nlabeling of reactions, precision and smoothness: type 1 for assemblages\n\nCALCULATION STARTS"
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#b-optional-calculate-phases-and-isopleths",
+    "href": "blog/2025/theriak-domino/index.html#b-optional-calculate-phases-and-isopleths",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "B: (Optional): Calculate phases AND isopleths",
+    "text": "B: (Optional): Calculate phases AND isopleths\n\nFor eq and isopleths of phase compositions (e.g. garnet), follow steps up to 3. and type: script\nNew JOB filename: domjob.bat\nscript name for eq diagram: script_001_eq\nFollow steps described in A3 - A7\nAlmandine file name script_002_alm\nFollow steps described in B4 - B8. Define the calculation type. The input must follow this structure: phase key nr min max step.\n\n\nphase must be a mineral phase from the database (GT07W2 for garnet data in the database tcds55_p07.txt)\nnr is 1\nkey is an end-member of that mineral phase (e.g. alm for almandine, gr for grossular, py pyrope, spss spessartine) as defined in the database file for that phase\nmin, max and step specify the range and the step-size for which isopleths the compositions should be calculated for (0 1 0.02` means from 0 to 100% in 2% steps.)\n\nGT07W2 alm 1 0 1 0.02\n\nTo label the reactions, type: 1\nRepeat steps 3-7 for additional garnet phases.\n\nFor example:\nGT07W2 alm 1 0.5 0.8 0.01 \nGT07W2 py 1 0.01 0.05 0.01 \nGT07W2 gr 1 0.2 0.5 0.01 \nGT07W2 spss 1 0.05 0.3 0.01\n\nFinal database definition\n\nend\n\nTo start the scripts type and run\n\ndomjob"
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#c-export-mineral-reactions-as-table-and-plot",
+    "href": "blog/2025/theriak-domino/index.html#c-export-mineral-reactions-as-table-and-plot",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "C: Export mineral reactions as table and plot",
+    "text": "C: Export mineral reactions as table and plot\nNext, we have to clean up the labels of the reactions lines and then plot a phase diagram. Therefore, we run the two routines GUZZLER and EXPLOT (GUZZLER: cleans the labels, while EXPLOT, creates the plot and saves it in the plot.ps file).\nIn the command shell type and run the following functions in this sequence:\n\nguzzler\n\nEnter input name. Usually you can just hit ENTER here, unless your specified a script. In that case you may check all the different *.plt file in your working directory and repeat all this steps for each file.\nSpecify the extent of the X-axis (temperature): min and max values (can be the ones specified earlier in domino, followed by a width value, e.g. 15)\nSpecify the extent of the Y-axis (pressure) min and max values (can be the ones specified earlier in domino, followed by a height value, e.g. 15)\nSpecify the size of the labels: 0.2\nSpecify if you want to label the plot: 3 (means YES)\n\nexplot\n\nEnter output name: Same as above, but now for all *.cln files in your working directory.\n\n\nNow make a copy of the generated *.ps or *.svg file and repeat the same procedure, but this time we create a plot without labels (so you have a look-up file and a clean plot for further editing).\n\nType and execute guzzler: Specify if you want to label the plot: 0 (means No)\nType and execute explot\n\nFinally generated the phase diagrams as a postscript file (*.ps) and *.svg, which you can further edit with vector graphics software, such as the free inkscape program."
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#d-quickly-search-the-reaction-table-for-mineral-phases",
+    "href": "blog/2025/theriak-domino/index.html#d-quickly-search-the-reaction-table-for-mineral-phases",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "D: Quickly search the reaction table for mineral phases",
+    "text": "D: Quickly search the reaction table for mineral phases\nIf you open the postscript file, you will see a complicated equilibrium phase diagram with some reactions numbered instead of labeled (because there is not enough room for labels.) To see a list of reactions and numbers, open the file table (created by GUZZLER) in the Working folder.\nTo quickly find the reaction belonging to a number, you may use my GUZZLER Filter app:\n\nGo to https://tobiste.shinyapps.io/Bulk_to_therin/\nOpen the GUZZLER Filter tab\nUpload your reaction table (table)\nType in the mineral of interest to see in which reaction lines the mineral is involved."
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#additional-ressources",
+    "href": "blog/2025/theriak-domino/index.html#additional-ressources",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "Additional ressources",
+    "text": "Additional ressources\n\nA more detailed quick-guide: https://cdn.serc.carleton.edu/files/research_education/equilibria/theriak-domino_getting_started.v3.pdf\nOfficial manual: https://earth.geology.yale.edu/~ajs/SupplementaryData/2016/theriakd/Documentation/TheriakDominoGuide.pdf\nCreate pixel-maps: https://muse.union.edu/hollochk/kurt-hollocher/some-theriak-domino-tips-and-tools/"
+  },
+  {
     "objectID": "blog/index.html#section",
     "href": "blog/index.html#section",
+    "title": "Blog",
+    "section": "2026",
+    "text": "2026\n\n\n\n\n\n\n\n\n\n\nInstallation guide for THERIAK-DOMINO on UNIX\n\n\n\n\n\n\nMetamorphic petrology\n\n\nInstallation\n\n\n\nSome steps to install THERIAK-DOMIN on UNIX based systems\n\n\n\n\n\nJune 6, 2026\n\n\nTobias Stephan\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html#section-1",
+    "href": "blog/index.html#section-1",
     "title": "Blog",
     "section": "2025",
     "text": "2025\n\n\n\n\n\n\n\n\n\n\nStatistics and composition data\n\n\n\n\n\n\nGeochemistry\n\n\nData\n\n\nR\n\n\n\nLearn about the numeric nature of compositional data (e.g., geochemical compositions and concentrations) and how to treat them for statistical analysis\n\n\n\n\n\nNovember 30, 2025\n\n\nTobias Stephan\n\n\n\n\n\n\n\n\n\n\n\n\nQuick-Guide to THERIAK-DOMINO\n\n\n\n\n\n\nMetamorphic petrology\n\n\nTutorial\n\n\n\nA few simple steps to generate metamorphic phase equilibria diagrams\n\n\n\n\n\nNovember 29, 2025\n\n\nTobias Stephan\n\n\n\n\n\n\nNo matching items"
@@ -250,5 +264,33 @@
     "title": "Teaching",
     "section": "",
     "text": "Lead Instructor\n\nGeological Case Studies (Lakehead University, GEOL 4313) | Syllabus \nStructural Geology and Tectonics (Lakehead University, GEOL 3310) | Syllabus \nMetamorphic Petrology (Lakehead University, GEOL 3217) | Syllabus \n\n\n\nTeaching Assistant\n\n3D Modeling (Technische Universität Bergakademie Freiberg, 2018)\n\n\n\nShort-Courses and Workshops\n\nPlate motion and deformation of the lithosphere (workshop in 2023/10 at Department of Geology, Technische Universität Bergakademie Freiberg, Germany)\nProgramming with R — A Beginners’ Guide for Geoscientists (short course in 2022/09 at University of Calgary, Department of Geoscience, Calgary, AB, Canada)"
+  },
+  {
+    "objectID": "blog/2026/install_theriakdomino_LIN/index.html#run-unix-on-windows",
+    "href": "blog/2026/install_theriakdomino_LIN/index.html#run-unix-on-windows",
+    "title": "Installation guide for THERIAK-DOMINO on UNIX",
+    "section": "",
+    "text": "open a Windows terminal and run:\nwsl --install\nThis install Ubuntu by default. If a different distribution is desired, run wsl --list --online to see a list of available distros and run wsl --install -d &lt;DistroName&gt;"
+  },
+  {
+    "objectID": "blog/2026/install_theriakdomino_LIN/index.html#how-to-use-wsl",
+    "href": "blog/2026/install_theriakdomino_LIN/index.html#how-to-use-wsl",
+    "title": "Installation guide for THERIAK-DOMINO on UNIX",
+    "section": "",
+    "text": "To start wsl, open the terminal and run\nwsl.exe\n\n\n\n\nInstall the WSL Extension\nOpen VS Code on Windows.\nClick on the Extensions icon on the left sidebar (or press Ctrl+Shift+X).\nSearch for and install the official WSL Extension by Microsoft.\nOpen a terminal and run\nwsl.exe\ncode"
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#isopleths",
+    "href": "blog/2025/theriak-domino/index.html#isopleths",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "B: (Optional): Calculate phases AND isopleths",
+    "text": "B: (Optional): Calculate phases AND isopleths\n\nFor eq and isopleths of phase compositions (e.g. garnet), follow steps up to 3. and type: script\nNew JOB filename: domjob.bat\nscript name for eq diagram: script_001_eq\nFollow steps described in A3 - A7\nAlmandine file name script_002_alm\nFollow steps described in B4 - B8. Define the calculation type. The input must follow this structure: phase key nr min max step.\n\n\nphase must be a mineral phase from the database (GT07W2 for garnet data in the database tcds55_p07.txt)\nnr is 1\nkey is an end-member of that mineral phase (e.g. alm for almandine, gr for grossular, py pyrope, spss spessartine) as defined in the database file for that phase\nmin, max and step specify the range and the step-size for which isopleths the compositions should be calculated for (0 1 0.02` means from 0 to 100% in 2% steps.)\n\nGT07W2 alm 1 0 1 0.02\n\nTo label the reactions, type: 1\nRepeat steps 3-7 for additional garnet phases.\n\nFor example:\nGT07W2 alm 1 0.5 0.8 0.01 \nGT07W2 py 1 0.01 0.05 0.01 \nGT07W2 gr 1 0.2 0.5 0.01 \nGT07W2 spss 1 0.05 0.3 0.01\n\nFinal database definition\n\nend\n\nTo start the scripts type and run\n\ndomjob"
+  },
+  {
+    "objectID": "blog/2025/theriak-domino/index.html#some-tipps",
+    "href": "blog/2025/theriak-domino/index.html#some-tipps",
+    "title": "Quick-Guide to THERIAK-DOMINO",
+    "section": "Some tipps",
+    "text": "Some tipps\n\nBatch modelling\nIn case you wan to run a bunch of samples over the weekend, you can create scripts and run them through a batch file. You can create those scripts through domino via script (as described in B). But it its easier and faster to do that yourself:\nEach sample and their modelling parameters must be in a single script file (txt file), and they all must this structure:\nscript.script_001.txt\nscript_001.plt\ntcds55_m11.txt\n    1.0000    300    0.010000   0.1000000E-08   0.1000000E-08   0.1000000E+01 0.1000000E-03     25      25     500\n0  SI(126.3225)AL(25.0095)FE(1.3919)MG(2.1338)CA(2.1756)NA(7.8736)K(8.7477)TI(0.0501)H(80)O(?)  *  022  NCKFMASHT\n \n \n \n \n \nTC  150  800\nP  1000  8000\n.\n1\n 0.0000000E+00   0.0000000E+00\n_script_001_pix\\\n\nThis is stored in a file called script_001.txt. The first line is the name of the script file, the second gives the name of the final plot file, third line specifies the database, the next two lines give the input parameters, the next 5 lines are empty, the next lines gives the temperature and pressure ranges, the . indicates that a phase equilibrium diagram should be created…\nYou can then copy this file, create a new script script_002.txt, and modify it to input the new parameters. You can create multiple files like this.\nNext you create a file called domjob.bat. This is a batch file that tells THERIAK-DOMINO the order in which the subroutines should be executed. The batch file has the following structure:\ndomino  script_001.txt\nguzzler script_001.plt  script_001.cln  script_001.rxn\nexplot  script_001.cln  script_001.ps\ndomino  script_002.txt\nguzzler script_002.plt  script_002.cln  script_002.rxn\nexplot  script_002.cln  script_002.ps\ndomino  script_003.txt\nguzzler script_003.plt  script_003.cln  script_003.rxn\nexplot  script_003.cln  script_003.ps\ndomino  script_004.txt\nguzzler script_004.plt  script_004.cln  script_004.rxn\nexplot  script_004.cln  script_004.ps\n\nThe names of the script files doesn’t matter as long as they are correctly spelled in both the script files and the domjob batch file.\n\nFinally, you start domino and type domjob followed by ENTER"
   }
 ]
