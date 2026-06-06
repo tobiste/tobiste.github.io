@@ -6,6 +6,7 @@ date: "06/06/2026"
 categories:
   - Metamorphic petrology
   - Installation
+  - UNIX
 format:
   html:
     toc: true
