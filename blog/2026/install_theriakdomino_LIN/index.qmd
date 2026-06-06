@@ -12,7 +12,7 @@ format:
     toc-location: right
 ---
 
-# Installation guide for THERIAK-DOMINO on UNIX systems
+## Installation steps
 
 These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g. Ubuntu), including a [Windows Subsystem for Linux (WSL)](#wsl).
 
@@ -113,9 +113,9 @@ wsl --install
 
 This install Ubuntu by default. If a different distribution is desired, run `wsl --list --online` to see a list of available distros and run `wsl --install -d <DistroName>`
 
-## How to use WSL:
+### Ways to use WSL
 
-### From terminal directly
+### Using the terminal directly
 
 To start `wsl`, open the terminal and run
 
@@ -123,7 +123,7 @@ To start `wsl`, open the terminal and run
 wsl.exe
 ```
 
-### Using VS Code
+#### Using VS Code
 
 1.  Install the WSL Extension
 
