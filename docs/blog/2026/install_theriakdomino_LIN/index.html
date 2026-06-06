@@ -176,14 +176,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installation-guide-for-theriak-domino-on-unix-systems" id="toc-installation-guide-for-theriak-domino-on-unix-systems" class="nav-link active" data-scroll-target="#installation-guide-for-theriak-domino-on-unix-systems">Installation guide for THERIAK-DOMINO on UNIX systems</a>
+  <li><a href="#installation-steps" id="toc-installation-steps" class="nav-link active" data-scroll-target="#installation-steps">Installation steps</a></li>
+  <li><a href="#wsl" id="toc-wsl" class="nav-link" data-scroll-target="#wsl">Run UNIX on Windows</a>
   <ul class="collapse">
-  <li><a href="#wsl" id="toc-wsl" class="nav-link" data-scroll-target="#wsl">Run UNIX on Windows</a></li>
-  <li><a href="#how-to-use-wsl" id="toc-how-to-use-wsl" class="nav-link" data-scroll-target="#how-to-use-wsl">How to use WSL:</a>
-  <ul class="collapse">
-  <li><a href="#from-terminal-directly" id="toc-from-terminal-directly" class="nav-link" data-scroll-target="#from-terminal-directly">From terminal directly</a></li>
-  <li><a href="#using-vs-code" id="toc-using-vs-code" class="nav-link" data-scroll-target="#using-vs-code">Using VS Code</a></li>
-  </ul></li>
+  <li><a href="#ways-to-use-wsl" id="toc-ways-to-use-wsl" class="nav-link" data-scroll-target="#ways-to-use-wsl">Ways to use WSL</a></li>
+  <li><a href="#using-the-terminal-directly" id="toc-using-the-terminal-directly" class="nav-link" data-scroll-target="#using-the-terminal-directly">Using the terminal directly</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -231,8 +228,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="installation-guide-for-theriak-domino-on-unix-systems" class="level1">
-<h1>Installation guide for THERIAK-DOMINO on UNIX systems</h1>
+<section id="installation-steps" class="level2">
+<h2 class="anchored" data-anchor-id="installation-steps">Installation steps</h2>
 <p>These steps show how THERIAK-DOMINO can be installed on UNIX-based systems (e.g.&nbsp;Ubuntu), including a <a href="#wsl">Windows Subsystem for Linux (WSL)</a>.</p>
 <ol type="1">
 <li>Install Linux essential commands and <em>gfortran</em> compiler:</li>
@@ -296,21 +293,21 @@ echo pwd: $PWD
 </ol>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .bashrc <span class="co"># needs to be only executed once per session</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">domino</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="wsl" class="level2">
 <h2 class="anchored" data-anchor-id="wsl">Run UNIX on Windows</h2>
 <p>open a Windows terminal and run:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This install Ubuntu by default. If a different distribution is desired, run <code>wsl --list --online</code> to see a list of available distros and run <code>wsl --install -d &lt;DistroName&gt;</code></p>
+<section id="ways-to-use-wsl" class="level3">
+<h3 class="anchored" data-anchor-id="ways-to-use-wsl">Ways to use WSL</h3>
 </section>
-<section id="how-to-use-wsl" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use-wsl">How to use WSL:</h2>
-<section id="from-terminal-directly" class="level3">
-<h3 class="anchored" data-anchor-id="from-terminal-directly">From terminal directly</h3>
+<section id="using-the-terminal-directly" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-terminal-directly">Using the terminal directly</h3>
 <p>To start <code>wsl</code>, open the terminal and run</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wsl.exe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="using-vs-code" class="level3">
-<h3 class="anchored" data-anchor-id="using-vs-code">Using VS Code</h3>
+<section id="using-vs-code" class="level4">
+<h4 class="anchored" data-anchor-id="using-vs-code">Using VS Code</h4>
 <ol type="1">
 <li><p>Install the WSL Extension</p></li>
 <li><p>Open VS Code on Windows.</p></li>
