@@ -39,7 +39,7 @@ cd td/src
 4.  Open and edit makefile
 
 ```bash
-nano MakefileLin
+nano MakefileLIN
 ```
 
 5.  Uncomment the gfortran compiler line and comment out the others in the head of that file so that it reads as ....
@@ -55,7 +55,7 @@ Save and close file by `CTRL+S` `CTRL+X`
 6.  Now install
 
 ```bash         
-make -fMakefile all
+make -fMakefileLIN all
 ```
 
 7.  Copy installed files into "`dist/Programs/`" directory:

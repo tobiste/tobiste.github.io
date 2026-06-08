@@ -134,8 +134,9 @@ end
 
 
 ```bash
-domjob
+domjob.bat
 ```
+
 ## C: Export mineral reactions as table and plot
 
 Next, we have to clean up the labels of the reactions lines and then
@@ -246,7 +247,9 @@ explot  script_004.cln  script_004.ps
 
 > The names of the script files doesn't matter as long as they are correctly spelled in both the script files and the `domjob` batch file.
 
-Finally, you start `domino` and type `domjob` followed by ENTER
+Finally, you open a terminal in the Working folder and call `domjob.bat`
+
+(Or in UNIX: `source .bashrc` followed by `source domjob.bat`)
 
 ## Additional ressources
 
