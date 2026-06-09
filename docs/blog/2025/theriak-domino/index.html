@@ -183,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#d-quickly-search-the-reaction-table-for-mineral-phases" id="toc-d-quickly-search-the-reaction-table-for-mineral-phases" class="nav-link" data-scroll-target="#d-quickly-search-the-reaction-table-for-mineral-phases">D: Quickly search the reaction table for mineral phases</a></li>
   <li><a href="#some-tipps" id="toc-some-tipps" class="nav-link" data-scroll-target="#some-tipps">Some tipps</a>
   <ul class="collapse">
-  <li><a href="#batch-modelling" id="toc-batch-modelling" class="nav-link" data-scroll-target="#batch-modelling">Batch modelling</a></li>
+  <li><a href="#run-several-models-overnight" id="toc-run-several-models-overnight" class="nav-link" data-scroll-target="#run-several-models-overnight">Run several models overnight</a></li>
   </ul></li>
   <li><a href="#additional-ressources" id="toc-additional-ressources" class="nav-link" data-scroll-target="#additional-ressources">Additional ressources</a></li>
   </ul>
@@ -232,14 +232,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This blog post gives a brief and most simple walk-through for <code>THERIAK-DOMINO</code> to generate phase isochemical equilibria diagrams (pseudosections) modeled from the composition of metamorphic rocks.</p>
+<p>This blog post gives a brief and most simple walk-through for <code>THERIAK-DOMINO</code> to generate phase isochemical equilibria diagrams (pseudosections) modeled from the major-element composition of metamorphic rocks.</p>
 <section id="a-calculate-phases-isopleths" class="level2">
 <h2 class="anchored" data-anchor-id="a-calculate-phases-isopleths">A: Calculate phases / isopleths</h2>
 <ol type="1">
 <li>We need to define the chemical composition within a preferred chemical system relevant for the metamorphic reactions. In the <code>therin.txt</code> file, you need to add these compositions following the following structure to the end of the file:</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">500</span>     4000 </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> SI<span class="er">(</span><span class="ex">111.8429</span><span class="kw">)</span><span class="ex">AL</span><span class="er">(</span><span class="ex">31.9729</span><span class="kw">)</span><span class="ex">FE</span><span class="er">(</span><span class="ex">7.7807</span><span class="kw">)</span><span class="ex">MG</span><span class="er">(</span><span class="ex">6.1284</span><span class="kw">)</span><span class="ex">MN</span><span class="er">(</span><span class="ex">0.0846</span><span class="kw">)</span><span class="ex">CA</span><span class="er">(</span><span class="ex">2.8175</span><span class="kw">)</span><span class="ex">NA</span><span class="er">(</span><span class="ex">11.4878</span><span class="kw">)</span><span class="ex">K</span><span class="er">(</span><span class="ex">6.3272</span><span class="kw">)</span><span class="ex">TI</span><span class="er">(</span><span class="ex">0.6887</span><span class="kw">)</span><span class="ex">H</span><span class="er">(</span><span class="ex">80</span><span class="kw">)</span><span class="ex">O</span><span class="er">(</span><span class="ex">?</span><span class="kw">)</span> <span class="ex">*</span> HT-9 MnNCKFMASHT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span>  SI<span class="er">(</span><span class="ex">111.8429</span><span class="kw">)</span><span class="ex">AL</span><span class="er">(</span><span class="ex">31.9729</span><span class="kw">)</span><span class="ex">FE</span><span class="er">(</span><span class="ex">7.7807</span><span class="kw">)</span><span class="ex">MG</span><span class="er">(</span><span class="ex">6.1284</span><span class="kw">)</span><span class="ex">MN</span><span class="er">(</span><span class="ex">0.0846</span><span class="kw">)</span><span class="ex">CA</span><span class="er">(</span><span class="ex">2.8175</span><span class="kw">)</span><span class="ex">NA</span><span class="er">(</span><span class="ex">11.4878</span><span class="kw">)</span><span class="ex">K</span><span class="er">(</span><span class="ex">6.3272</span><span class="kw">)</span><span class="ex">TI</span><span class="er">(</span><span class="ex">0.6887</span><span class="kw">)</span><span class="ex">H</span><span class="er">(</span><span class="ex">80</span><span class="kw">)</span><span class="ex">O</span><span class="er">(</span><span class="ex">?</span><span class="kw">)</span>  <span class="ex">*</span>  HT-9 MnNCKFMASHT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Here, the first line gives the expected temperature (in °C) and pressure (kbar) for the modeling, and the second line specifies the concentrations of the elements relevant for our metamorphism.</p>
 <p>To generate this line from your geochemical data, you may use my <strong>Bulk to therin</strong> app</p>
 <ul>
@@ -256,11 +256,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>data base definition</strong>: Select <strong>database</strong> for the modelling (e.g.&nbsp;<code>tcds55_p07.txt</code>)</p></li>
 <li><p><strong>definition of X-axis</strong>: Define X-axis and its range (<code>TC</code> for Temperature (in ° Celsius), and then two numbers indicating the minimum and maximum temperature):</p></li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">TC</span> 300 800</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">TC</span>  300  800</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li><strong>definition of X-axis</strong>: Define Y-axis and its range (<code>P</code> for pressure followed by the minimum maximum pressure in kbar):</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">P</span> 1000 7000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">P</span>  1000  7000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="6" type="1">
 <li><p><strong>definition of calculation type</strong>: Type <code>.</code> for equilibrium phase diagram (<em>eq</em>) or jump to part B for mineral composition isopleth</p></li>
 <li><p><strong>labeling of reactions, precision and smoothness</strong>: type <code>1</code> for assemblages</p></li>
@@ -281,18 +281,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>phase</code> must be a mineral phase from the database (<code>GT07W2</code> for garnet data in the database <code>tcds55_p07.txt</code>)</p></li>
 <li><p><code>nr</code> is 1</p></li>
 <li><p><code>key</code> is an end-member of that mineral phase (e.g.&nbsp;<code>alm</code> for almandine, <code>gr</code> for grossular, <code>py</code> pyrope, <code>spss</code> spessartine) as defined in the database file for that <code>phase</code></p></li>
-<li><p><code>min</code>, <code>max</code> and <code>step</code> specify the range and the step-size for which isopleths the compositions should be calculated for (<code>0 1 0.02`</code> means from 0 to 100% in 2% steps.)</p></li>
+<li><p><code>min</code>, <code>max</code> and <code>step</code> specify the range and the step-size for which isopleths the compositions should be calculated for (<code>0  1  0.02`</code> means from 0 to 100% in 2% steps.)</p></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span> alm 1 0 1 0.02</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span>  alm  1  0  1  0.02</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="7" type="1">
 <li><p>To label the reactions, type: <code>1</code></p></li>
 <li><p>Repeat steps 3-7 for additional garnet phases.</p></li>
 </ol>
 <p>For example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span> alm 1 0.5 0.8 0.01 </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span> py 1 0.01 0.05 0.01 </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span> gr 1 0.2 0.5 0.01 </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span> spss 1 0.05 0.3 0.01</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span>  alm  1  0.5  0.8  0.01 </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span>  py  1  0.01  0.05  0.01 </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span>  gr  1  0.2  0.5  0.01 </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">GT07W2</span>  spss 1  0.05  0.3  0.01</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="9" type="1">
 <li>Final database definition</li>
 </ol>
@@ -340,8 +340,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="some-tipps" class="level2">
 <h2 class="anchored" data-anchor-id="some-tipps">Some tipps</h2>
-<section id="batch-modelling" class="level3">
-<h3 class="anchored" data-anchor-id="batch-modelling">Batch modelling</h3>
+<section id="run-several-models-overnight" class="level3">
+<h3 class="anchored" data-anchor-id="run-several-models-overnight">Run several models overnight</h3>
 <p>In case you wan to run a bunch of samples over the weekend, you can create scripts and run them through a batch file. You can create those scripts through domino via script (as described in <a href="#isopleths">B</a>). But it its easier and faster to do that yourself:</p>
 <p>Each sample and their modelling parameters must be in a single script file (txt file), and they all must this structure:</p>
 <pre><code>script.script_001.txt
@@ -364,22 +364,32 @@ _script_001_pix\
 <p>This is stored in a file called <code>script_001.txt</code>. The first line is the name of the script file, the second gives the name of the final plot file, third line specifies the database, the next two lines give the input parameters, the next 5 lines are empty, the next lines gives the temperature and pressure ranges, the <code>.</code> indicates that a phase equilibrium diagram should be created…</p>
 <p>You can then copy this file, create a new script <code>script_002.txt</code>, and modify it to input the new parameters. You can create multiple files like this.</p>
 <p>Next you create a file called <code>domjob.bat</code>. This is a batch file that tells THERIAK-DOMINO the order in which the subroutines should be executed. The batch file has the following structure:</p>
-<pre><code>domino  script_001.txt
+<pre><code>:: This is a comment. Run script 1
+domino  script_001.txt
 guzzler script_001.plt  script_001.cln  script_001.rxn
 explot  script_001.cln  script_001.ps
+
+:: Script 2
 domino  script_002.txt
 guzzler script_002.plt  script_002.cln  script_002.rxn
 explot  script_002.cln  script_002.ps
+
+:: Script 3
 domino  script_003.txt
 guzzler script_003.plt  script_003.cln  script_003.rxn
 explot  script_003.cln  script_003.ps
+
+:: Script 4
 domino  script_004.txt
 guzzler script_004.plt  script_004.cln  script_004.rxn
 explot  script_004.cln  script_004.ps</code></pre>
 <blockquote class="blockquote">
 <p>The names of the script files doesn’t matter as long as they are correctly spelled in both the script files and the <code>domjob</code> batch file.</p>
 </blockquote>
-<p>Finally, you open a terminal in the Working folder and call <code>domjob.bat</code></p>
+<blockquote class="blockquote">
+<p>You can include comment lines using <code>::</code> followed by the comment (these lines are ignored and just serve as an additional information)</p>
+</blockquote>
+<p>Finally, you open a terminal using <code>start.bat</code> in the Working folder and call <code>domjob</code></p>
 <p>(Or in UNIX: <code>source .bashrc</code> followed by <code>source domjob.bat</code>)</p>
 </section>
 </section>

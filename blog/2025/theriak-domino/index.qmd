@@ -15,7 +15,7 @@ format:
 
 This blog post gives a brief and most simple walk-through for
 `THERIAK-DOMINO` to generate phase isochemical equilibria diagrams
-(pseudosections) modeled from the composition of metamorphic rocks.
+(pseudosections) modeled from the major-element composition of metamorphic rocks.
 
 ## A: Calculate phases / isopleths
 
@@ -26,7 +26,7 @@ This blog post gives a brief and most simple walk-through for
 
 ```bash          
 500     4000 
-0 SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?) * HT-9 MnNCKFMASHT
+0  SI(111.8429)AL(31.9729)FE(7.7807)MG(6.1284)MN(0.0846)CA(2.8175)NA(11.4878)K(6.3272)TI(0.6887)H(80)O(?)  *  HT-9 MnNCKFMASHT
 ```
 
 Here, the first line gives the expected temperature (in °C) and pressure
@@ -60,14 +60,14 @@ domino
     minimum and maximum temperature):
 
 ```bash         
-TC 300 800
+TC  300  800
 ```
 
 5.  **definition of X-axis**: Define Y-axis and its range (`P` for
     pressure followed by the minimum maximum pressure in kbar):
 
 ```bash         
-P 1000 7000
+P  1000  7000
 ```
 
 6.  **definition of calculation type**: Type `.` for equilibrium phase
@@ -105,10 +105,10 @@ CALCULATION STARTS
 
 -   `min`, `max` and `step` specify the range and the step-size for
     which isopleths the compositions should be calculated for
-    (`` 0 1 0.02` `` means from 0 to 100% in 2% steps.)
+    (``0  1  0.02` `` means from 0 to 100% in 2% steps.)
 
 ```bash         
-GT07W2 alm 1 0 1 0.02
+GT07W2  alm  1  0  1  0.02
 ```
 
 7.  To label the reactions, type: `1`
@@ -118,10 +118,10 @@ GT07W2 alm 1 0 1 0.02
 For example:
 
 ```bash         
-GT07W2 alm 1 0.5 0.8 0.01 
-GT07W2 py 1 0.01 0.05 0.01 
-GT07W2 gr 1 0.2 0.5 0.01 
-GT07W2 spss 1 0.05 0.3 0.01
+GT07W2  alm  1  0.5  0.8  0.01 
+GT07W2  py  1  0.01  0.05  0.01 
+GT07W2  gr  1  0.2  0.5  0.01 
+GT07W2  spss 1  0.05  0.3  0.01
 ```
 
 9.  Final database definition
@@ -198,7 +198,7 @@ To quickly find the reaction belonging to a number, you may use my
 
 ## Some tipps
 
-### Batch modelling
+### Run several models overnight
 In case you wan to run a bunch of samples over the weekend, you can create scripts and run them through a batch file.
 You can create those scripts through domino via script (as described in [B](#isopleths)). But it its easier and faster to do that yourself:
 
@@ -231,15 +231,22 @@ You can then copy this file, create a new script `script_002.txt`, and modify it
 Next you create a file called `domjob.bat`. This is a batch file that tells THERIAK-DOMINO the order in which the subroutines should be executed. The batch file has the following structure:
 
 ```
+:: This is a comment. Run script 1
 domino  script_001.txt
 guzzler script_001.plt  script_001.cln  script_001.rxn
 explot  script_001.cln  script_001.ps
+
+:: Script 2
 domino  script_002.txt
 guzzler script_002.plt  script_002.cln  script_002.rxn
 explot  script_002.cln  script_002.ps
+
+:: Script 3
 domino  script_003.txt
 guzzler script_003.plt  script_003.cln  script_003.rxn
 explot  script_003.cln  script_003.ps
+
+:: Script 4
 domino  script_004.txt
 guzzler script_004.plt  script_004.cln  script_004.rxn
 explot  script_004.cln  script_004.ps
@@ -247,7 +254,9 @@ explot  script_004.cln  script_004.ps
 
 > The names of the script files doesn't matter as long as they are correctly spelled in both the script files and the `domjob` batch file.
 
-Finally, you open a terminal in the Working folder and call `domjob.bat`
+> You can include comment lines using `::` followed by the comment (these lines are ignored and just serve as an additional information)
+
+Finally, you open a terminal using `start.bat` in the Working folder and call `domjob`
 
 (Or in UNIX: `source .bashrc` followed by `source domjob.bat`)
 
