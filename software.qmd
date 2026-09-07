@@ -93,9 +93,10 @@ Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): [GUI](
 
 ### Theriak-Domino helpers
 
-Web-application providing little helper functions to handle THERIAK DOMINO files:
+Web-application providing little helper functions to handle [THERIAK DOMINO](https://titan.minpet.unibas.ch/minpet/theriak/theruser.html) and [MAGEMin](https://computationalthermodynamics.github.io/MAGEMin_C.jl/dev/) files:
 
 -   Therin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino
 -   GUZZLER table filter: Extracts minerals from the GUZZLER reaction table
+-   MAGEMin input file generator
 
 [GUI](https://tobiste.shinyapps.io/Bulk_to_therin/) \| [code](https://github.com/tobiste/Bulk_to_therin)
