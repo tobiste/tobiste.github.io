@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.2.20)  29 MAR 2026 13:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.2.20)  7 SEP 2026 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,9 +664,9 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 
 {C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fira/fir_2mfh3o.enc}]
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <12> not available
-(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 175.
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 174.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 175.
+(Font)              scaled to size 12.0pt on input line 174.
 
 
 [2]
@@ -694,17 +694,17 @@ Package rerunfilecheck Info: File `cv_long.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18525 strings out of 473523
- 335150 string characters out of 5713178
+ 18533 strings out of 473523
+ 335220 string characters out of 5713178
  934910 words of memory out of 5000000
- 41222 multiletter control sequences out of 15000+600000
- 671042 words of font info for 205 fonts, out of 8000000 for 9000
+ 41223 multiletter control sequences out of 15000+600000
+ 671562 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,107p,10986b,889s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,11n,107p,10986b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tstephan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Bold.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fira/FiraSans-Regular.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/tstephan/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on cv_long.pdf (9 pages, 223756 bytes).
+Output written on cv_long.pdf (9 pages, 221131 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 45185 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 45193 words of extra memory for PDF output out of 51595 (max. 10000000)
 

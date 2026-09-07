@@ -1,20 +1,21 @@
 \documentclass[10pt, paper=letter]{scrartcl} % tabellarischer Lebenslauf
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[american]{babel}
 \RequirePackage{makecmds}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage[letterpaper,left=2cm, right=2cm, top=2.5cm, bottom=2cm]{geometry}
-
-\usepackage{currvita,graphicx,microtype,csquotes,xcolor,doipubmed,charter,fancyhdr,lastpage,soul}
-
-%\usepackage[defaultsans,oldstyle,scale=0.95]{opensans}
-\usepackage[default]{FiraSans}
-%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{currvita}
+\usepackage{graphicx,microtype,csquotes,doipubmed,fancyhdr,lastpage,soul}
+ 
+\usepackage{XCharter}
+\usepackage[scale=1]{FiraSans}
 \renewcommand{\familydefault}{\rmdefault}
-
-\usepackage[bookmarks,hidelinks]{hyperref}
+ 
+\usepackage[breaklinks=true,hidelinks]{hyperref}
 \usepackage[hyphenbreaks]{breakurl}
+\usepackage{fontawesome5}
+\usepackage{orcidlink}
 
 \usepackage[shortcuts]{extdash} % hyphenation rules for dashes: - : \-/(no hyphenation: \=/) | -- : \-- (\==) | --- : \--- (\===)  
 
@@ -39,52 +40,36 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 
 \setkomafont{section}{\color{mygray}\Large\scshape\MakeLowercase}
-\setkomafont{subsection}{\color{mygray}\large}
+\setkomafont{subsection}{\color{mygray}\large\scshape\MakeLowercase}
+\setkomafont{subsubsection}{\color{mygray}\scshape\MakeLowercase}
 
 
 \begin{document}
 
-\addcontentsline{toc}{chapter}{Curriculum Vitae}
+%\addcontentsline{toc}{chapter}{Curriculum Vitae}
 
-\begin{cv}{\textcolor{myred}{\textsf{Dr Tobias Stephan}}}
-    \medskip
-    % \noindent\begin{minipage}{.74\linewidth}%
-    %\medskip
-    \noindent Assistant Professor\smallskip \\
-    Lakehead University\\
-    Department of Geology\\
-    Thunder Bay, ON, Canada\smallskip \\
-    %Earth Sciences, Calgary, AB, T2N 1N4 \smallskip \\
-    \noindent Email: \href{mailto:tstephan@lakeheadu.ca}{tstephan@lakeheadu.ca}\\
-    Website: \url{https://tobiste.github.io/}\\
-    ORCID: \href{https://orcid.org/0000-0002-9290-014X}{0000-0002-9290-014X}
-    % \bigskip
-    % \end{minipage}%
-    % \hfill
-    % \begin{minipage}{.24\linewidth}%
-    % \raggedleft
-    %   \includegraphics[width = \linewidth]{tobi.jpg}
-    % \end{minipage}%
+\begin{cv}{}
+% ---------------------------------------------------------- letterhead
+    \begin{center}
+        {\textcolor{myred}{\sffamily\LARGE\textbf{Tobias Stephan}}}\\[4pt]
+        {\sffamily\small Assistant Professor of Structural Geology~\textbar~Department of Geology, Lakehead University, Thunder Bay, ON, Canada}\\[5pt]
+        {\small
+            \faEnvelope[regular]\ \href{mailto:tstephan@lakeheadu.ca}{tstephan@lakeheadu.ca}%
+            \quad\textbar\quad
+            \faGlobe\ \href{https://tobiste.github.io/}{tobiste.github.io}%
+            \quad\textbar\quad
+            \faGithub\ \href{https://github.com/tobiste/}{github.com/tobiste}%
+            \quad\textbar\quad
+            \orcidlink{0000-0002-9290-014X}\ \href{https://orcid.org/0000-0002-9290-014X}{0000-0002-9290-014X}%
+        }
+    \end{center}
+ 
+    \vspace{1pt}
+    {\color{gray!60}\hrule height 0.6pt}
+    \vspace{5pt}
+    % -------------------------------------------------------------------
 
-    %\medskip
-
-    % \noindent {\large \textbf{Research interests}}
-    % \begin{itemize}\setlength\itemsep{-0.2em}
-    %     \item Convergent tectonics
-    %     \item Analysis of large-scale patterns of stress and strain fields and their link to tectonic forces
-    %     \item Analysis of plate motion
-    %     \item Plate tectonic reconstructions
-    %     \item Structural analysis of polyphase brittle and ductile deformation
-    %     \item Sedimentary provenance analysis
-    %     \item Exloring and analysing large geo-datasets using modern statistical tools
-    %     \item Paleozoic tectonics of the Variscides
-    %     \item Cenozoic tectonics of central Europe and Canadian Cordillera
-    % \end{itemize}
-    % 
-    % 
-    % \smallskip
-
-    \section{Education}
+\section{Education}
     \begin{cvlist}{}
         \item[2019/03] \textbf{Doctor of Philosophy (PhD)} in \enquote{Geology}\\ \textit{Technische Universit\"at Bergakademie Freiberg, Germany}
 
@@ -101,9 +86,7 @@
         \item[since 2025/12] \textbf{Assistant Professor}\\ \textit{Lakehead University,
             Department of Geology, Thunder Bay, ON, Canada}
         \item[2023/04--2023/11] \textbf{Postdoctoral associate / Lecturer}\\ \textit{Lakehead University,
-            Department of Geology, Thunder Bay, ON, Canada}
-        % \item[2024/09--2023/11] \textbf {Lecturer}\\ \textit{Lakehead University, Department of
-        %     Geology, Thunder Bay, ON, Canada}      
+            Department of Geology, Thunder Bay, ON, Canada} 
         \item[2020/12--2022/11] \textbf{DFG Research Fellow}\\
         \textit{University of Calgary, Geo- and Thermochronology Research Group, Department of Geoscience, Calgary, AB, Canada}\
         \item[2020/03--2020/11] \textbf{Postdoctoral associate}\\
@@ -117,7 +100,24 @@
 
     \end{cvlist}
 
-
+\section{Teaching Experience}
+    %\begingroup
+    %\setlength{\cvlabelwidth}{10em}
+    \begin{cvlist}{}
+        \item[since 2026] Metamorphic Petrology (GEOL-3217) \\
+        \textit{Lakehead University, Department of Geology, Thunder Bay, ON, Canada}\\
+        Course level: undergraduate~\textbar~lecture hours per week: 3\\
+        \href{https://tobiste.github.io/teaching/GEOL3217_Syllabus_2026.pdf}{\textcolor{mygray}{\faDownload~  \textit{course syllabus}}}
+        \item[since 2025] Geology Case Studies (GEOL--4313)\\
+        \textit{Lakehead University, Department of Geology, Thunder Bay, ON, Canada}\\
+        Course level: undergraduate~\textbar~lecture hours per week: 3\\
+        \href{https://tobiste.github.io/teaching/GEOL4313_Syllabus_2025.pdf}{\textcolor{mygray}{\faDownload~  \textit{course syllabus}}}
+        \item[since 2024] Structural Geology \& Tectonics (GEOL-3310)\\
+        \textit{Lakehead University, Department of Geology, Thunder Bay, ON, Canada}\\
+        Course level: undergraduate~\textbar~lecture hours per week: 3\\
+        \href{https://tobiste.github.io/teaching/GEOL3310_Syllabus_2025.pdf}{\textcolor{mygray}{\faDownload~  \textit{course syllabus}}}
+    \end{cvlist}
+    %\endgroup
 
     %\newpage 
     \section{Publications}
@@ -173,6 +173,8 @@
     \endgroup
 
     \subsection{Other academic articles}
+    \begingroup
+    \setlength{\cvlabelwidth}{3em}
     \begin{cvlist}{}
         \item[Book] Legler, C., Barth, A., Knobloch, A., Mruma, A.\,H., Myumbilwa Y.,
         Magigita, M., Msechu, M., Ngole, T., Stanek, K.\,P., Boniface, N., Kagya, M.,
@@ -181,34 +183,41 @@
             Minerogenic Map of Tanzania 1:1,5 M.}, \textit{Geological Survey of Tanzania}.
         ISBN: 978-9987-477-94-4
     \end{cvlist}
-
+    \endgroup
 
     \section{Software developments}
     \begin{cvlist}{}
-        \item[\texttt{tectonicr}] Free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress using relative plate motion (\doi{10.32614/CRAN.package.tectonicr}).\\
-        Package website: \url{https://tobiste.github.io/tectonicr/}
-        \item[\texttt{structr}] Free and open-source R package for analyzing and visualizing orientation data for structural geology.
-        Package website: \url{https://tobiste.github.io/structr/}
-        \item[\texttt{geoprofiler}] Creates Swath profiles and Distance vs X plots by measuring the accurate distances parallel and perpendicular to user-defined lines (\doi{10.32614/CRAN.package.geoprofiler}).\\
-        Package website: \url{https://tobiste.github.io/geoprofiler/}
+        \item[\texttt{tectonicr}] Free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress using relative plate motion.\\
+        \doi{10.32614/CRAN.package.tectonicr} \textbar \faLink~\url{https://tobiste.github.io/tectonicr/}
+        \item[\texttt{structr}] Free and open-source R package for analyzing and visualizing orientation data for structural geology.\\
+        \faLink~\url{https://tobiste.github.io/structr/}
+        
+        \item[\texttt{geocreep}] Estimate uncertainties in strain rates from flow laws, grain-size piezometry, and fugacity computations.\\
+        \faLink~\url{https://github.com/tobiste/geocreep/}
+        
+        \item[\texttt{geoprofiler}] Creates Swath profiles and Distance vs X plots by measuring the accurate distances parallel and perpendicular to user-defined lines.\\
+        \doi{10.32614/CRAN.package.geoprofiler} \textbar \faLink~\url{https://tobiste.github.io/geoprofiler/}
         %\item[\texttt{ptrotR}] Free and open-source R package for plate motion reconstruction.\\
         %\url{https://github.com/tobiste/ptrotR}
-        \item[\texttt{laftr}] Free and open-source R package to calculate the ages from LA-ICP-MS based fission track dating using the zeta approach. Package website: \url{https://tobiste.github.io/laftr/}
+       
+        \item[\texttt{thermoclustr}] Clustering, advanced statistics and densities of thermochronology cooling paths from inverse models.\\
+        \faLink~\url{https://github.com/tobiste/thermoclustr/}
+        
+         \item[\texttt{laftr}] Free and open-source R package to calculate the ages from LA-ICP-MS based fission track dating using the zeta approach.\\
+         \faLink~\url{https://tobiste.github.io/laftr/}
         %\item[\texttt{euler}] Free and open-source R package for describing plate motion in terms of quaternions.\newline
         % \url{https://github.com/tobiste/euler}
         %\item[\texttt{euler.reco}] Free and open-source R package. Provides algorithms to find and evaluate the Euler pole solution describing the orientation of geological structures.\\
-        % \url{https://github.com/tobiste/euler.reco} 
-        \item[\texttt{thermoclustr}] Clustering, advanced statistics and densities of thermochronology cooling paths from inverse models: \url{https://github.com/tobiste/thermoclustr/}
-        \item[\texttt{geocreep}] Estimate uncertainties in strain rates from flow laws, grain-size piezometry, and fugacity computations: \url{https://github.com/tobiste/geocreep/}
+        % \url{https://github.com/tobiste/euler.reco}
     \end{cvlist}
 
     %\newpage
     \section{Funding and Grants}
     \begin{cvlist}{}
-        \item[2026--2031] NSERC Discovery Grant (CA\$\,183,000) --- \textit{Natural Sciences and Engineering Research Council of Canada}
+        \item[2026--2031] NSERC Discovery Grant (CA\$\,183{,}000) --- \textit{Natural Sciences and Engineering Research Council of Canada}
         \item[2020--2022]
         \href{https://gepris.dfg.de/gepris/projekt/439621066?language=en}{DFG Research
-            Fellowship} (\texteuro\,85,000) --- \textit{German Research Foundation (DFG)}
+            Fellowship} (\texteuro\,170{,}000) --- \textit{German Research Foundation (DFG)}
         %\item[] 2016 Travel grant (750\texteuro) --- \textit{Centre of Advanced Study and Research Freiberg}
         %\item 2013 Travel grant (500\texteuro) --- \textit{TU Bergakademie Freiberg Association of Friends}
         %\item 2009 IAESTE Internship stipend --- \textit{International Association for the Exchange of Students for Technical Experience   (IAESTE)}
@@ -217,7 +226,7 @@
     \section{Awards}
     \begin{cvlist}{}
         \item[2026] CTG David Elliott Best Paper Award (2026) for \textit{\enquote{All Aligned on the Western Front of North America? Analyzing the Stress Field in the Northern Cordillera}} (Tectonics, 2025)
-        \item[2014] Poster award at \textit{CETEG2015}, Kada\v{n}, Czech Republic, 2014
+        %\item[2014] Poster award at \textit{CETEG2015}, Kada\v{n}, Czech Republic, 2014
     \end{cvlist}
     
     \section{Professional Services and Memberships}
