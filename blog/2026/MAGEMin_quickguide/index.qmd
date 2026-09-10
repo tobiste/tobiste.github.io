@@ -46,6 +46,14 @@ Run MAGEMinApp directly from your terminal without starting a Julia session. Jus
 ```bash
 MAGEMinApp
 ```
+
+or start julia (type `julia` in the terminal) and then:
+
+```julia
+using MAGEMinApp
+App()
+```
+
 This will initiate the program. After a couple seconds, the following line will appear:
 
 ```bash
