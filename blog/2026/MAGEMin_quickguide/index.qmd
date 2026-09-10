@@ -112,4 +112,8 @@ To add these contour lines in MAGEMinApp switch to the *Isopleths* tab on the ri
 
 ![Adding isopleths for mineral chemistry (here pyrope composition)](magemin_isopleths.png)
 
+## Exporting the pseudosection
+
+Click the blue **Export figure** button. MageMinApp exports all layers (background, reaction lines, labels, isopleths, etc.)  as separate SVG files that can be easily opened and stacked using vector graphics editing tools such as Inkscape, where you can further edit the figure to your liking.
+
 [^riel]: Riel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. *Geochemistry, Geophysics, Geosystems*, 23, e2022GC010427. doi: [10.1029/2022GC010427](https://doi.org/10.1029/2022GC010427)

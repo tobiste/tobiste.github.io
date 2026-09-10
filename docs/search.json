@@ -362,5 +362,12 @@
     "title": "Quick guide for MAGEMinApp",
     "section": "Adding mineral composition isopleths",
     "text": "Adding mineral composition isopleths\nA mineral composition isopleth is a contour line on a pressure-temperature (P-T) phase diagram or pseudosection that connects points where a specific mineral (usually a solid-solution phase, such as garnet) has a constant chemical composition.\nTo add these contour lines in MAGEMinApp switch to the Isopleths tab on the right panel.\n\nIn Isopleth type pick Solution phase\nPick the phase for which the isopleths should be calculated (e.g. g for garnet)\nSelect Endmember mode in Field\nSelect mol fraction in Unit\nPick the endmember of the solid-solution phase (e.g. py for pyrope)\nSelect the plotting parameters of the contour lines (line style, width, color)\nHit Add to calculate the isopleths and add them to the existing phase diagram.\n\n\n\n\nAdding isopleths for mineral chemistry (here pyrope composition)"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#exporting-the-pseudosection",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#exporting-the-pseudosection",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Exporting the pseudosection",
+    "text": "Exporting the pseudosection\nClick the blue Export figure button. MageMinApp exports all layers (background, reaction lines, labels, isopleths, etc.) as separate SVG files that can be easily opened and stacked using vector graphics editing tools such as Inkscape, where you can further edit the figure to your liking."
   }
 ]
