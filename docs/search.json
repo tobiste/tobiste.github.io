@@ -214,7 +214,7 @@
     "href": "blog/index.html#section",
     "title": "Blog",
     "section": "2026",
-    "text": "2026\n\n\n\n\n\n\n\n\n\n\nQuick guide for MAGEMinApp\n\n\n\nMetamorphic petrology\n\nInstallation\n\nTutorial\n\n\n\nSome steps to produce pseudosections with MAGEMin\n\n\n\n\n\nSeptember 10, 2026\n\n\nTobias Stephan\n\n\n\n\n\n\n\n\n\n\n\n\nInstallation guide for THERIAK-DOMINO on UNIX\n\n\n\nMetamorphic petrology\n\nInstallation\n\nUNIX\n\n\n\nSome steps to install THERIAK-DOMIN on UNIX based systems\n\n\n\n\n\nJune 6, 2026\n\n\nTobias Stephan\n\n\n\n\n\nNo matching items"
+    "text": "2026\n\n\n\n\n\n\n\n\n\n\nQuick guide for MAGEMinApp\n\n\n\nMetamorphic petrology\n\nInstallation\n\nTutorial\n\n\n\nSimple steps to produce fast pseudosections using MAGEMin\n\n\n\n\n\nSeptember 10, 2026\n\n\nTobias Stephan\n\n\n\n\n\n\n\n\n\n\n\n\nInstallation guide for THERIAK-DOMINO on UNIX\n\n\n\nMetamorphic petrology\n\nInstallation\n\nUNIX\n\n\n\nSome steps to install THERIAK-DOMIN on UNIX based systems\n\n\n\n\n\nJune 6, 2026\n\n\nTobias Stephan\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/index.html#section-1",
@@ -291,14 +291,14 @@
     "href": "blog/2026/MAGEMin_quickguide/index.html",
     "title": "Quick guide for MAGEMinApp",
     "section": "",
-    "text": "These steps show how MAGEMinApp can be installed\n\n\n\nWindows: Open the Microsoft Store or run winget install julia -s msstore in your command shell.\nmacOS and Linux: Run curl -fsSL https://install.julialang.org | sh in your terminal.\n\nVerify Installation: Type julia in your command-line terminal to start an interactive session.\n\n\n\n\nIf not done start a julia session in the terminal.\nTo install packages just type ] and press enter.\nNow install MAGEMinApp by typing add MAGEMinApp followed by enter."
+    "text": "MAGEMin 1 is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.\nThis tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data."
   },
   {
     "objectID": "blog/2026/MAGEMin_quickguide/index.html#installation-steps",
     "href": "blog/2026/MAGEMin_quickguide/index.html#installation-steps",
     "title": "Quick guide for MAGEMinApp",
-    "section": "",
-    "text": "These steps show how MAGEMinApp can be installed\n\n\n\nWindows: Open the Microsoft Store or run winget install julia -s msstore in your command shell.\nmacOS and Linux: Run curl -fsSL https://install.julialang.org | sh in your terminal.\n\nVerify Installation: Type julia in your command-line terminal to start an interactive session.\n\n\n\n\nIf not done start a julia session in the terminal.\nTo install packages just type ] and press enter.\nNow install MAGEMinApp by typing add MAGEMinApp followed by enter."
+    "section": "Installation steps",
+    "text": "Installation steps\nThese steps show how MAGEMinApp can be installed\n\n1. Install julia programming language\n\nWindows: Open the Microsoft Store or run winget install julia -s msstore in your command shell.\nmacOS and Linux: Run curl -fsSL https://install.julialang.org | sh in your terminal.\n\nVerify Installation: Type julia in your command-line terminal to start an interactive session.\n\n\n2. Install MAGEMinApp\n\nIf not done start a julia session in the terminal.\nTo install packages just type ] and press enter.\nNow install MAGEMinApp by typing add MAGEMinApp followed by enter."
   },
   {
     "objectID": "blog/2026/MAGEMin_quickguide/index.html#running-mageminapp",
@@ -320,5 +320,47 @@
     "title": "Quick guide for MAGEMinApp",
     "section": "Compute and refine phase diagram",
     "text": "Compute and refine phase diagram\n\nTo start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the Diagram tab (opens automatically after the calculation).\nYou can now refine the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#generate-a-pseudosection",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#generate-a-pseudosection",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Generate a pseudosection",
+    "text": "Generate a pseudosection\nRun MAGEMinApp directly from your terminal without starting a Julia session. Just type in your terminal:\nMAGEMinApp\nThis will initiate the program. After a couple seconds, the following line will appear:\n[ Info: Listening on: 127.0.0.1:8050, thread id: 1\nYou now only need to copy and paste 127.0.0.1:8050 into your favorite browser to launch the App.\n\nLoad a bulk-rock composition\nMAGEMinApp is designed is such a way that bulk-rock composition must be entered in a *.dat file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my Bulk_to_therin App:\n\nUsing Bulk_to_therin to generate the input fiel for MAGEMinApp\n\nUpload your excel file in the THERIN Generator tab\nSwitch to the MAGEMin tab\nSelect the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g. S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively)\nIf your uploading more than one sample you can filter the data by typing the name of the sample you are interested in into the Sample field.\nSelect the database from the drop-down menu. mb stands for metabasite and mp for metapelite. The other acronyms are explained here\nDownload the file below the Preview window on the right\n\n\nNow go back to your MAGEMinApp browser tab and switch to the Phase Diagrams tab to open the Setup tab. Here you find a drag and drop field in the middle panel where you can upload the dat file.\nOn the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just make sure that the correct database is selected.\nNow select the sample you want to model below the drag-and-drop field in the middle panel.\n\n\nCompute and refine phase diagram\n\nTo start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the Diagram tab (opens automatically after the calculation).\n\n\n\n\nSetting up background colors of stable mineral assemblage fields.\n\n\n\nYou can now refine the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#modifying-colors",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#modifying-colors",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Modifying colors",
+    "text": "Modifying colors\nBy default the phase diagram shows the variance in each mineral assemblage field. You can change the background colors in the Display options tab in the right panel. In Field you can now choose which parameter you want to show as the diagrams background.\nChoose Hash if you want to assign random colors to the each assemblage field. See example below:\n\n\n\nChoosing background colors for stable mineral assemblage fields."
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#adding-isopleths",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#adding-isopleths",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Adding isopleths",
+    "text": "Adding isopleths\nTo add lines of constant composition of a solid-solution phase (isopleths):\n\n\n\nAdding isopleths for mineral chemistry (here pyrope composition)"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#references",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#references",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#footnotes",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#footnotes",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRiel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427↩︎"
+  },
+  {
+    "objectID": "blog/2026/MAGEMin_quickguide/index.html#adding-mineral-composition-isopleths",
+    "href": "blog/2026/MAGEMin_quickguide/index.html#adding-mineral-composition-isopleths",
+    "title": "Quick guide for MAGEMinApp",
+    "section": "Adding mineral composition isopleths",
+    "text": "Adding mineral composition isopleths\nA mineral composition isopleth is a contour line on a pressure-temperature (P-T) phase diagram or pseudosection that connects points where a specific mineral (usually a solid-solution phase, such as garnet) has a constant chemical composition.\nTo add these contour lines in MAGEMinApp switch to the Isopleths tab on the right panel.\n\nIn Isopleth type pick Solution phase\nPick the phase for which the isopleths should be calculated (e.g. g for garnet)\nSelect Endmember mode in Field\nSelect mol fraction in Unit\nPick the endmember of the solid-solution phase (e.g. py for pyrope)\nSelect the plotting parameters of the contour lines (line style, width, color)\nHit Add to calculate the isopleths and add them to the existing phase diagram.\n\n\n\n\nAdding isopleths for mineral chemistry (here pyrope composition)"
   }
 ]

@@ -1,8 +1,9 @@
 ---
 title: "Quick guide for MAGEMinApp"
-description: "Some steps to produce pseudosections with MAGEMin"
+description: "Simple steps to produce fast pseudosections using MAGEMin"
 author: "Tobias Stephan"
 date: "09/10/2026"
+image: "cover.png"
 categories:
   - Metamorphic petrology
   - Installation
@@ -12,6 +13,10 @@ format:
     toc: true
     toc-location: right
 ---
+
+**MAGEMin** [^riel] is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems. 
+
+This tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data.
 
 ## Installation steps
 
@@ -34,7 +39,7 @@ Verify Installation: Type `julia` in your command-line terminal to start an inte
 2.  Now install **MAGEMinApp** by typing `add MAGEMinApp` followed by enter.
 
 
-## Running MAGEMinApp
+## Generate a pseudosection
 
 Run **MAGEMinApp** directly from your terminal without starting a Julia session. Just type in your terminal:
 
@@ -54,7 +59,8 @@ You now only need to copy and paste `127.0.0.1:8050` into your favorite browser 
 To generate this input file from a classic bulk-rock composition excel file you can use my
 [Bulk_to_therin](https://tobiste.shinyapps.io/Bulk_to_therin/) App:
 
-
+> **Using *Bulk_to_therin* to generate the input fiel for MAGEMinApp**
+> 
 > 1. Upload your excel file in the *THERIN Generator* tab
 >
 > 2. Switch to the *MAGEMin* tab
@@ -77,7 +83,36 @@ Now select the sample you want to model below the drag-and-drop field in the mid
 
 1. To start the modelling click on the green button (labelled "Compute phase diagram") on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you'll see the generated pseudosection in the *Diagram* tab (opens automatically after the calculation). 
 
-3. You can now *refine* the field boundaries by hitting the green button labelled "Refine Phase Boundaries". (You can repeat this several times, but the calculation time will increase exponentially with each iteration)
+![Setting up background colors of stable mineral assemblage fields.](magemin_setup.png)
 
 
-tbc
+2. You can now *refine* the field boundaries by hitting the green button labelled "Refine Phase Boundaries". (You can repeat this several times, but the calculation time will increase exponentially with each iteration)
+
+## Modifying colors
+
+By default the phase diagram shows the variance in each mineral assemblage field. You can change the background colors in the *Display options* tab in the right panel. In **Field** you can now choose which parameter you want to show as the diagrams background. 
+
+Choose **Hash** if you want to assign random colors to the each assemblage field. See example below:
+
+![Choosing background colors for stable mineral assemblage fields.](magemin_color.png)
+
+## Adding mineral composition isopleths
+
+A mineral composition isopleth is a contour line on a pressure-temperature (P-T) phase diagram or pseudosection that connects points where a specific mineral (usually a solid-solution phase, such as garnet) has a constant chemical composition. 
+
+To add these contour lines in MAGEMinApp switch to the *Isopleths* tab on the right panel. 
+
+* In **Isopleth type** pick *Solution phase*
+* Pick the **phase** for which the isopleths should be calculated (e.g. g for garnet)
+* Select *Endmember mode* in **Field**
+* Select *mol fraction* in **Unit**
+* Pick the endmember of the solid-solution phase (e.g. py for pyrope)
+* Select the plotting parameters of the contour lines (line style, width, color)
+* Hit **Add** to calculate the isopleths and add them to the existing phase diagram.
+
+![Adding isopleths for mineral chemistry (here pyrope composition)](magemin_isopleths.png)
+
+
+## References
+
+[^riel]: Riel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427

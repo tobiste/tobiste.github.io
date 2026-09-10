@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tobias Stephan">
 <meta name="dcterms.date" content="2026-09-10">
-<meta name="description" content="Some steps to produce pseudosections with MAGEMin">
+<meta name="description" content="Simple steps to produce fast pseudosections using MAGEMin">
 
 <title>Tobias Stephan</title>
 <style>
@@ -111,7 +111,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="Tobias Stephan">
-<meta property="og:description" content="Some steps to produce pseudosections with MAGEMin">
+<meta property="og:description" content="Simple steps to produce fast pseudosections using MAGEMin">
+<meta property="og:image" content="cover.png">
 <meta property="og:site_name" content="Tobias Stephan">
 </head>
 
@@ -186,11 +187,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#install-julia-programming-language" id="toc-install-julia-programming-language" class="nav-link" data-scroll-target="#install-julia-programming-language">1. Install julia programming language</a></li>
   <li><a href="#install-mageminapp" id="toc-install-mageminapp" class="nav-link" data-scroll-target="#install-mageminapp">2. Install MAGEMinApp</a></li>
   </ul></li>
-  <li><a href="#running-mageminapp" id="toc-running-mageminapp" class="nav-link" data-scroll-target="#running-mageminapp">Running MAGEMinApp</a>
+  <li><a href="#generate-a-pseudosection" id="toc-generate-a-pseudosection" class="nav-link" data-scroll-target="#generate-a-pseudosection">Generate a pseudosection</a>
   <ul class="collapse">
   <li><a href="#load-a-bulk-rock-composition" id="toc-load-a-bulk-rock-composition" class="nav-link" data-scroll-target="#load-a-bulk-rock-composition">Load a bulk-rock composition</a></li>
   <li><a href="#compute-and-refine-phase-diagram" id="toc-compute-and-refine-phase-diagram" class="nav-link" data-scroll-target="#compute-and-refine-phase-diagram">Compute and refine phase diagram</a></li>
   </ul></li>
+  <li><a href="#modifying-colors" id="toc-modifying-colors" class="nav-link" data-scroll-target="#modifying-colors">Modifying colors</a></li>
+  <li><a href="#adding-mineral-composition-isopleths" id="toc-adding-mineral-composition-isopleths" class="nav-link" data-scroll-target="#adding-mineral-composition-isopleths">Adding mineral composition isopleths</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Some steps to produce pseudosections with MAGEMin
+    Simple steps to produce fast pseudosections using MAGEMin
   </div>
 </div>
 
@@ -238,6 +242,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><strong>MAGEMin</strong> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.</p>
+<p>This tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data.</p>
 <section id="installation-steps" class="level2">
 <h2 class="anchored" data-anchor-id="installation-steps">Installation steps</h2>
 <p>These steps show how <strong>MAGEMinApp</strong> can be installed</p>
@@ -258,8 +264,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="running-mageminapp" class="level2">
-<h2 class="anchored" data-anchor-id="running-mageminapp">Running MAGEMinApp</h2>
+<section id="generate-a-pseudosection" class="level2">
+<h2 class="anchored" data-anchor-id="generate-a-pseudosection">Generate a pseudosection</h2>
 <p>Run <strong>MAGEMinApp</strong> directly from your terminal without starting a Julia session. Just type in your terminal:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MAGEMinApp</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will initiate the program. After a couple seconds, the following line will appear:</p>
@@ -269,6 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="load-a-bulk-rock-composition">Load a bulk-rock composition</h3>
 <p><strong>MAGEMinApp</strong> is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
 <blockquote class="blockquote">
+<p><strong>Using <em>Bulk_to_therin</em> to generate the input fiel for MAGEMinApp</strong></p>
 <ol type="1">
 <li><p>Upload your excel file in the <em>THERIN Generator</em> tab</p></li>
 <li><p>Switch to the <em>MAGEMin</em> tab</p></li>
@@ -285,16 +292,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="compute-and-refine-phase-diagram" class="level3">
 <h3 class="anchored" data-anchor-id="compute-and-refine-phase-diagram">Compute and refine phase diagram</h3>
 <ol type="1">
-<li><p>To start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the <em>Diagram</em> tab (opens automatically after the calculation).</p></li>
-<li><p>You can now <em>refine</em> the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)</p></li>
+<li>To start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the <em>Diagram</em> tab (opens automatically after the calculation).</li>
 </ol>
-<p>tbc</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="magemin_setup.png" class="img-fluid figure-img"></p>
+<figcaption>Setting up background colors of stable mineral assemblage fields.</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>You can now <em>refine</em> the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)</li>
+</ol>
+</section>
+</section>
+<section id="modifying-colors" class="level2">
+<h2 class="anchored" data-anchor-id="modifying-colors">Modifying colors</h2>
+<p>By default the phase diagram shows the variance in each mineral assemblage field. You can change the background colors in the <em>Display options</em> tab in the right panel. In <strong>Field</strong> you can now choose which parameter you want to show as the diagrams background.</p>
+<p>Choose <strong>Hash</strong> if you want to assign random colors to the each assemblage field. See example below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="magemin_color.png" class="img-fluid figure-img"></p>
+<figcaption>Choosing background colors for stable mineral assemblage fields.</figcaption>
+</figure>
+</div>
+</section>
+<section id="adding-mineral-composition-isopleths" class="level2">
+<h2 class="anchored" data-anchor-id="adding-mineral-composition-isopleths">Adding mineral composition isopleths</h2>
+<p>A mineral composition isopleth is a contour line on a pressure-temperature (P-T) phase diagram or pseudosection that connects points where a specific mineral (usually a solid-solution phase, such as garnet) has a constant chemical composition.</p>
+<p>To add these contour lines in MAGEMinApp switch to the <em>Isopleths</em> tab on the right panel.</p>
+<ul>
+<li>In <strong>Isopleth type</strong> pick <em>Solution phase</em></li>
+<li>Pick the <strong>phase</strong> for which the isopleths should be calculated (e.g.&nbsp;g for garnet)</li>
+<li>Select <em>Endmember mode</em> in <strong>Field</strong></li>
+<li>Select <em>mol fraction</em> in <strong>Unit</strong></li>
+<li>Pick the endmember of the solid-solution phase (e.g.&nbsp;py for pyrope)</li>
+<li>Select the plotting parameters of the contour lines (line style, width, color)</li>
+<li>Hit <strong>Add</strong> to calculate the isopleths and add them to the existing phase diagram.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="magemin_isopleths.png" class="img-fluid figure-img"></p>
+<figcaption>Adding isopleths for mineral chemistry (here pyrope composition)</figcaption>
+</figure>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Riel, N., Kaus, B. J. P., Green, E. C. R., &amp; Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
