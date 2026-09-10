@@ -81,6 +81,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-7b0e86272e1b4b73b3152f303e1b13f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -269,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To run MAGEMinApp, you’ll to start julia session.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
-<p>{{&lt; fa lightbulb &gt;}} MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the <code>-t</code> flag:</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the <code>-t</code> flag:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To assign a specific number of cores (e.g., 6)</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span> <span class="at">-t</span> 6</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -286,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="load-a-bulk-rock-composition">Load a bulk-rock composition</h3>
 <p>MAGEMinApp is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
-<p>{{&lt; fa lightbulb &gt;}} <strong>Using <em>Bulk_to_therin</em> to generate the input file for MAGEMinApp</strong></p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Using <em>Bulk_to_therin</em> to generate the input file for MAGEMinApp</strong></p>
 <ol type="1">
 <li><p>Upload your excel file in the <em>THERIN Generator</em> tab.</p></li>
 <li><p>Switch to the <em>MAGEMin</em> tab.</p></li>
