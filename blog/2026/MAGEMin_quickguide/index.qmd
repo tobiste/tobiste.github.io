@@ -48,7 +48,7 @@ julia
 ```
 
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
-MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the `-t` flag:
+{{< fa lightbulb >}} MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the `-t` flag:
 
 ```bash
 # To assign a specific number of cores (e.g., 6)
@@ -80,7 +80,7 @@ To generate this input file from a classic bulk-rock composition excel file you 
 [Bulk_to_therin](https://tobiste.shinyapps.io/Bulk_to_therin/) App:
 
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
-**Using *Bulk_to_therin* to generate the input file for MAGEMinApp**
+{{< fa lightbulb >}} **Using *Bulk_to_therin* to generate the input file for MAGEMinApp**
  
 1. Upload your excel file in the *THERIN Generator* tab.
 
