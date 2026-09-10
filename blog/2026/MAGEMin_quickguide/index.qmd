@@ -56,7 +56,7 @@ App()
 
 This will initiate the program. After a couple seconds, the following line will appear:
 
-```bash
+```julia
 [ Info: Listening on: 127.0.0.1:8050, thread id: 1
 ```
 You now only need to copy and paste `127.0.0.1:8050` into your favorite browser to launch the App.
