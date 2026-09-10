@@ -291,7 +291,7 @@
     "href": "blog/2026/MAGEMin_quickguide/index.html",
     "title": "Quick guide for MAGEMinApp",
     "section": "",
-    "text": "MAGEMin 1 is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.\nThis tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data."
+    "text": "MAGEMin1 is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.\nThis tutorial explains how you can install the browser-based graphical user interface to MAGEMin (MAGEMINApp) and how you can create a pseudosection from bulk-rock geochemical data."
   },
   {
     "objectID": "blog/2026/MAGEMin_quickguide/index.html#installation-steps",
@@ -354,7 +354,7 @@
     "href": "blog/2026/MAGEMin_quickguide/index.html#footnotes",
     "title": "Quick guide for MAGEMinApp",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nRiel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427↩︎"
+    "text": "Footnotes\n\n\nRiel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. doi: 10.1029/2022GC010427↩︎"
   },
   {
     "objectID": "blog/2026/MAGEMin_quickguide/index.html#adding-mineral-composition-isopleths",

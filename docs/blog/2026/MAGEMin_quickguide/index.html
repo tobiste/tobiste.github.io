@@ -194,7 +194,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#modifying-colors" id="toc-modifying-colors" class="nav-link" data-scroll-target="#modifying-colors">Modifying colors</a></li>
   <li><a href="#adding-mineral-composition-isopleths" id="toc-adding-mineral-composition-isopleths" class="nav-link" data-scroll-target="#adding-mineral-composition-isopleths">Adding mineral composition isopleths</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -242,11 +241,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>MAGEMin</strong> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.</p>
-<p>This tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data.</p>
+<p><strong>MAGEMin</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems.</p>
+<p>This tutorial explains how you can install the browser-based graphical user interface to MAGEMin (<strong>MAGEMINApp</strong>) and how you can create a pseudosection from bulk-rock geochemical data.</p>
 <section id="installation-steps" class="level2">
 <h2 class="anchored" data-anchor-id="installation-steps">Installation steps</h2>
-<p>These steps show how <strong>MAGEMinApp</strong> can be installed</p>
+<p>These steps show how MAGEMinApp can be installed</p>
 <section id="install-julia-programming-language" class="level3">
 <h3 class="anchored" data-anchor-id="install-julia-programming-language">1. Install julia programming language</h3>
 <ul>
@@ -260,20 +259,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="0" type="1">
 <li><p>If not done start a <em>julia</em> session in the terminal.</p></li>
 <li><p>To install packages just type <code>]</code> and press enter.</p></li>
-<li><p>Now install <strong>MAGEMinApp</strong> by typing <code>add MAGEMinApp</code> followed by enter.</p></li>
+<li><p>Now install MAGEMinApp by typing <code>add MAGEMinApp</code> followed by enter.</p></li>
 </ol>
 </section>
 </section>
 <section id="generate-a-pseudosection" class="level2">
 <h2 class="anchored" data-anchor-id="generate-a-pseudosection">Generate a pseudosection</h2>
-<p>Run <strong>MAGEMinApp</strong> directly from your terminal without starting a Julia session. Just type in your terminal:</p>
+<p>Run MAGEMinApp directly from your terminal without starting a Julia session. Just type in your terminal:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MAGEMinApp</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will initiate the program. After a couple seconds, the following line will appear:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> Info: Listening on: <span class="er">127.0.0.1:8050,</span> <span class="ex">thread</span> id: 1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You now only need to copy and paste <code>127.0.0.1:8050</code> into your favorite browser to launch the App.</p>
 <section id="load-a-bulk-rock-composition" class="level3">
 <h3 class="anchored" data-anchor-id="load-a-bulk-rock-composition">Load a bulk-rock composition</h3>
-<p><strong>MAGEMinApp</strong> is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
+<p>MAGEMinApp is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
 <blockquote class="blockquote">
 <p><strong>Using <em>Bulk_to_therin</em> to generate the input fiel for MAGEMinApp</strong></p>
 <ol type="1">
@@ -285,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Download the file below the <em>Preview</em> window on the right</p></li>
 </ol>
 </blockquote>
-<p>Now go back to your <strong>MAGEMinApp</strong> browser tab and switch to the <em>Phase Diagrams</em> tab to open the <em>Setup</em> tab. Here you find a drag and drop field in the middle panel where you can upload the <em>dat</em> file.</p>
+<p>Now go back to your MAGEMinApp browser tab and switch to the <em>Phase Diagrams</em> tab to open the <em>Setup</em> tab. Here you find a drag and drop field in the middle panel where you can upload the <em>dat</em> file.</p>
 <p>On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just <strong>make sure that the correct database is selected.</strong></p>
 <p>Now select the sample you want to model below the drag-and-drop field in the middle panel.</p>
 </section>
@@ -335,9 +334,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Adding isopleths for mineral chemistry (here pyrope composition)</figcaption>
 </figure>
 </div>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 </section>
@@ -346,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Riel, N., Kaus, B. J. P., Green, E. C. R., &amp; Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Riel, N., Kaus, B. J. P., Green, E. C. R., &amp; Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. <em>Geochemistry, Geophysics, Geosystems</em>, 23, e2022GC010427. doi: <a href="https://doi.org/10.1029/2022GC010427">10.1029/2022GC010427</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

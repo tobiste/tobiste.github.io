@@ -14,13 +14,13 @@ format:
     toc-location: right
 ---
 
-**MAGEMin** [^riel] is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems. 
+**MAGEMin**[^riel] is a fast, open-source software tool that calculates thermodynamic phase equilibria and pressure-temperature (P-T) pseudosections by minimizing Gibbs free energy for multiphase and multicomponent systems. 
 
-This tutorial explains how you can install the browser-based graphical user interface to MAGEMin and how you can create a pseudosection from bulk-rock geochemical data.
+This tutorial explains how you can install the browser-based graphical user interface to MAGEMin (**MAGEMINApp**) and how you can create a pseudosection from bulk-rock geochemical data.
 
 ## Installation steps
 
-These steps show how **MAGEMinApp** can be installed
+These steps show how MAGEMinApp can be installed
 
 ### 1. Install julia programming language
 
@@ -36,12 +36,12 @@ Verify Installation: Type `julia` in your command-line terminal to start an inte
 
 1.  To install packages just type `]` and press enter.
 
-2.  Now install **MAGEMinApp** by typing `add MAGEMinApp` followed by enter.
+2.  Now install MAGEMinApp by typing `add MAGEMinApp` followed by enter.
 
 
 ## Generate a pseudosection
 
-Run **MAGEMinApp** directly from your terminal without starting a Julia session. Just type in your terminal:
+Run MAGEMinApp directly from your terminal without starting a Julia session. Just type in your terminal:
 
 ```bash
 MAGEMinApp
@@ -55,7 +55,7 @@ You now only need to copy and paste `127.0.0.1:8050` into your favorite browser 
 
 ### Load a bulk-rock composition
 
-**MAGEMinApp** is designed is such a way that bulk-rock composition must be entered in a `*.dat` file and loaded in the simulation tab. 
+MAGEMinApp is designed is such a way that bulk-rock composition must be entered in a `*.dat` file and loaded in the simulation tab. 
 To generate this input file from a classic bulk-rock composition excel file you can use my
 [Bulk_to_therin](https://tobiste.shinyapps.io/Bulk_to_therin/) App:
 
@@ -73,7 +73,7 @@ To generate this input file from a classic bulk-rock composition excel file you 
 >
 > 6. Download the file below the *Preview* window on the right
 
-Now go back to your **MAGEMinApp** browser tab and switch to the *Phase Diagrams* tab to open the *Setup* tab. Here you find a drag and drop field in the middle panel where you can upload the *dat* file.
+Now go back to your MAGEMinApp browser tab and switch to the *Phase Diagrams* tab to open the *Setup* tab. Here you find a drag and drop field in the middle panel where you can upload the *dat* file.
 
 On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just **make sure that the correct database is selected.**
 
@@ -112,7 +112,4 @@ To add these contour lines in MAGEMinApp switch to the *Isopleths* tab on the ri
 
 ![Adding isopleths for mineral chemistry (here pyrope composition)](magemin_isopleths.png)
 
-
-## References
-
-[^riel]: Riel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. Geochemistry, Geophysics, Geosystems, 23, e2022GC010427. https://doi.org/10.1029/2022GC010427
+[^riel]: Riel, N., Kaus, B. J. P., Green, E. C. R., & Berlie, N. (2022). MAGEMin, an efficient Gibbs energy minimizer: Application to igneous systems. *Geochemistry, Geophysics, Geosystems*, 23, e2022GC010427. doi: [10.1029/2022GC010427](https://doi.org/10.1029/2022GC010427)
