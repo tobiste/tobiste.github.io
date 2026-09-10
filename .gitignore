@@ -301,3 +301,4 @@ TSWLatexianTemp*
 
 # xwatermark package
 *.xwm
+**/*.quarto_ipynb

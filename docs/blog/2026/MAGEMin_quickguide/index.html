@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tobias Stephan">
-<meta name="dcterms.date" content="2024-11-30">
-<meta name="description" content="The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.">
+<meta name="dcterms.date" content="2026-09-10">
+<meta name="description" content="Some steps to produce pseudosections with MAGEMin">
 
 <title>Tobias Stephan</title>
 <style>
@@ -26,46 +26,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9de9f6925d305bcf5b7eb9351f368d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7b0e86272e1b4b73b3152f303e1b13f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-9de9f6925d305bcf5b7eb9351f368d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-7b0e86272e1b4b73b3152f303e1b13f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,8 +111,7 @@ div.csl-indent {
 
 
 <meta property="og:title" content="Tobias Stephan">
-<meta property="og:description" content="The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.">
-<meta property="og:image" content="../../pictures/Stephan2019_ESR_10.png">
+<meta property="og:description" content="Some steps to produce pseudosections with MAGEMin">
 <meta property="og:site_name" content="Tobias Stephan">
 </head>
 
@@ -108,7 +122,7 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tobias Stephan</span>
     </a>
   </div>
@@ -119,35 +133,35 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html"> 
+    <a class="nav-link" href="../../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research/index.html"> 
+    <a class="nav-link" href="../../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../software.html"> 
+    <a class="nav-link" href="../../../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html"> 
+    <a class="nav-link" href="../../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../cv/cv.pdf"> <i class="bi bi-file-pdf-fill" role="img">
+    <a class="nav-link" href="../../../cv/cv.pdf"> <i class="bi bi-file-pdf-fill" role="img">
 </i> 
 <span class="menu-text">Curriculum Vitæ</span></a>
   </li>  
@@ -162,37 +176,57 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installation-steps" id="toc-installation-steps" class="nav-link active" data-scroll-target="#installation-steps">Installation steps</a>
+  <ul class="collapse">
+  <li><a href="#install-julia-programming-language" id="toc-install-julia-programming-language" class="nav-link" data-scroll-target="#install-julia-programming-language">1. Install julia programming language</a></li>
+  <li><a href="#install-mageminapp" id="toc-install-mageminapp" class="nav-link" data-scroll-target="#install-mageminapp">2. Install MAGEMinApp</a></li>
+  </ul></li>
+  <li><a href="#running-mageminapp" id="toc-running-mageminapp" class="nav-link" data-scroll-target="#running-mageminapp">Running MAGEMinApp</a>
+  <ul class="collapse">
+  <li><a href="#load-a-bulk-rock-composition" id="toc-load-a-bulk-rock-composition" class="nav-link" data-scroll-target="#load-a-bulk-rock-composition">Load a bulk-rock composition</a></li>
+  <li><a href="#compute-and-refine-phase-diagram" id="toc-compute-and-refine-phase-diagram" class="nav-link" data-scroll-target="#compute-and-refine-phase-diagram">Compute and refine phase diagram</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reconstructing plate motion: From Pannotia to Pangea</h1>
+<h1 class="title">Quick guide for MAGEMinApp</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Plate motion</div>
-    <div class="quarto-category">Pangea</div>
-    <div class="quarto-category">Variscan</div>
-    <div class="quarto-category">Reconstruction</div>
-    <div class="quarto-category">Mineral deposits</div>
-    <div class="quarto-category">Supercontinent cycle</div>
+    <div class="quarto-category">Metamorphic petrology</div>
+    <div class="quarto-category">Installation</div>
+    <div class="quarto-category">Tutorial</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.
+    Some steps to produce pseudosections with MAGEMin
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tobias Stephan </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 30, 2024</p>
+      <p class="date">September 10, 2026</p>
     </div>
   </div>
   
@@ -204,45 +238,63 @@ div.csl-indent {
 </header>
 
 
-<div class="grid">
-<div class="g-col-9">
-<p>The supercontinent cycle is a fundamental concept in geology that describes the periodic assembly and breakup of supercontinents over hundreds of millions of years. By unraveling the break-up history of Pannotia an the assemblage of Pangea, we can gain insights into the mechanisms that drive this cycle, the timescales involved, and the consequences for Earth’s systems.</p>
-</div>
-<div class="g-col-3">
-<p><audio src="../../stuff/Reconstructing%20plate%20motion%20linked%20to%20Pangea%20assemblage.wav" class="img-fluid" controls=""><a href="../../stuff/Reconstructing plate motion linked to Pangea assemblage.wav">Audio</a></audio></p>
-<p>AI-generated[^1] audio summary</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../pictures/Pannotia_Pangea.gif" class="img-fluid figure-img"></p>
-<figcaption>Reconstruction of the supercontinent cycle Pannotia-Pangea (absolute plate motion reference frame). From <span class="citation" data-cites="Kroner2020">Kroner et al. (<a href="#ref-Kroner2020" role="doc-biblioref">2020</a>)</span>.</figcaption>
-</figure>
-</div>
-<p>Using various methods, including paleomagnetic data, geochronology, and plate kinematic modeling, we can reconstruct the past positions and movements of continents. This research serves as a test of existing plate tectonic models and helps to refine our understanding of how plates interact over time. By identifying inconsistencies and discrepancies in these models, such as the conflicting views on Gondwana-Laurussia interaction during the Devonian, we can develop more accurate and comprehensive representations of Earth’s tectonic history.</p>
-<p>Paleozoic orogenies, such as Caledonian, Taconic, Famatinian, Acadian, and Variscan orogenies occurred at different locations and different time. But they do not represent isolated tectonic events - instead they are all related through the Paleozoic motion between Laussia and Gondwana culminating in the assemblage of Pangea. Thus, plate tectonic models and reconstructions must be in agreement with the conclusions we draw from studying these ancient orogens.</p>
-<p>In this project, we examine Paleozoic plate tectonics, focusing on the formation of the supercontinent Pangaea. We utilize a novel method to reconstruct relative plate movements from continental deformation patterns, specifically analyzing the interactions between Gondwana and Laurussia. Our research integrates various geological data, including paleogeographic, paleobiogeographic, and geochemical information to explain the complex tectonic evolution of western Pangaea and the Central European Variscides.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../pictures/pannotia.PNG" class="img-fluid figure-img"></p>
-<figcaption>Pannotia reconstruction. From <span class="citation" data-cites="Kroner2020">Kroner et al. (<a href="#ref-Kroner2020" role="doc-biblioref">2020</a>)</span>.</figcaption>
-</figure>
-</div>
+<section id="installation-steps" class="level2">
+<h2 class="anchored" data-anchor-id="installation-steps">Installation steps</h2>
+<p>These steps show how <strong>MAGEMinApp</strong> can be installed</p>
+<section id="install-julia-programming-language" class="level3">
+<h3 class="anchored" data-anchor-id="install-julia-programming-language">1. Install julia programming language</h3>
+<ul>
+<li><p>Windows: Open the Microsoft Store or run <code>winget install julia -s msstore</code> in your command shell.</p></li>
+<li><p>macOS and Linux: Run <code>curl -fsSL https://install.julialang.org | sh</code> in your terminal.</p></li>
+</ul>
+<p>Verify Installation: Type <code>julia</code> in your command-line terminal to start an interactive session.</p>
+</section>
+<section id="install-mageminapp" class="level3">
+<h3 class="anchored" data-anchor-id="install-mageminapp">2. Install MAGEMinApp</h3>
+<ol start="0" type="1">
+<li><p>If not done start a <em>julia</em> session in the terminal.</p></li>
+<li><p>To install packages just type <code>]</code> and press enter.</p></li>
+<li><p>Now install <strong>MAGEMinApp</strong> by typing <code>add MAGEMinApp</code> followed by enter.</p></li>
+</ol>
+</section>
+</section>
+<section id="running-mageminapp" class="level2">
+<h2 class="anchored" data-anchor-id="running-mageminapp">Running MAGEMinApp</h2>
+<p>Run <strong>MAGEMinApp</strong> directly from your terminal without starting a Julia session. Just type in your terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MAGEMinApp</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This will initiate the program. After a couple seconds, the following line will appear:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> Info: Listening on: <span class="er">127.0.0.1:8050,</span> <span class="ex">thread</span> id: 1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You now only need to copy and paste <code>127.0.0.1:8050</code> into your favorite browser to launch the App.</p>
+<section id="load-a-bulk-rock-composition" class="level3">
+<h3 class="anchored" data-anchor-id="load-a-bulk-rock-composition">Load a bulk-rock composition</h3>
+<p><strong>MAGEMinApp</strong> is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p>Upload your excel file in the <em>THERIN Generator</em> tab</p></li>
+<li><p>Switch to the <em>MAGEMin</em> tab</p></li>
+<li><p>Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g.&nbsp;S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively)</p></li>
+<li><p>If your uploading more than one sample you can filter the data by typing the name of the sample you are interested in into the <em>Sample</em> field.</p></li>
+<li><p>Select the database from the drop-down menu. <em>mb</em> stands for <em>metabasite</em> and <em>mp</em> for <em>metapelite</em>. The other acronyms are explained <a href="https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database">here</a></p></li>
+<li><p>Download the file below the <em>Preview</em> window on the right</p></li>
+</ol>
+</blockquote>
+<p>Now go back to your <strong>MAGEMinApp</strong> browser tab and switch to the <em>Phase Diagrams</em> tab to open the <em>Setup</em> tab. Here you find a drag and drop field in the middle panel where you can upload the <em>dat</em> file.</p>
+<p>On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just <strong>make sure that the correct database is selected.</strong></p>
+<p>Now select the sample you want to model below the drag-and-drop field in the middle panel.</p>
+</section>
+<section id="compute-and-refine-phase-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="compute-and-refine-phase-diagram">Compute and refine phase diagram</h3>
+<ol type="1">
+<li><p>To start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the <em>Diagram</em> tab (opens automatically after the calculation).</p></li>
+<li><p>You can now <em>refine</em> the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)</p></li>
+</ol>
+<p>tbc</p>
 
 
+</section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Kroner2020" class="csl-entry" role="listitem">
-Kroner, U., Stephan, T., Romer, R. L., &amp; Roscher, M. (2020). <span class="nocase">Paleozoic plate kinematics during the Pannotia–Pangaea supercontinent cycle</span>. <em>Geological Society, London, Special Publications</em>, <em>503</em>(1), 83–104. <a href="https://doi.org/10.1144/sp503-2020-15">https://doi.org/10.1144/sp503-2020-15</a>
-</div>
-<div id="ref-Kroner2023" class="csl-entry" role="listitem">
-Kroner, U., Romer, R. L., &amp; Stephan, T. (2023). <span class="nocase">Die Rekonstruktion von relativen Plattenbewegungen aus dem pal<span class="nocase">ä</span>ozoischen Deformationsmuster der Kontinente. [Relative plate motions deduced from the Palaeozoic deformation pattern of continents.]</span>. <em>Zeitschrift Der Deutschen Gesellschaft f<span>ü</span>r Geowissenschaften</em>, <em>174</em>(3), 491–519. <a href="https://doi.org/10.1127/zdgg/2023/0365">https://doi.org/10.1127/zdgg/2023/0365</a>
-</div>
-<div id="ref-Stephan2019" class="csl-entry" role="listitem">
-Stephan, T., Kroner, U., Romer, R. L., &amp; Rösel, D. (2019). <span class="nocase">From a bipartite Gondwanan shelf to an arcuate Variscan belt: The early Paleozoic evolution of northern Peri-Gondwana</span>. <em>Earth-Science Reviews</em>, <em>192</em>, 491–512. <a href="https://doi.org/10.1016/j.earscirev.2019.03.012">https://doi.org/10.1016/j.earscirev.2019.03.012</a>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -647,13 +699,13 @@ Stephan, T., Kroner, U., Romer, R. L., &amp; Rösel, D. (2019). <span class="noc
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><span class="faux-block">Tobias Stephan (he/him)</span> <span class="faux-block"><a href="https://orcid.org/0000-0002-9290-014X"><img class="manImg" src="../../pictures/ORCID_iD.png" alt="ORCID" style="height:15px"> 0000-0002-9290-014X</a></span></p>
+<p><span class="faux-block">Tobias Stephan (he/him)</span> <span class="faux-block"><a href="https://orcid.org/0000-0002-9290-014X"><img class="manImg" src="../../../pictures/ORCID_iD.png" alt="ORCID" style="height:15px"> 0000-0002-9290-014X</a></span></p>
 </div>   
     <div class="nav-footer-center">
 <p>Lakehead University respectfully acknowledges its campuses are located on the traditional lands of Fort William First Nation, Signatory to the Robinson Superior Treaty of 1850 and the Ojibwe, Odawa, and Pottawatomi nations, collectively known as the Three Fires Confederacy.</p>
 </div>
     <div class="nav-footer-right">
-<p><span class="faux-block">Made with <a href="https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111"><img class="manImg" src="../../pictures/Rlogo.png" alt="R" style="height:15px"></a> and <a href="https://quarto.org/"><img class="manImg" src="../../pictures/logo-quarto2.png" alt="Quarto" style="height:15px"></a></span></p>
+<p><span class="faux-block">Made with <a href="https://posit.co/download/rstudio-desktop/?cmplz-force-reload=1732239687111"><img class="manImg" src="../../../pictures/Rlogo.png" alt="R" style="height:15px"></a> and <a href="https://quarto.org/"><img class="manImg" src="../../../pictures/logo-quarto2.png" alt="Quarto" style="height:15px"></a></span></p>
 </div>
   </div>
 </footer>

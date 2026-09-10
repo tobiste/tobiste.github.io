@@ -1,0 +1,83 @@
+---
+title: "Quick guide for MAGEMinApp"
+description: "Some steps to produce pseudosections with MAGEMin"
+author: "Tobias Stephan"
+date: "09/10/2026"
+categories:
+  - Metamorphic petrology
+  - Installation
+  - Tutorial
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+## Installation steps
+
+These steps show how **MAGEMinApp** can be installed
+
+### 1. Install julia programming language
+
+- Windows: Open the Microsoft Store or run `winget install julia -s msstore` in your command shell.
+
+- macOS and Linux: Run `curl -fsSL https://install.julialang.org | sh` in your terminal.
+
+Verify Installation: Type `julia` in your command-line terminal to start an interactive session.
+
+### 2. Install MAGEMinApp
+
+0.  If not done start a *julia* session in the terminal.
+
+1.  To install packages just type `]` and press enter.
+
+2.  Now install **MAGEMinApp** by typing `add MAGEMinApp` followed by enter.
+
+
+## Running MAGEMinApp
+
+Run **MAGEMinApp** directly from your terminal without starting a Julia session. Just type in your terminal:
+
+```bash
+MAGEMinApp
+```
+This will initiate the program. After a couple seconds, the following line will appear:
+
+```bash
+[ Info: Listening on: 127.0.0.1:8050, thread id: 1
+```
+You now only need to copy and paste `127.0.0.1:8050` into your favorite browser to launch the App.
+
+### Load a bulk-rock composition
+
+**MAGEMinApp** is designed is such a way that bulk-rock composition must be entered in a `*.dat` file and loaded in the simulation tab. 
+To generate this input file from a classic bulk-rock composition excel file you can use my
+[Bulk_to_therin](https://tobiste.shinyapps.io/Bulk_to_therin/) App:
+
+
+> 1. Upload your excel file in the *THERIN Generator* tab
+>
+> 2. Switch to the *MAGEMin* tab
+>
+> 3. Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g. S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively)
+>
+> 4. If your uploading more than one sample you can filter the data by typing the name of the sample you are interested in into the *Sample* field.
+>
+> 5. Select the database from  the drop-down menu. *mb* stands for *metabasite* and *mp* for *metapelite*. The other acronyms are explained [here](https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database)
+>
+> 6. Download the file below the *Preview* window on the right
+
+Now go back to your **MAGEMinApp** browser tab and switch to the *Phase Diagrams* tab to open the *Setup* tab. Here you find a drag and drop field in the middle panel where you can upload the *dat* file.
+
+On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just **make sure that the correct database is selected.**
+
+Now select the sample you want to model below the drag-and-drop field in the middle panel.
+
+### Compute and refine phase diagram
+
+1. To start the modelling click on the green button (labelled "Compute phase diagram") on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you'll see the generated pseudosection in the *Diagram* tab (opens automatically after the calculation). 
+
+3. You can now *refine* the field boundaries by hitting the green button labelled "Refine Phase Boundaries". (You can repeat this several times, but the calculation time will increase exponentially with each iteration)
+
+
+tbc
