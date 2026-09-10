@@ -47,8 +47,8 @@ To run MAGEMinApp, you'll to start julia session.
 julia
 ```
 
-< [!TIP]
->MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the `-t` flag:
+<div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
+MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the `-t` flag:
 
 ```bash
 # To assign a specific number of cores (e.g., 6)
@@ -57,7 +57,7 @@ julia -t 6
 # Or let Julia automatically utilize all available logical cores
 julia -t auto
 ```
-
+</div>
 
 and then:
 
@@ -71,7 +71,7 @@ This will initiate the program. After a couple seconds, the following line will 
 ```julia
 [ Info: Listening on: 127.0.0.1:8050, thread id: 1
 ```
-You now only need to copy and paste `127.0.0.1:8050` into your favorite browser to launch the App.
+You now only need to copy and paste `127.0.0.1:8050` into your browser to launch the App.
 
 ### Load a bulk-rock composition
 
@@ -82,33 +82,33 @@ To generate this input file from a classic bulk-rock composition excel file you 
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
 **Using *Bulk_to_therin* to generate the input file for MAGEMinApp**
  
-1. Upload your excel file in the *THERIN Generator* tab
+1. Upload your excel file in the *THERIN Generator* tab.
 
-2. Switch to the *MAGEMin* tab
+2. Switch to the *MAGEMin* tab.
 
-3. Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g. S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively)
+3. Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g. S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively).
 
 4. If your uploading more than one sample you can filter the data by typing the name of the sample you are interested in into the *Sample* field.
 
-5. Select the database from  the drop-down menu. *mb* stands for *metabasite* and *mp* for *metapelite*. The other acronyms are explained [here](https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database)
+5. Select the database from  the drop-down menu. *mb* stands for *metabasite* and *mp* for *metapelite*. The other acronyms are explained [here](https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database).
 
-6. Download the file below the *Preview* window on the right
+6. Download the file below the *Preview* window on the right.
 </div>
 
 Now go back to your MAGEMinApp browser tab and switch to the *Phase Diagrams* tab to open the *Setup* tab. Here you find a drag and drop field in the middle panel where you can upload the *dat* file.
 
-On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just ==make sure that the correct database is selected==.
+On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just **make sure that the correct database is selected**.
 
-Now select the sample you want to model below the drag-and-drop field in the middle panel.
+Finally, select the sample you want to model below the drag-and-drop field in the middle panel.
 
 ### Compute and refine phase diagram
 
-1. To start the modelling click on the green button (labelled "Compute phase diagram") on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you'll see the generated pseudosection in the *Diagram* tab (opens automatically after the calculation). 
+To start the modelling click on the green button (labelled "Compute phase diagram") on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you'll see the generated pseudosection in the *Diagram* tab (opens automatically after the calculation). 
 
 ![Setting up background colors of stable mineral assemblage fields.](magemin_setup.png)
 
 
-2. You can now *refine* the field boundaries by hitting the green button labelled "Refine Phase Boundaries". (You can repeat this several times, but the calculation time will increase exponentially with each iteration)
+You can now *refine* the field boundaries by hitting the green button labelled "Refine Phase Boundaries". (You can repeat this several times, but the calculation time will increase exponentially with each iteration)
 
 ## Modifying colors
 
@@ -124,11 +124,11 @@ A mineral composition isopleth is a contour line on a pressure-temperature (P-T)
 
 To add these contour lines in MAGEMinApp switch to the *Isopleths* tab on the right panel. 
 
-- [x] In **Isopleth type** pick *Solution phase*
-- [ ] Pick the **phase** for which the isopleths should be calculated (e.g. g for garnet)
-- [ ] Select *Endmember mode* in **Field**
-- [ ] Select *mol fraction* in **Unit**
-- [ ] Pick the endmember of the solid-solution phase (e.g. py for pyrope)
+- [x] In **Isopleth type** pick *Solution phase*.
+- [ ] Pick the **phase** for which the isopleths should be calculated (e.g. g for garnet).
+- [ ] Select *Endmember mode* in **Field**.
+- [ ] Select *mol fraction* in **Unit**.
+- [ ] Pick the endmember of the solid-solution phase (e.g. py for pyrope).
 - [ ] Select the plotting parameters of the contour lines (line style, width, color)
 - [ ] Hit **Add** to calculate the isopleths and add them to the existing phase diagram.
 

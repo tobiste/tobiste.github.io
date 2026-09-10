@@ -268,50 +268,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="generate-a-pseudosection">Generate a pseudosection</h2>
 <p>To run MAGEMinApp, you’ll to start julia session.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>&lt; [!TIP] &gt;MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the <code>-t</code> flag:</p>
+<div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
+<p>MAGEMin can utilize multiple CPU of your machine to become even faster. To do that you need to initalize julia with the number of cores indicated with the <code>-t</code> flag:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To assign a specific number of cores (e.g., 6)</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span> <span class="at">-t</span> 6</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or let Julia automatically utilize all available logical cores</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span> <span class="at">-t</span> auto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>and then:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MAGEMinApp</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">App</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will initiate the program. After a couple seconds, the following line will appear:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[ Info<span class="op">:</span> Listening on<span class="op">:</span> <span class="fl">127.0.0.1</span><span class="op">:</span><span class="fl">8050</span>, thread id<span class="op">:</span> <span class="fl">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You now only need to copy and paste <code>127.0.0.1:8050</code> into your favorite browser to launch the App.</p>
+<p>You now only need to copy and paste <code>127.0.0.1:8050</code> into your browser to launch the App.</p>
 <section id="load-a-bulk-rock-composition" class="level3">
 <h3 class="anchored" data-anchor-id="load-a-bulk-rock-composition">Load a bulk-rock composition</h3>
 <p>MAGEMinApp is designed is such a way that bulk-rock composition must be entered in a <code>*.dat</code> file and loaded in the simulation tab. To generate this input file from a classic bulk-rock composition excel file you can use my <a href="https://tobiste.shinyapps.io/Bulk_to_therin/">Bulk_to_therin</a> App:</p>
 <div style="border:1px solid #000; padding: 10px; background-color: #f9f9f9;">
 <p><strong>Using <em>Bulk_to_therin</em> to generate the input file for MAGEMinApp</strong></p>
 <ol type="1">
-<li><p>Upload your excel file in the <em>THERIN Generator</em> tab</p></li>
-<li><p>Switch to the <em>MAGEMin</em> tab</p></li>
-<li><p>Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g.&nbsp;S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively)</p></li>
+<li><p>Upload your excel file in the <em>THERIN Generator</em> tab.</p></li>
+<li><p>Switch to the <em>MAGEMin</em> tab.</p></li>
+<li><p>Select the desired system by typing the first letters of the elements you want to include in the thermodynamic model: e.g.&nbsp;S for Si, N for Na (exception: Cr and Mn should be spelled Cr and Mn, respectively).</p></li>
 <li><p>If your uploading more than one sample you can filter the data by typing the name of the sample you are interested in into the <em>Sample</em> field.</p></li>
-<li><p>Select the database from the drop-down menu. <em>mb</em> stands for <em>metabasite</em> and <em>mp</em> for <em>metapelite</em>. The other acronyms are explained <a href="https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database">here</a></p></li>
-<li><p>Download the file below the <em>Preview</em> window on the right</p></li>
+<li><p>Select the database from the drop-down menu. <em>mb</em> stands for <em>metabasite</em> and <em>mp</em> for <em>metapelite</em>. The other acronyms are explained <a href="https://github.com/ComputationalThermodynamics/MAGEMinApp.jl#available-thermodynamic-database">here</a>.</p></li>
+<li><p>Download the file below the <em>Preview</em> window on the right.</p></li>
 </ol>
 </div>
 <p>Now go back to your MAGEMinApp browser tab and switch to the <em>Phase Diagrams</em> tab to open the <em>Setup</em> tab. Here you find a drag and drop field in the middle panel where you can upload the <em>dat</em> file.</p>
-<p>On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just ==make sure that the correct database is selected==.</p>
-<p>Now select the sample you want to model below the drag-and-drop field in the middle panel.</p>
+<p>On the left panel you can edit some of the model setup parameters, such as the pressure and temperature range. You can leave all other parameters using the default settings, just <strong>make sure that the correct database is selected</strong>.</p>
+<p>Finally, select the sample you want to model below the drag-and-drop field in the middle panel.</p>
 </section>
 <section id="compute-and-refine-phase-diagram" class="level3">
 <h3 class="anchored" data-anchor-id="compute-and-refine-phase-diagram">Compute and refine phase diagram</h3>
-<ol type="1">
-<li>To start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the <em>Diagram</em> tab (opens automatically after the calculation).</li>
-</ol>
+<p>To start the modelling click on the green button (labelled “Compute phase diagram”) on the right panel. The computation may take a couple seconds or minutes depending on the power of your computer. Once done, you’ll see the generated pseudosection in the <em>Diagram</em> tab (opens automatically after the calculation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="magemin_setup.png" class="img-fluid figure-img"></p>
 <figcaption>Setting up background colors of stable mineral assemblage fields.</figcaption>
 </figure>
 </div>
-<ol start="2" type="1">
-<li>You can now <em>refine</em> the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)</li>
-</ol>
+<p>You can now <em>refine</em> the field boundaries by hitting the green button labelled “Refine Phase Boundaries”. (You can repeat this several times, but the calculation time will increase exponentially with each iteration)</p>
 </section>
 </section>
 <section id="modifying-colors" class="level2">
@@ -330,11 +328,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A mineral composition isopleth is a contour line on a pressure-temperature (P-T) phase diagram or pseudosection that connects points where a specific mineral (usually a solid-solution phase, such as garnet) has a constant chemical composition.</p>
 <p>To add these contour lines in MAGEMinApp switch to the <em>Isopleths</em> tab on the right panel.</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">In <strong>Isopleth type</strong> pick <em>Solution phase</em></label></li>
-<li><label><input type="checkbox">Pick the <strong>phase</strong> for which the isopleths should be calculated (e.g.&nbsp;g for garnet)</label></li>
-<li><label><input type="checkbox">Select <em>Endmember mode</em> in <strong>Field</strong></label></li>
-<li><label><input type="checkbox">Select <em>mol fraction</em> in <strong>Unit</strong></label></li>
-<li><label><input type="checkbox">Pick the endmember of the solid-solution phase (e.g.&nbsp;py for pyrope)</label></li>
+<li><label><input type="checkbox" checked="">In <strong>Isopleth type</strong> pick <em>Solution phase</em>.</label></li>
+<li><label><input type="checkbox">Pick the <strong>phase</strong> for which the isopleths should be calculated (e.g.&nbsp;g for garnet).</label></li>
+<li><label><input type="checkbox">Select <em>Endmember mode</em> in <strong>Field</strong>.</label></li>
+<li><label><input type="checkbox">Select <em>mol fraction</em> in <strong>Unit</strong>.</label></li>
+<li><label><input type="checkbox">Pick the endmember of the solid-solution phase (e.g.&nbsp;py for pyrope).</label></li>
 <li><label><input type="checkbox">Select the plotting parameters of the contour lines (line style, width, color)</label></li>
 <li><label><input type="checkbox">Hit <strong>Add</strong> to calculate the isopleths and add them to the existing phase diagram.</label></li>
 </ul>
