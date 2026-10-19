@@ -35,7 +35,7 @@ My work in usable statistical tools for stress/strain orientations is nascent, b
 
 ## Updates
 
-The article "Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries" published together with Eva Enkelmann in *Scientific Reports* won the 2026 David Elliott Best Paper award from the Canadian Tectonics Group (CTG).
+The article "Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries" published together with Eva Enkelmann in *Scientific Reports* won the **2026 David Elliott Best Paper award** from the Canadian Tectonics Group (CTG).
 
 I gave a online presentation on this research on October 14th, 2026 to the CTG seminars:
 
