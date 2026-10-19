@@ -34,6 +34,6 @@ My work in usable statistical tools for stress/strain orientations is nascent, b
 ![Global stress field [@Stephan2023, Figure 14].](../../pictures/Figure_14_world.png)
 
 
-Here is the presentation I gave to the Canadian Tectonics Group (CTG) on this research:
+Here is the presentation I gave on October 14th, 2026 to the Canadian Tectonics Group (CTG) on this research:
 
 {{< video https://www.youtube.com/embed/6NWisi0xoNc?si=SePQfPHzVxqW8w3o >}}
