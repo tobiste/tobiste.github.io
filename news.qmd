@@ -1,0 +1,32 @@
+---
+title: "News"
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+### 2026
+
+- *October 14*: I gave a presentation to the Canadian Tectonics Group (CTG) webinar:
+
+  {{< video https://www.youtube.com/embed/6NWisi0xoNc?si=SePQfPHzVxqW8w3o >}}
+
+- *September 25*: Paper accepted! "Long-term effect of inherited basement structures on the basin evolution of northwestern Canada" in GSA Bulletin by Pinto et al.
+
+- *September 10*: The NSERC Alliance grant entitled "Tectonostratigraphy and structural evolution of the Great Bear project, NW Ontario", with Kinross Gold Corporation (CAN)" together with Dr. Pete Hollings got approved
+
+- *September 08*: The NSERC Alliance grant entitled "Alteration chemistry of the Tower Mountain gold deposit", with Thunder Gold Corp." together with Dr. Pete Hollings got approved
+
+- *August 10*: Congrats to Hanna Tiitto for successfully defending her [{{< iconify fa6-solid download >}} MSc thesis ](https://knowledgecommons.lakeheadu.ca/items/b88db6bd-8663-487c-b1b3-717702cd6b36) entitled: "Deformation processes in a mid-crustal strike-slip shear zone: insights from the Archean Quetico Shear Zone, Superior Province, Canada"
+
+- *May 26*: The article ["Analyzing the horizontal orientation of the crustal stress adjacent to plate boundaries"](<https://doi.org/10.1029/2025TC009014>) published together with Eva Enkelmann in *Scientific Reports* won the **2026 David Elliott Best Paper award** from the Canadian Tectonics Group (CTG).
+
+- *May 22*: Congrats to Hanna for winning the Student Paper award at the 72nd Annual Meeting of the Institute on Late Superior Geology   
+
+- *April 15*: My NSERC Discovery Grant entitled "Kinematics and Strain Geometry of Archean Tectonics — A New Tool for Predicting Gold
+Mineralization in the Canadian Shield" got approved
+
+### 2025
+
+- *Dec 01*: I started a new role as "Assistant Professor" at the  Department of Geology at Lakehead University
