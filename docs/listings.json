@@ -1,0 +1,25 @@
+[
+  {
+    "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/gold/index.html",
+      "/research/plate/index.html",
+      "/research/reconstruction/index.html",
+      "/research/stress/index.html",
+      "/research/zircon/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2025/compositions/index.html",
+      "/blog/2025/theriak-domino/index.html",
+      "/blog/2026/MAGEMin_quickguide/index.html",
+      "/blog/2026/install_theriakdomino_LIN/index.html"
+    ]
+  }
+]
