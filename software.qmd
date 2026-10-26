@@ -91,6 +91,10 @@ Plotting Mohr Circles for students and teachers: [GUI](https://tobiste.shinyapps
 
 Convert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): [GUI](https://tobiste.shinyapps.io/apfu_converter/) \| [code](https://github.com/tobiste/apfu_converter)
 
+### cipwnormR
+
+Calculates CIPW norm for whole-rock geochemical data: [code](https://github.com/tobiste/cipwnormR)
+
 ### Theriak-Domino helpers
 
 Web-application providing little helper functions to handle [THERIAK DOMINO](https://titan.minpet.unibas.ch/minpet/theriak/theruser.html) and [MAGEMin](https://computationalthermodynamics.github.io/MAGEMin_C.jl/dev/) files:

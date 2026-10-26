@@ -61,5 +61,26 @@
     "title": "Tobias Stephan",
     "section": "",
     "text": "I am an Assistant Professor at the Department of Geology at Lakehead University in Thunder Bay (Canada). I received a PhD in geology from Technische Universität Bergakademie Freiberg (Germany) in 2019.\nMy research addresses how the continental lithosphere deforms across scales and through time, and how that deformation records, and in turn controls the migration of crustal fluids and the localization of strain and mineralization. The work combines classical, field-based structural geology with modern mathematical and statistical methods and incorporates techniques from metamorphic petrology, crystallographic preferred orientation, geophysics, geochemistry, geo-thermochronology, and provenance analysis.\nI teach courses on structural geology, tectonics, metamorphic petrology, and data science for geology.\n\n\n\n\n\n\n\nI am currently seeking two motivated graduate students to join my research group. If you are interested in studying structural geology and/or metamorphic petrology, please contact me at tstephan@lakeheadu.ca and include your CV and transcript. I will not respond to AI generated applications."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "My developments are located on my GitHub page. They are free and open-source and I try to keep them up to date. Feel free to contribute, comment or open an issue!"
+  },
+  {
+    "objectID": "software.html#r-packages",
+    "href": "software.html#r-packages",
+    "title": "Software",
+    "section": "R packages",
+    "text": "R packages\n\ntectonicr\n\n\ntectonicr is a free and open-source R package for modeling and analyzing the direction of the maximum horizontal stress (SHmax) based on the empirical link between the orientation of intraplate stress and the direction of the relative motion of neighboring plates (see Stephan et al., 2023). You can download and install it directly from the CRAN server using install.packages(\"tectonicr\") in R. A beta version is on github.\ndocumentation | CRAN | code | GUI\n\n\n\n\n\n\n\ngeoprofiler\ngeoprofiler is a free, open-source R package that allows you to create SWATH profiles and “data transects”, which are geological parameters plotted against the distance along a user-defined profile line. This is useful whenever you want to analyze the trend of values (e.g., geochemical compositions, ages, depth, and magnitudes) with the distance to an important structure. You can download and install it directly from the CRAN server using install.packages(\"geoprofiler\") in R. A beta version is available through github.\ndocumentation | CRAN | code\n\n\nstructr (beta)\n\n\nStructural geology package for R, free and open-source. It provides functions to\n\nanalyze and visualize orientation data such as faults, folds, bedding planes, and lineations.\nanalyze and visualize the magnitudes of stress in the Mohr Circle.\nreconstruct the orientation of structures in oriented drill cores using the alpha, beta, and gamma angles\npaleostress analysis using slip inversion\nvorticity and strain analysis\nsimulation of deformation using deformation and velocity gradient tensors\neasy import: import your structural data directly from StraboSpot projects\n\ndocumentation | code\n\n\n\n\n\n\n\nthermoclustr\nClustering, advanced statistics and densities of thermochronology cooling paths from inverse models: code\n\n\ngeocreep\nEstimate uncertainties in strain rates from flow laws, grain-size piezometry, and fugacity computations: code\n\n\nlaftr\nCalculates the ages from LA-ICP-MS based fission track dating.\ndocumentation | code\n\n\neuler\nRotation of plates in terms of quaternions: code\n\n\neuler.reco\nFinds best Euler pole solution for a given structure: code"
+  },
+  {
+    "objectID": "software.html#web-applications",
+    "href": "software.html#web-applications",
+    "title": "Software",
+    "section": "Web applications",
+    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | code\n\n\ncipwnormR\nCalculates CIPW norm for whole-rock geochemical data: code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO and MAGEMin files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\nMAGEMin input file generator\n\nGUI | code"
   }
 ]
