@@ -5,7 +5,7 @@ title: Publications
 [Web of Science](https://www.webofscience.com/wos/author/record/AAV-2685-2021)
 
 ::: {style="font-size:0.9em;"}
--   Pinto, T. F., Enkelmann, E., **Stephan, T.**, Beranek, L., Padgett, J., Terlaky, V., and Qadri, T. (accepted): "Long-term effect of inherited basement structures on the basin evolution of northwestern Canada". *GSA Bulletin*
+-   Pinto, T. F., Enkelmann, E., **Stephan, T.**, Beranek, L., Padgett, J., Terlaky, V., and Qadri, T. (accepted): "Long-term effect of inherited basement structures on the basin evolution of northwestern Canada". *GSA Bulletin* doi: [10.1130/B39035.1](https://doi.org/10.1130/B39035.1)
 
 -   **Stephan, T.**, Phillips, N., Tiitto, H., Perez, A., Nwakanma, M., and Hollings, P. (2025). "Going with the flow - Changes of Vorticity Controls Gold Enrichment in Archean Shear Zones (Shebandowan Greenstone Belt, Superior Province, Canada)". *Journal of Structural Geology*. doi: [10.1016/j.jsg.2025.105542](https://doi.org/10.1016/j.jsg.2025.105542) \| [citation](publications/Stephan2025_JSG.bib) \| [<i class="bi bi-file-pdf-fill"></i>](publications/Stephan2025_JSG.pdf) {{< iconify academicons:open-access >}}
 
