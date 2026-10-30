@@ -25,7 +25,7 @@
     "href": "software.html#web-applications",
     "title": "Software",
     "section": "Web applications",
-    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO and MAGEMin files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\nMAGEMin input file generator\n\nGUI | code"
+    "text": "Web applications\n\ntectonicr\nGUI for tectonicr as browser App (no R installation required): tectonicr-app\n\n\nMohr Circle App\nPlotting Mohr Circles for students and teachers: GUI | code\n\n\napfu converter\nConvert Weight% to Molar weight (g/mol) or apfu (atoms per formula unit): GUI | code\n\n\ncipwnormR\nCalculates CIPW norm for whole-rock geochemical data: code\n\n\nTheriak-Domino helpers\nWeb-application providing little helper functions to handle THERIAK DOMINO and MAGEMin files:\n\nTherin Generator: Calculates the molar units given a bulk compositions (wt. %) and generates the THERIN input for Theriak-Domino\nGUZZLER table filter: Extracts minerals from the GUZZLER reaction table\nMAGEMin input file generator\n\nGUI | code"
   },
   {
     "objectID": "research/stress/index.html",
